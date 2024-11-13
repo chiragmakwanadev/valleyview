@@ -10,12 +10,12 @@ const Specialist = () => {
       <Link
         key={index}
         href={`/staff/${item.slug}`}
-        className="w-[32%] p-4 bg-white text-center flex flex-col justify-between h-[450px]"
+        className="w-[31%] p-4 bg-white text-center flex flex-col justify-between h-[450px] "
       >
         <img
           src={item.image || "/default-image.jpg"} // use a default image if no image is provided
           alt={item.name}
-          className="w-[100%] h-[320px] object-cover"
+          className="w-[100%] h-[320px] object-cover rounded-lg overflow-hidden"
         />
         <div className="flex flex-col gap-2 pt-3">
           <h3 className="text-[14px] font-normal">{item.title}</h3>
@@ -26,7 +26,7 @@ const Specialist = () => {
   };
 
   return (
-    <div className="px-[250px] py-[50px]">
+    <div className="px-[250px] py-[50px] flex flex-col items-center">
       <div className="text-center mb-8">
         <p className="text-[24px]">Your health connected with care!</p>
         <h1 className="text-[40px] font-bold text-blue-600">
@@ -57,7 +57,7 @@ const Specialist = () => {
         </button>
       </div>
 
-      <div className="flex w-full flex-wrap items-center justify-center gap-5">
+      <div className="flex flex-wrap items-center justify-center gap-5 w-[70%]">
         {activeTab === "doctors"
           ? renderData("doctors")
           : renderData("pharmacists")}

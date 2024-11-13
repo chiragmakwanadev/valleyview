@@ -116,27 +116,35 @@ const Header = () => {
           <Link href="/news">NEWS</Link>
         </li>
         <li className="border border-transparent hover:border-white duration-500 rounded-md px-[15px] py-[5px]">
-          CONTACT US
+          <Link href="/contact">CONTACT US</Link>
         </li>
         <li className="border border-transparent hover:border-white duration-500 rounded-md px-[15px] py-[5px]">
-          BECOME A PATIENT
+          <Link href="/news/4">BECOME A PATIENT</Link>
         </li>
         <li className="border border-transparent hover:border-white duration-500 rounded-md px-[15px] py-[5px] bg-red-500">
-          BOOK APPOINTMENT
+          <Link href="https://ocean.cognisantmd.com/intake/patients.html?linkRef=04f9eeaf-8434-4153-aa26-2d0c910f4020#/online-booking">
+            BOOK APPOINTMENT
+          </Link>
         </li>
         <li className="border border-transparent hover:border-white duration-500 rounded-md px-[15px] py-[5px] bg-red-500">
-          PHARMACY
+          <Link href="https://www.bookmyshot.com/9054351100">PHARMACY</Link>
         </li>
       </ul>
       <ul className="flex gap-4 text-[20px]">
         <li>
-          <FaXTwitter />
+          <Link href="https://x.com/vmcwhitby">
+            <FaXTwitter />
+          </Link>
         </li>
         <li>
-          <FaFacebookF />
+          <Link href="https://www.facebook.com/profile.php?id=100094622814558">
+            <FaFacebookF />
+          </Link>
         </li>
         <li>
-          <FaInstagram />
+          <Link href="https://www.instagram.com/valleyviewmedical/">
+            <FaInstagram />
+          </Link>
         </li>
       </ul>
     </div>

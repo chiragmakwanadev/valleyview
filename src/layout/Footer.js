@@ -20,7 +20,7 @@ const Footer = () => {
           </h1>
           <ul>
             <li className="text-[20px]">
-              <span className=" font-semibold">CALL US:</span>{" "}
+              <span className=" font-semibold">CALL US:</span>
               <Link href="" className="hover:text-red-600">
                 +1 905-434-1662
               </Link>
@@ -29,7 +29,7 @@ const Footer = () => {
               FAX US: <span className="font-semibold">+1 905-747-0999</span>
             </li>
             <li className="text-[20px] font-semibold">
-              <span>EMAIL US:</span>{" "}
+              <span>EMAIL US:</span>
               <Link href="" className="hover:text-red-600">
                 info@valleyviewmedical.ca
               </Link>
@@ -40,22 +40,28 @@ const Footer = () => {
           <h1 className="text-[40px] font-semibold">Information</h1>
           <ul className="text-[18px]">
             <li className="hover:text-red-600">
-              <Link href="">Clinic Policies</Link>
+              <Link href="/policy/clinic-policies">Clinic Policies</Link>
             </li>
             <li className="hover:text-red-600">
-              <Link href="">Prescription Renewals</Link>
+              <Link href="/policy/prescription-renewal-policy">
+                Prescription Renewals
+              </Link>
             </li>
             <li className="hover:text-red-600">
-              <Link href="">Patient Responsibilites</Link>
+              <Link href="/policy/patient-responsibility">
+                Patient Responsibilites
+              </Link>
             </li>
             <li className="hover:text-red-600">
-              <Link href="">Patient Rights</Link>
+              <Link href="/policy/patient-rights">Patient Rights</Link>
             </li>
             <li className="hover:text-red-600">
-              <Link href="">Test Result Notifications</Link>
+              <Link href="/policy/test-results-notification">
+                Test Result Notifications
+              </Link>
             </li>
             <li className="hover:text-red-600">
-              <Link href="">Health Card Policy</Link>
+              <Link href="/policy/health-card-policy">Health Card Policy</Link>
             </li>
           </ul>
         </div>
@@ -72,13 +78,19 @@ const Footer = () => {
         </p>
         <ul className="flex gap-4 text-[16px]">
           <li>
-            <FaXTwitter />
+            <Link href="https://x.com/vmcwhitby">
+              <FaXTwitter />
+            </Link>
           </li>
           <li>
-            <FaFacebookF />
+            <Link href="https://www.facebook.com/profile.php?id=100094622814558">
+              <FaFacebookF />
+            </Link>
           </li>
           <li>
-            <FaInstagram />
+            <Link href="https://www.instagram.com/valleyviewmedical/">
+              <FaInstagram />
+            </Link>
           </li>
         </ul>
       </div>

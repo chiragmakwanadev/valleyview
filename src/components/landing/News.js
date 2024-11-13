@@ -39,7 +39,7 @@ const NewsCard = () => {
         {currentItems.map((news) => (
           <div
             key={news.id}
-            className="bg-white p-8 shadow-lg rounded-lg w-[33%] min-h-[400px] flex flex-col justify-between"
+            className="bg-white p-8 shadow-lg rounded-lg w-[33%] h-[400px] flex flex-col justify-between"
           >
             <div>
               <p className="text-gray-500 text-sm">{news.date}</p>

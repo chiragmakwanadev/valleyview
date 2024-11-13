@@ -90,13 +90,19 @@ const NewsDetail = ({ newsItem }) => {
           <h1 className="text-[40px] font-semibold text-blue-600">Follow Us</h1>
           <ul className="flex gap-4 text-[20px] text-white">
             <li className="bg-blue-600 p-4 rounded-full">
-              <FaXTwitter />
+              <Link href="https://x.com/vmcwhitby">
+                <FaXTwitter />
+              </Link>
             </li>
             <li className="bg-blue-600 p-4 rounded-full">
-              <FaFacebookF />
+              <Link href="https://www.facebook.com/profile.php?id=100094622814558">
+                <FaFacebookF />
+              </Link>
             </li>
             <li className="bg-blue-600 p-4 rounded-full">
-              <FaInstagram />
+              <Link href="https://www.instagram.com/valleyviewmedical/">
+                <FaInstagram />
+              </Link>
             </li>
           </ul>
         </div>

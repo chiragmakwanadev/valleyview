@@ -49,12 +49,14 @@ const Prescription = () => {
           We look forward to serving you and being a partner in your healthcare
           journey.
         </p>
-        <button
-          className="bg-red-600 px-[20px] py-[8px] mt-[40px] text-white
+        <Link href="https://www.bookmyshot.com/9054351100">
+          <button
+            className="bg-red-600 px-[20px] py-[8px] mt-[40px] text-white
            hover:text-red-600 border-[1px] border-transparent hover:border-red-600 hover:bg-white duration-500"
-        >
-          FILL A PRISCRIPTION
-        </button>
+          >
+            FILL A PRISCRIPTION
+          </button>
+        </Link>
       </div>
       <div className="w-[60%] flex flex-col gap-2 items-center">
         <img

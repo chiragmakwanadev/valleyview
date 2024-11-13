@@ -34,7 +34,7 @@ export const Newsdata = [
     When you choose Valleyview Medical Centre, you’re not only selecting a healthcare provider but also gaining access to the expertise and care of Dr. Abdullah Khan – a seasoned professional with a passion for delivering top-notch medical services.`,
   },
   {
-    id: 1,
+    id: 3,
     date: "March 4, 2024",
     tag: "Staffing News",
     title: "Welcome Dr. Rashida Anike Agoro",
@@ -57,7 +57,7 @@ export const Newsdata = [
     Join us in extending a warm welcome to Dr. Agoro, a healthcare professional committed to the well-being of our community.`,
   },
   {
-    id: 1,
+    id: 4,
     date: "October 4, 2023",
     tag: "Policy Updates and Changes",
     title: "Our New Registration Process",
@@ -68,6 +68,7 @@ export const Newsdata = [
     If you specifically require a female doctor, please make this known on the form, and our team will make note of your request.
     
     However, it’s important to be aware that there are limited openings for female doctors, and requesting one may result in longer wait times.
+    
     We are currently processing a significant number of applications, having received over 1100 so far.
     
     The estimated wait time for processing is currently 6-7 weeks.
@@ -77,6 +78,7 @@ export const Newsdata = [
     It’s essential to note that completing the form does NOT guarantee acceptance into the family practice.
     
     We have stringent rules, policies, and criteria in place to determine eligibility.
+
     In most cases, individuals with existing family doctors cannot be added to the roster unless specific conditions are met.`,
   },
 ];

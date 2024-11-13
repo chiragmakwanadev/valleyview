@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Banner = ({
@@ -30,12 +31,12 @@ const Banner = ({
           Your health connected with care!
         </h1>
         <p className="text-[56px] font-bold mb-2">{subtitle}</p>
-        <a
-          href="mailto:info@example.com"
+        <Link
+          href="mailto:info@valleyviewmedical.ca"
           className="px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-300 transition duration-300"
         >
           {buttonText}
-        </a>
+        </Link>
       </div>
     </div>
   );

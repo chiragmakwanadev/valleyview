@@ -4,7 +4,7 @@ export const Data = [
       {
         title: "PHYSICIAN",
         name: "Dr. Emmanuel Olamide Adeogun",
-        image: "/images/doctor.jpg",
+        image: "/images/emmanuel.jpg",
         slug: "dr-emmanuel-olamide-adeogun",
         description: `Dr. Emmanuel is a highly skilled and versatile medical professional whose extensive background in healthcare demonstrates remarkable leadership capabilities.
   
@@ -23,7 +23,7 @@ export const Data = [
       {
         title: "PHYSICIAN",
         name: "Dr. Sidra Saif",
-        image: "/images/doctor.jpg",
+        image: "/images/sidra.jpg",
         slug: "dr-sidra-saif",
         description: `Dr. Sidra Saif is an experienced and compassionate medical professional who is committed to providing exceptional care to her patients.
   
@@ -45,7 +45,7 @@ export const Data = [
         title: "PHYSICIAN",
         name: "Dr. Francis Owoicho",
         slug: "dr-francis-owoicho",
-        image: "/images/doctor.jpg",
+        image: "/images/francis.jpg",
         description: `Dr. Francis Owoicho Aluh is a dedicated multilingual medical practitioner skilled in Emergency Medicine and Primary Care.
   
             His exceptional communication abilities and strong rapport with patients and colleagues characterize his approach.
@@ -69,7 +69,7 @@ export const Data = [
       {
         title: "PHYSICIAN",
         name: "Dr. Rashida Anike Agoro",
-        image: "/images/doctor.jpg",
+        image: "/images/logo.png",
         slug: "dr-rashida-anike-agoro",
         description: `Dr. Rashida Anike Agoro brings a specialized focus on Geriatric Medicine, Women’s Health, Psychiatry, Pediatrics, and General Practice, Dr. Agoro brings a wealth of knowledge and a commitment to comprehensive patient care.
 
@@ -90,7 +90,7 @@ export const Data = [
       {
         title: "PHYSICIAN",
         name: "Dr. Abdullah Khan",
-        image: "/images/doctor.jpg",
+        image: "/images/abdullah.jpg",
         slug: "dr-abdullah-khan",
         description: `Valleyview Medical Centre is proud to introduce Dr. Abdullah Khan, an esteemed medical professional with over 12 years of experience since his graduation.
 
@@ -115,7 +115,7 @@ export const Data = [
       {
         title: "Pharmacist Manager",
         name: "Kashif Alavi",
-        image: "/images/doctor.jpg",
+        image: "/images/kashif.jpg",
         slug: "kashif-alavi",
         description: `Kashif Alavi is known for his dedicated patient care and strong interpersonal skills, thriving in fast-paced environments by combining his approachable nature with the ability to foster trust among healthcare colleagues.
 
@@ -134,7 +134,7 @@ export const Data = [
       {
         title: "Pharmacist",
         name: "Husban Ahmed",
-        image: "/images/doctor.jpg",
+        image: "/images/husban.jpg",
         slug: "husban-ahmed",
         description: `Originally from Brampton, Husban and his family relocated to Whitby in 2014, immersing themselves in the community’s welcoming atmosphere.
 
@@ -151,7 +151,7 @@ export const Data = [
       {
         title: "Pharmacist",
         name: "Hetal Bhalala",
-        image: "/images/doctor.jpg",
+        image: "/images/hetal.jpg",
         slug: "hetal-bhalala",
         description: `Hetal stands as an accomplished and empathetic clinical pharmacist, leaving a significant impact on geriatric healthcare. With a wealth of knowledge and experience, she ensures exceptional patient care and expert medication guidance.
 
