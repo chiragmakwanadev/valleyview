@@ -3,7 +3,11 @@ import React from "react";
 const Why = () => {
   return (
     <div className="px-[250px] py-[100px] bg-blue-600 text-white flex gap-10">
-      <img src="/images/welcome.jpg" alt="" className="w-[50%] object-cover" />
+      <img
+        src="/images/welcome.jpg"
+        alt=""
+        className="w-[50%] object-cover h-auto"
+      />
       <div className="w-[50%] flex flex-col gap-5">
         <p className="text-[24px]">Your health connected with care!</p>
         <h1 className="text-[40px] font-bold">

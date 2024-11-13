@@ -81,7 +81,7 @@ const Registration = () => {
           </div>
         </div>
       </div>
-      <div className="bg-blue-600 text-white px-[250px] py-[80px] flex gap-5">
+      <div className="bg-blue-600 text-white px-[250px] py-[80px] flex gap-5 items-center">
         <h1 className="text-[36px] text-right font-semibold leading-[40px]">
           Appointment <br /> Cancellation <br /> Policy
         </h1>

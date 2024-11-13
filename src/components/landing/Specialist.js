@@ -1,61 +1,15 @@
 import React, { useState } from "react";
-
-const Data = [
-  {
-    doctors: [
-      {
-        title: "PHYSICIAN",
-        name: "Dr. Emmanuel Olamide Adeogun",
-        image: "/images/doctor.jpg",
-      },
-      {
-        title: "PHYSICIAN",
-        name: "Dr. Sidra Saif",
-        image: "/images/doctor.jpg",
-      },
-      {
-        title: "PHYSICIAN",
-        name: "Dr. Francis Owoicho",
-        image: "/images/doctor.jpg",
-      },
-      {
-        title: "PHYSICIAN",
-        name: "Dr. Rashida Anike Agoro",
-        image: "/images/doctor.jpg",
-      },
-      {
-        title: "PHYSICIAN",
-        name: "Dr. Abdullah Khan",
-        image: "/images/doctor.jpg",
-      },
-    ],
-    pharmacists: [
-      {
-        title: "Pharmacist Manager",
-        name: "Kashif Alavi",
-        image: "/images/doctor.jpg",
-      },
-      {
-        title: "Pharmacist",
-        name: "Husban Ahmed",
-        image: "/images/doctor.jpg",
-      },
-      {
-        title: "Pharmacist",
-        name: "Hetal Bhalalal",
-        image: "/images/doctor.jpg",
-      },
-    ],
-  },
-];
+import { Data } from "@/static/StaffData";
+import Link from "next/link";
 
 const Specialist = () => {
   const [activeTab, setActiveTab] = useState("doctors");
 
   const renderData = (category) => {
     return Data[0][category].map((item, index) => (
-      <div
+      <Link
         key={index}
+        href={`/staff/${item.slug}`}
         className="w-[32%] p-4 bg-white text-center flex flex-col justify-between h-[450px]"
       >
         <img
@@ -67,7 +21,7 @@ const Specialist = () => {
           <h3 className="text-[14px] font-normal">{item.title}</h3>
           <p className="text-blue-600 font-bold text-[24px]">{item.name}</p>
         </div>
-      </div>
+      </Link>
     ));
   };
 
