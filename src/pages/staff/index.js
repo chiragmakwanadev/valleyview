@@ -27,7 +27,7 @@ const Index = () => {
   };
 
   return (
-    <>
+    <div className="pt-[120px]">
       <Banner subtitle="FIND A DOCTOR" buttonText="Have a question?" />
       <div className="px-[250px] py-[50px]">
         <div className="text-center mb-8">
@@ -64,7 +64,7 @@ const Index = () => {
           {renderData(activeTab)}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

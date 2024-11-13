@@ -25,7 +25,7 @@ const Banner = ({
         </svg>
       </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+      <div className="absolute top-[-15%] inset-0 flex flex-col items-center justify-center text-center text-white px-4">
         <h1 className="text-[18px] font-normal mb-2">
           Your health connected with care!
         </h1>

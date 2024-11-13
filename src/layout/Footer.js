@@ -12,9 +12,11 @@ const Footer = () => {
           <h1 className="text-[40px] font-semibold">Location</h1>
           <h1 className="text-[20px] font-semibold">
             ADDRESS <br />
-            1916 Dundas St E Unit 6
-            <br />
-            Whitby, ON L1N 2L6
+            <span className="font-normal">
+              1916 Dundas St E Unit 6
+              <br />
+              Whitby, ON L1N 2L6
+            </span>
           </h1>
           <ul>
             <li className="text-[20px]">

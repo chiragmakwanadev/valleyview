@@ -36,9 +36,8 @@ export async function getStaticProps({ params }) {
 }
 
 const PolicySlugPage = ({ policyTopic }) => {
-  console.log("this is check", policyTopic);
   return (
-    <div className="policy-page">
+    <div className="policy-page pt-[120px]">
       <Banner subtitle={policyTopic.topic} buttonText="Have a question?" />
       <div className="policy-content flex flex-col items-center py-[100px]">
         {policyTopic.item.map((policy, index) => (

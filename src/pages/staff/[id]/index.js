@@ -5,7 +5,7 @@ const StaffDetail = ({ staffMember }) => {
   if (!staffMember) return <p>Staff member not found</p>;
 
   return (
-    <>
+    <div className="pt-[120px]">
       <Banner subtitle={staffMember.name} buttonText="Email Us" />
       <div className="px-[250px] py-[50px] flex w-full gap-5">
         <div className="w-[40%]">
@@ -25,7 +25,7 @@ const StaffDetail = ({ staffMember }) => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

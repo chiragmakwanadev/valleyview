@@ -53,7 +53,7 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-[#0f68df] text-white flex items-center px-[40px] py-[20px] justify-between ${montserrat.className}`}
+      className={`bg-[#0f68df] text-white flex items-center px-[40px] py-[20px] justify-between fixed w-full z-50  ${montserrat.className}`}
     >
       <div className="flex gap-3 items-center">
         <Link href="/">
