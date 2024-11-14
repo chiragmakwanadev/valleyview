@@ -3,9 +3,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { montserrat } from "@/pages";
 import Link from "next/link";
-
 import { PolicyData } from "@/static/PolicyData";
 import { Data as StaffData } from "@/static/StaffData";
+import Clamp from "@/components/Clamp";
 
 const Header = () => {
   const [isPolicyHovering, setIsPolicyHovering] = useState(false);
@@ -53,14 +53,23 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-[#0f68df] text-white flex items-center px-[40px] py-[20px] justify-between fixed w-full z-50  ${montserrat.className}`}
+      className={`bg-[#0f68df] text-white flex items-center px-[15px] md:px-[20px] xl:px-[40px] 
+      py-[12px] xl:py-[20px] justify-between fixed w-full z-50  ${montserrat.className}`}
     >
       <div className="flex gap-3 items-center">
         <Link href="/">
-          <img src="/images/logo2.jpg" alt="logo" className="h-[80px]" />
+          <img
+            src="/images/logo2.jpg"
+            alt="logo"
+            className="w-[250px]"
+            style={{ width: Clamp(8, 15) }}
+          />
         </Link>
       </div>
-      <ul className="flex gap-2 font-medium">
+      <ul
+        className="hidden xl:flex gap-1 2xl:gap-2 font-medium text-[12px] 2xl:text-[16px] "
+        // style={{ fontSize: Clamp(0.7, 1) }}
+      >
         <li
           className="border border-transparent hover:border-white duration-500 rounded-md px-[15px] py-[5px] relative"
           onMouseEnter={handleStaffMouseEnter}
@@ -130,7 +139,10 @@ const Header = () => {
           <Link href="https://www.bookmyshot.com/9054351100">PHARMACY</Link>
         </li>
       </ul>
-      <ul className="flex gap-4 text-[20px]">
+      <ul
+        className="gap-4 hidden xl:flex"
+        style={{ fontSize: Clamp(0.4, 1.25) }}
+      >
         <li>
           <Link href="https://x.com/vmcwhitby">
             <FaXTwitter />

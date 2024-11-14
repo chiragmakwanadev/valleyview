@@ -31,7 +31,7 @@ export default function Home() {
         <News />
         <Welcome />
         <Specialist />
-        <Why />
+        {/* <Why /> */}
       </main>
     </div>
   );
