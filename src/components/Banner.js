@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Clamp from "./Clamp";
 
 const Banner = ({
   subtitle,
@@ -7,13 +8,13 @@ const Banner = ({
   buttonText,
 }) => {
   return (
-    <div className="relative w-full h-[450px]">
+    <div className="relative w-full" style={{ height: Clamp(20, 28) }}>
       <img
         src={backgroundImage}
         alt="Banner Background"
         className="object-cover w-full h-full"
       />
-      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="absolute inset-0 bg-black opacity-10"></div>
 
       <div className="absolute bottom-0 w-full">
         <svg
@@ -26,14 +27,16 @@ const Banner = ({
         </svg>
       </div>
 
-      <div className="absolute top-[-15%] inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+      <div className="absolute top-[-15%] inset-0 flex flex-col items-center justify-center text-center text-white px-4 border-none">
         <h1 className="text-[18px] font-normal mb-2">
           Your health connected with care!
         </h1>
-        <p className="text-[56px] font-bold mb-2">{subtitle}</p>
+        <p className="font-bold mb-2" style={{ fontSize: Clamp(1.4, 3) }}>
+          {subtitle}
+        </p>
         <Link
           href="mailto:info@valleyviewmedical.ca"
-          className="px-6 py-2 bg-white text-black font-semibold rounded hover:bg-gray-300 transition duration-300"
+          className="px-3 md:px-6 py-1 md:py-2 bg-white text-black font-semibold rounded hover:bg-gray-300 transition duration-300 text-[14px]"
         >
           {buttonText}
         </Link>

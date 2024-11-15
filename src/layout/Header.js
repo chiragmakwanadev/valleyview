@@ -106,7 +106,7 @@ const Header = () => {
           onMouseEnter={handlePolicyMouseEnter}
           onMouseLeave={handlePolicyMouseLeave}
         >
-          <Link href="/policy/">CLINIC POLICIES</Link>
+          <Link href="/policy/clinic-policies">CLINIC POLICIES</Link>
           {isPolicyHovering && (
             <div className="absolute left-0 top-[100%] bg-[#0f68df] text-white shadow-lg rounded-md mt-2 w-[200px] z-10">
               <ul className="space-y-2">

@@ -1,16 +1,24 @@
 import React from "react";
+import Clamp from "../Clamp";
 
 const Why = () => {
   return (
-    <div className="px-[250px] py-[100px] bg-blue-600 text-white flex gap-10">
+    <div className="padding-x py-[100px] bg-blue-600 text-white flex flex-col xl:flex-row gap-10">
       <img
-        src="/images/welcome.jpg"
+        src="/images/why.jpg"
         alt=""
-        className="w-[50%] object-cover h-auto"
+        className="w-full xl:w-[50%] object-cover h-auto hidden xl:block"
       />
-      <div className="w-[50%] flex flex-col gap-5">
-        <p className="text-[24px]">Your health connected with care!</p>
-        <h1 className="text-[40px] font-bold">
+      <img
+        src="/images/why2.jpg"
+        alt=""
+        className="w-full xl:w-[50%] object-cover h-[300px] xl:h-auto rounded-2xl xl:rounded-none block xl:hidden"
+      />
+      <div className="w-full xl:w-[50%] flex flex-col gap-5">
+        <p style={{ fontSize: Clamp(1, 1.5) }}>
+          Your health connected with care!
+        </p>
+        <h1 className="font-bold" style={{ fontSize: Clamp(1.5, 2.5) }}>
           Why Choose Valleyview Medical?
         </h1>
         <p className="text-[20px]">

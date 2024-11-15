@@ -10,6 +10,7 @@ const Footer = () => {
       <div
         className="border-t-[4px] border-blue-600 flex flex-col md:flex-row items-start gap-3 justify-around py-[50px] 
       mt-[80px] mx-[15px] sm:mx-[60px] md:mx-[120px] xl:mx-[200px] 2xl:mx-[250px]"
+        style={{ marginLeft: Clamp(1, 15), marginRight: Clamp(1, 15) }}
       >
         <img src="/images/logo.png" alt="" style={{ width: Clamp(10, 18) }} />
         <div className="flex gap-2 flex-col pl-0 xl:pl-[50px]">

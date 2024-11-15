@@ -1,6 +1,7 @@
 // pages/policy/[slug].js
 
 import Banner from "@/components/Banner";
+import Clamp from "@/components/Clamp";
 import { PolicyData } from "@/static/PolicyData";
 
 export async function getStaticPaths() {
@@ -37,17 +38,23 @@ export async function getStaticProps({ params }) {
 
 const PolicySlugPage = ({ policyTopic }) => {
   return (
-    <div className="policy-page pt-[120px]">
+    <div className="policy-page" style={{ paddingTop: Clamp(3.7, 7.5) }}>
       <Banner subtitle={policyTopic.topic} buttonText="Have a question?" />
-      <div className="policy-content flex flex-col items-center py-[100px]">
+      <div className="policy-content padding-x flex flex-col items-center py-[100px]">
         {policyTopic.item.map((policy, index) => (
-          <div key={index} className="policy-item mb-8 w-[50%]">
+          <div key={index} className="policy-item mb-8 w-full xl:w-[50%]">
             {policy.title && (
-              <h2 className="text-[36px] font-semibold text-blue-600 pb-3">
+              <h2
+                className="font-semibold text-blue-600 pb-3"
+                style={{ fontSize: Clamp(1, 1.5) }}
+              >
                 {policy.title}
               </h2>
             )}
-            <p className="text-[18px]" style={{ whiteSpace: "pre-line" }}>
+            <p
+              className="text-[18px]"
+              style={{ whiteSpace: "pre-line", fontSize: Clamp(0.75, 1) }}
+            >
               {policy.description}
             </p>
           </div>

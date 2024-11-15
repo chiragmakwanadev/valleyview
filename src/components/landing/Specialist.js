@@ -11,7 +11,7 @@ const Specialist = () => {
       <Link
         key={index}
         href={`/staff/${item.slug}`}
-        className="min-w-[300px] w-[31%] p-4 bg-white text-center flex flex-col h-[450px] "
+        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] "
       >
         <img
           src={item.image || "/default-image.jpg"} // use a default image if no image is provided
@@ -20,7 +20,12 @@ const Specialist = () => {
         />
         <div className="flex flex-col gap-2 pt-3">
           <h3 className="text-[14px] font-normal">{item.title}</h3>
-          <p className="text-blue-600 font-bold text-[24px]">{item.name}</p>
+          <p
+            className="text-blue-600 font-bold"
+            style={{ fontSize: Clamp(1, 1.25) }}
+          >
+            {item.name}
+          </p>
         </div>
       </Link>
     ));
