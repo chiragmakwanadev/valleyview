@@ -17,7 +17,7 @@ const Dates = [
 
 const Index = () => {
   return (
-    <div className="pt-[120px]">
+    <div style={{ paddingTop: Clamp(3.7, 7.5) }}>
       <Banner subtitle="Contact Us" buttonText="Email Us" />
       <div className="flex flex-col xl:flex-row w-full gap-10 padding-x">
         <div className="flex flex-col w-full xl:w-[50%]">

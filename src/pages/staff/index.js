@@ -35,7 +35,7 @@ const Index = () => {
   return (
     <div
       className="padding-x py-[50px] flex flex-col items-center"
-      style={{ paddingTop: Clamp(3.7, 10) }}
+      style={{ paddingTop: Clamp(6, 10) }}
     >
       <div className="text-center mb-8">
         <p style={{ fontSize: Clamp(1, 1.5) }}>

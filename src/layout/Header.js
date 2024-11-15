@@ -6,6 +6,7 @@ import Link from "next/link";
 import { PolicyData } from "@/static/PolicyData";
 import { Data as StaffData } from "@/static/StaffData";
 import Clamp from "@/components/Clamp";
+import HamburgerMenu from "@/components/Hamburger";
 
 const Header = () => {
   const [isPolicyHovering, setIsPolicyHovering] = useState(false);
@@ -65,6 +66,9 @@ const Header = () => {
             style={{ width: Clamp(8, 15) }}
           />
         </Link>
+      </div>
+      <div className="flex xl:hidden">
+        <HamburgerMenu />
       </div>
       <ul
         className="hidden xl:flex gap-1 2xl:gap-2 font-medium text-[12px] 2xl:text-[16px] "
