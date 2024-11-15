@@ -31,7 +31,7 @@ const Footer = () => {
           <ul style={{ fontSize: Clamp(0.75, 1.25) }}>
             <li>
               <span className=" font-semibold">CALL US:</span>
-              <Link href="" className="hover:text-red-600">
+              <Link href="tel:+19054341662" className="hover:text-red-600">
                 +1 905-434-1662
               </Link>
             </li>
@@ -40,7 +40,10 @@ const Footer = () => {
             </li>
             <li className="font-semibold">
               <span>EMAIL US:</span>
-              <Link href="" className="hover:text-red-600">
+              <Link
+                href="mailto:info@valleyviewmedical.ca"
+                className="hover:text-red-600"
+              >
                 info@valleyviewmedical.ca
               </Link>
             </li>

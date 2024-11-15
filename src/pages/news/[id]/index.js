@@ -6,6 +6,7 @@ import { FaPhone, FaLink, FaXTwitter } from "react-icons/fa6";
 import { BiSolidMessage } from "react-icons/bi";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
+import Clamp from "@/components/Clamp";
 
 export const getStaticPaths = async () => {
   const paths = Newsdata.map((news) => ({
@@ -34,17 +35,31 @@ const NewsDetail = ({ newsItem }) => {
   if (router.isFallback) return <p>Loading...</p>;
 
   return (
-    <div className="pb-[50px] px-[350px] flex pt-[180px]">
-      <div className="w-[65%] min-h-[90vh] border-r-[1px] border-blue-600 pl-[100px] overflow-y-auto">
-        <h1 className="text-[32px] font-bold text-blue-600">
+    <div
+      className="pb-[50px] padding-x flex flex-col xl:flex-row gap-10"
+      style={{ paddingTop: Clamp(5, 10.5) }}
+    >
+      <div className="w-full xl:w-[65%] border-none xl:border-r-[1px] border-blue-600 pl-0 xl:pl-[100px] overflow-y-auto">
+        <h1
+          className="font-bold text-blue-600"
+          style={{ fontSize: Clamp(1.5, 2.25) }}
+        >
           {newsItem.title}
         </h1>
-        <p className="text-gray-500 text-sm my-2">{newsItem.date}</p>
-        <span className="text-blue-600 text-sm font-normal">
+        <p
+          className="text-gray-500  my-2"
+          style={{ fontSize: Clamp(0.75, 1.15) }}
+        >
+          {newsItem.date}
+        </p>
+        <span
+          className="text-blue-600  font-normal"
+          style={{ fontSize: Clamp(0.75, 1.15) }}
+        >
           {newsItem.tag}
         </span>
         <p
-          className="text-[16px] mt-4 w-[70%]"
+          className="text-[16px] mt-4 w-[90%]"
           style={{ whiteSpace: "pre-line" }}
         >
           {newsItem.description}
@@ -53,10 +68,13 @@ const NewsDetail = ({ newsItem }) => {
           <Link href="">CONTACT US</Link>
         </button>
       </div>
-      <div className="w-[35%] ml-[20px] px-[50px] flex flex-col gap-5 sticky top-[180px] h-fit">
+      <div className="w-full xl:w-[35%] ml-0 xl:ml-[20px] px-0 xl:px-[50px] flex flex-col gap-5 sticky top-[180px] h-fit">
         <img src="/images/valley-banner.jpg" alt="" />
         <div>
-          <h1 className="text-[40px] font-semibold text-blue-600">
+          <h1
+            className="font-semibold text-blue-600"
+            style={{ fontSize: Clamp(1.5, 2.25) }}
+          >
             Contact Us
           </h1>
           <ul className="flex flex-col gap-5 pt-4 text-gray-600">
@@ -87,8 +105,16 @@ const NewsDetail = ({ newsItem }) => {
           </ul>
         </div>
         <div>
-          <h1 className="text-[40px] font-semibold text-blue-600">Follow Us</h1>
-          <ul className="flex gap-4 text-[20px] text-white">
+          <h1
+            className="font-semibold text-blue-600 pb-5"
+            style={{ fontSize: Clamp(1.5, 2.25) }}
+          >
+            Follow Us
+          </h1>
+          <ul
+            className="flex gap-4 text-white"
+            style={{ fontSize: Clamp(0.75, 1.15) }}
+          >
             <li className="bg-blue-600 p-4 rounded-full">
               <Link href="https://x.com/vmcwhitby">
                 <FaXTwitter />
