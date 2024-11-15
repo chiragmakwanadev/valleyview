@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Data } from "@/static/StaffData";
 import Link from "next/link";
 import Clamp from "@/components/Clamp";
+import Head from "next/head";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("doctors");
@@ -33,53 +34,60 @@ const Index = () => {
   };
 
   return (
-    <div
-      className="padding-x py-[50px] flex flex-col items-center"
-      style={{ paddingTop: Clamp(6, 10) }}
-    >
-      <div className="text-center mb-8">
-        <p style={{ fontSize: Clamp(1, 1.5) }}>
-          Your health connected with care!
-        </p>
-        <h1
-          className="font-bold text-blue-600"
-          style={{ fontSize: Clamp(1.5, 2.5) }}
-        >
-          Our Health Care Specialists
-        </h1>
-      </div>
+    <>
+      <Head>
+        <title>
+          Whitby Doctors at Valleyview Medical | Vallewview Medical Centre
+        </title>
+      </Head>
+      <div
+        className="padding-x py-[50px] flex flex-col items-center"
+        style={{ paddingTop: Clamp(6, 10) }}
+      >
+        <div className="text-center mb-8">
+          <p style={{ fontSize: Clamp(1, 1.5) }}>
+            Your health connected with care!
+          </p>
+          <h1
+            className="font-bold text-blue-600"
+            style={{ fontSize: Clamp(1.5, 2.5) }}
+          >
+            Our Health Care Specialists
+          </h1>
+        </div>
 
-      <div className="flex justify-center mb-8">
-        <button
-          onClick={() => setActiveTab("doctors")}
-          className={`px-6 py-2 ${
-            activeTab === "doctors"
-              ? "border-b-[1px] border-b-blue-600 text-black"
-              : "text-gray-500"
-          }`}
-          style={{ fontSize: Clamp(1, 1.5) }}
-        >
-          Doctors
-        </button>
-        <button
-          onClick={() => setActiveTab("pharmacists")}
-          className={`px-6 py-2 ${
-            activeTab === "pharmacists"
-              ? "border-b-[1px] border-b-blue-600 text-black"
-              : "text-gray-500"
-          }`}
-          style={{ fontSize: Clamp(1, 1.5) }}
-        >
-          Pharmacists
-        </button>
-      </div>
+        <div className="flex justify-center mb-8">
+          <button
+            onClick={() => setActiveTab("doctors")}
+            className={`px-6 py-2 ${
+              activeTab === "doctors"
+                ? "border-b-[1px] border-b-blue-600 text-black"
+                : "text-gray-500"
+            }`}
+            style={{ fontSize: Clamp(1, 1.5) }}
+          >
+            Doctors
+          </button>
+          <button
+            onClick={() => setActiveTab("pharmacists")}
+            className={`px-6 py-2 ${
+              activeTab === "pharmacists"
+                ? "border-b-[1px] border-b-blue-600 text-black"
+                : "text-gray-500"
+            }`}
+            style={{ fontSize: Clamp(1, 1.5) }}
+          >
+            Pharmacists
+          </button>
+        </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-5 w-full xl:w-[70%]">
-        {activeTab === "doctors"
-          ? renderData("doctors")
-          : renderData("pharmacists")}
+        <div className="flex flex-wrap items-center justify-center gap-5 w-full xl:w-[70%]">
+          {activeTab === "doctors"
+            ? renderData("doctors")
+            : renderData("pharmacists")}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
