@@ -32,7 +32,8 @@ const Index = () => {
     <>
       <Head>
         <title>
-          What's new at Valleyview Medical Centre | Vallewview Medical Centre
+          What&apos;s new at Valleyview Medical Centre | Vallewview Medical
+          Centre
         </title>
       </Head>
       <div style={{ paddingTop: Clamp(3.7, 7.5) }}>
