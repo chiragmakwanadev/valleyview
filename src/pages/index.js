@@ -1,4 +1,4 @@
-import { Montserrat, DM_Sans } from "next/font/google";
+import { Montserrat, DM_Sans, Poppins } from "next/font/google";
 import Landing from "@/components/landing/Landing";
 import Registration from "@/components/landing/Registration";
 import Priscription from "@/components/landing/Priscription";
@@ -20,9 +20,15 @@ export const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
+export const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  subsets: ["latin"],
+});
+
 export default function Home() {
   return (
-    <div className={`${dmSans.variable}`}>
+    <div className={` ${poppins.variable}`}>
       <Head>
         <title>Vallewview Medical Centre</title>
       </Head>

@@ -3,6 +3,7 @@ import React from "react";
 import Clamp from "../Clamp";
 import { DiCssdeck } from "react-icons/di";
 import { GoDotFill } from "react-icons/go";
+import { LiaDotCircleSolid } from "react-icons/lia";
 
 const linkData = [
   {
@@ -53,13 +54,16 @@ const Landing = () => {
         <p className="text-[24px]" style={{ fontSize: Clamp(1, 1.5) }}>
           Your health connected with care!
         </p>
-        <Link href="mailto:info@valleyviewmedical.ca">
+        <Link
+          href="mailto:info@valleyviewmedical.ca"
+          className="w-[100px] xl:w-[150px]"
+        >
           <button
-            className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[5px] xl:py-[8px] text-white hover:text-black w-[100px] xl:w-[150px] rounded-full
-            border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center"
+            className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[5px] xl:py-[8px] text-white hover:text-black  rounded-full
+            border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full"
             style={{ fontSize: Clamp(0.75, 1) }}
           >
-            <GoDotFill />
+            <LiaDotCircleSolid size={20} />
             Email Us
           </button>
         </Link>
@@ -73,17 +77,18 @@ const Landing = () => {
             EAST WHITBY IDA PHARMACY
           </h1>
         </div>
-        <div className="flex pt-[20px] gap-8 xl:gap-2 w-full justify-center">
+        <div className="flex pt-[20px] gap-3 xl:gap-2 w-full justify-center">
           <div
-            className={`flex flex-row flex-wrap gap-4 font-medium items-center justify-center`}
+            className={`flex flex-row flex-wrap gap-2 font-medium items-center justify-center`}
             style={{ fontSize: Clamp(0.75, 1) }}
           >
             {linkData.map(({ href, text }, index) => (
               <Link key={index} href={href}>
                 <h1
-                  className="bg-transparent border-black hover:bg-black px-[25px] py-[10px] text-black hover:text-white w-full text-center rounded-full
-            border-[1px] duration-200"
+                  className="bg-transparent border-black hover:bg-black px-[22px] py-[8px] text-black hover:text-white w-full text-center rounded-full
+            border-[1px] duration-200 flex items-center gap-2"
                 >
+                  <GoDotFill />
                   {text}
                 </h1>
               </Link>

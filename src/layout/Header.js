@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <div
-      className={`backdrop-blur-md bg-white/50 text-black flex items-center justify-between px-5 py-2 w-auto z-50 rounded-2xl`}
+      className={`bg-white text-black flex items-center justify-between px-5 py-2 w-auto z-50 rounded-2xl shadow-xl`}
       style={{
         position: "fixed",
         left: "20px",
@@ -68,7 +68,6 @@ const Header = () => {
         <HamburgerMenu />
       </div>
       <ul className="hidden xl:flex gap-1 2xl:gap-7 font-medium text-[12px] 2xl:text-[16px]">
-        {/* OUR STAFF */}
         <li
           className="group relative py-[5px] cursor-pointer duration-300"
           onMouseEnter={handleStaffMouseEnter}
@@ -102,7 +101,6 @@ const Header = () => {
           )}
         </li>
 
-        {/* CLINIC POLICIES */}
         <li
           className="group relative py-[5px] cursor-pointer duration-300"
           onMouseEnter={handlePolicyMouseEnter}
@@ -128,25 +126,20 @@ const Header = () => {
           )}
         </li>
 
-        {/* NEWS */}
         <li className="group relative py-[5px] cursor-pointer duration-300">
           <Link href="/news">NEWS</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
 
-        {/* CONTACT */}
         <li className="group relative py-[5px] cursor-pointer duration-300">
           <Link href="/contact">CONTACT US</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
 
-        {/* BECOME A PATIENT */}
         <li className="group relative py-[5px] cursor-pointer duration-300">
           <Link href="/news/4">BECOME A PATIENT</Link>
           <span className="absolute bottom-[5px] left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
-
-        {/* BOOK APPOINTMENT */}
       </ul>
       <ul className="flex items-center gap-3">
         <li
@@ -158,7 +151,6 @@ const Header = () => {
           </Link>
         </li>
 
-        {/* PHARMACY */}
         <li
           className="group relative px-[20px] py-[5px] bg-transparent border-black border-[1px] hover:bg-black
          hover:text-white cursor-pointer duration-300 rounded-full"
