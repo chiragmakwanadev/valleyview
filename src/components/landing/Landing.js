@@ -68,7 +68,7 @@ const Landing = () => {
           </button>
         </Link>
       </div>
-      <div className="absolute bottom-[-70px] right-[12.5%] left-[12.5%] bg-white p-[30px] rounded-[10px]">
+      <div className="absolute bottom-[-70px] right-[12.5%] left-[12.5%] bg-white p-[30px] rounded-[10px] shadow-xl">
         <div className="flex flex-col">
           <h1
             className="font-medium text-black text-center"

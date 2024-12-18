@@ -16,7 +16,7 @@ const Dates = [
 const Registration = () => {
   return (
     <div className="bg-[#f2f0f0] pt-[150px]">
-      <div className="bg-white margin-x mb-[50px] p-7 rounded-xl flex flex-col gap-[50px]">
+      <div className="bg-white margin-x mb-[50px] p-7 rounded-xl flex flex-col gap-1 shadow-xl">
         <div className="flex flex-row-reverse bg-white rounded-xl gap-[40px]">
           <div className="flex flex-col w-full xl:w-[50%]">
             <iframe
@@ -58,12 +58,12 @@ const Registration = () => {
             alt=""
             className="w-[50%] object-cover rounded-xl"
           />
-          <div className="flex flex-col gap-2 w-full xl:w-[50%] py-[50px]">
+          <div className="flex flex-col gap-2 w-full xl:w-[50%]">
             <h1 className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
               Visit a Doctor
             </h1>
             <p
-              className=" font-normal pt-[30px] text-blue-600"
+              className=" font-normal pt-[10px] text-blue-600"
               style={{ fontSize: Clamp(1, 1.5) }}
             >
               +1 905-434-1662
@@ -80,7 +80,7 @@ const Registration = () => {
               <h1 className="font-bold text-[18px]">NOTE:</h1>
               Times may vary depending on doctor’s availability
             </span>
-            <p className="pt-[30px]" style={{ fontSize: Clamp(0.75, 1) }}>
+            <p style={{ fontSize: Clamp(0.75, 1) }}>
               As a community-oriented medical clinic in Whitby, we offer a wide
               range of services designed to address all of your health care
               needs. From routine check-ups, scheduled appointments to see your
@@ -89,8 +89,8 @@ const Registration = () => {
               your well-being.{" "}
             </p>
             <button
-              className="bg-blue-600 px-[20px] py-[8px] w-full md:w-[250px] mt-[40px] text-white
-           hover:text-blue-600 border-[1px] border-transparent hover:border-blue-600 hover:bg-white duration-500 rounded-xl"
+              className="bg-blue-600 px-[20px] py-[8px] w-full md:w-[250px] text-white
+           hover:text-blue-600 border-[1px] border-transparent hover:border-blue-600 hover:bg-white duration-500 rounded-xl mt-[10px]"
             >
               BOOK APPOINTMENT
             </button>

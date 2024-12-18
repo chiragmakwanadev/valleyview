@@ -4,7 +4,7 @@ import Clamp from "../Clamp";
 const Welcome = () => {
   return (
     <div className="bg-[#f2f0f0] padding-x py-[100px]">
-      <div className=" text-black flex flex-col xl:flex-row gap-10 bg-white p-10 rounded-xl">
+      <div className=" text-black flex flex-col xl:flex-row gap-10 bg-white p-10 rounded-xl shadow-xl">
         <div className="w-full xl:w-[50%] flex flex-col gap-5">
           <p className="text-[18px] text-blue-600 bg-blue-100 w-[350px] p-[5px] text-center rounded-3xl">
             Your health connected with care!

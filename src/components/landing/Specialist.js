@@ -7,24 +7,37 @@ const Specialist = () => {
   const [activeTab, setActiveTab] = useState("doctors");
 
   const renderData = (category) => {
+    console.log("first", Data);
     return Data[0][category].map((item, index) => (
       <Link
         key={index}
         href={`/staff/${item.slug}`}
-        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-gray-100 rounded-xl flex flex-col h-[500px] shadow-xl "
+        className="min-w-[300px] w-full sm:w-[31%] p-6 bg-[#f2f0f0] rounded-xl flex flex-col shadow-xl "
       >
         <img
           src={item.image || "/default-image.jpg"} // use a default image if no image is provided
           alt={item.name}
-          className="w-[100%] h-[370px] object-cover rounded-lg overflow-hidden"
+          className="w-[120px] h-[120px] object-cover rounded-full overflow-hidden"
         />
-        <div className="flex flex-col gap-2 pt-3">
-          <h3 className="text-[14px] font-normal">{item.title}</h3>
-          <p
-            className="text-blue-600 font-bold"
-            style={{ fontSize: Clamp(1, 1.25) }}
-          >
-            {item.name}
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2 pt-3">
+            <p className="text-[12px] font-normal bg-white px-2 py-1 rounded-full w-[120px] text-center">
+              {item.title}
+            </p>
+            <h1 className="text-[16px] font-medium break-words overflow-hidden text-ellipsis text-blue-600">
+              {item.name}
+            </h1>
+          </div>
+          <p>
+            {" "}
+            {item.description
+              .split(/\n\s*\n/) // Splits paragraphs by double line breaks with optional spaces/tabs
+              .slice(0, 1) // First two paragraphs
+              .map((paragraph, index) => (
+                <p key={index} className="mb-3 text-[14px]">
+                  {paragraph.trim()} {/* Removes extra spaces */}
+                </p>
+              ))}
           </p>
         </div>
       </Link>
@@ -50,7 +63,7 @@ const Specialist = () => {
           onClick={() => setActiveTab("doctors")}
           className={`px-6 py-2 ${
             activeTab === "doctors"
-              ? "bg-gray-200 p-10 rounded-xl text-black"
+              ? "bg-[#f2f0f0] p-10 rounded-xl text-black"
               : "text-gray-500"
           }`}
           style={{ fontSize: Clamp(1, 1.5) }}
@@ -61,7 +74,7 @@ const Specialist = () => {
           onClick={() => setActiveTab("pharmacists")}
           className={`px-6 py-2 ${
             activeTab === "pharmacists"
-              ? "bg-gray-200 p-10 rounded-xl text-black"
+              ? "bg-[#f2f0f0] p-10 rounded-xl text-black"
               : "text-gray-500"
           }`}
           style={{ fontSize: Clamp(1, 1.5) }}
