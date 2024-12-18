@@ -27,7 +27,7 @@ const NewsCard = () => {
   };
 
   return (
-    <div className="padding-x py-[50px] bg-gray-100">
+    <div className="padding-x py-[50px] bg-white">
       <h1
         className="text-center font-bold text-blue-600"
         style={{ fontSize: Clamp(1.5, 2.25) }}
@@ -42,7 +42,7 @@ const NewsCard = () => {
         {currentItems.map((news) => (
           <div
             key={news.id}
-            className="bg-white p-8 shadow-lg rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[32%] h-auto md:h-[400px] flex flex-col justify-between"
+            className="bg-white p-8 shadow-2xl rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[32%] h-auto md:h-[400px] flex flex-col justify-between"
           >
             <div>
               <p className="text-gray-500 text-sm">{news.date}</p>

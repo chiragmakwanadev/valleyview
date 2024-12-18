@@ -2,7 +2,7 @@ export const Data = [
   {
     doctors: [
       {
-        title: "PHYSICIAN",
+        title: "Family Physician",
         name: "Dr. Emmanuel Olamide Adeogun",
         image: "/images/emmanuel.jpg",
         slug: "dr-emmanuel-olamide-adeogun",
@@ -21,7 +21,7 @@ export const Data = [
             Fluent in both English and Yoruba, he ensures effective communication with a diverse patient population, underscoring his commitment to delivering top-tier healthcare services.`,
       },
       {
-        title: "PHYSICIAN",
+        title: "Family Physician",
         name: "Dr. Sidra Saif",
         image: "/images/sidra.jpg",
         slug: "dr-sidra-saif",
@@ -42,7 +42,7 @@ export const Data = [
             In addition to her professional accomplishments, Dr. Saif is fluent in both English and Urdu, enabling her to communicate effectively with a diverse patient population and establish strong doctor-patient relationships based on trust and understanding.`,
       },
       {
-        title: "PHYSICIAN",
+        title: "Family Physician",
         name: "Dr. Francis Owoicho",
         slug: "dr-francis-owoicho",
         image: "/images/francis.jpg",
@@ -67,7 +67,7 @@ export const Data = [
             With an MBBS and a passion for creative thinking and cycling, he takes a holistic approach, aiming to make a meaningful impact in healthcare through his medical expertise, leadership, and dedication.`,
       },
       {
-        title: "PHYSICIAN",
+        title: "Family Physician",
         name: "Dr. Rashida Anike Agoro",
         image: "/images/logo.png",
         slug: "dr-rashida-anike-agoro",
@@ -88,7 +88,7 @@ export const Data = [
         We are confident that Dr. Rashida Anike Agoro’s presence will not only enrich the medical expertise at Valleyview but also contribute to the compassionate and holistic healthcare experience we strive to provide. Join us in extending a warm welcome to Dr. Agoro, a healthcare professional committed to the well-being of our community.`, // Add Dr. Rashida's description here
       },
       {
-        title: "PHYSICIAN",
+        title: "Family Physician",
         name: "Dr. Abdullah Khan",
         image: "/images/abdullah.jpg",
         slug: "dr-abdullah-khan",

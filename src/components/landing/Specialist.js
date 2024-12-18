@@ -11,7 +11,7 @@ const Specialist = () => {
       <Link
         key={index}
         href={`/staff/${item.slug}`}
-        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] "
+        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-gray-100 rounded-xl flex flex-col h-[500px] shadow-xl "
       >
         <img
           src={item.image || "/default-image.jpg"} // use a default image if no image is provided
@@ -32,25 +32,25 @@ const Specialist = () => {
   };
 
   return (
-    <div className="padding-x py-[50px] flex flex-col items-center">
-      <div className="text-center mb-8">
-        <p style={{ fontSize: Clamp(1, 1.5) }}>
+    <div className="padding-x py-[50px] flex flex-col">
+      <div className="text-center mb-8 flex flex-col items-center">
+        <p className="text-[18px] text-blue-600 bg-blue-100 px-5 py-2 text-center rounded-3xl">
           Your health connected with care!
         </p>
         <h1
-          className="font-bold text-blue-600"
+          className="font-bold text-blue-600 pt-[20px]"
           style={{ fontSize: Clamp(1.5, 2.5) }}
         >
           Our Health Care Specialists
         </h1>
       </div>
 
-      <div className="flex justify-center mb-8">
+      <div className="flex mb-8">
         <button
           onClick={() => setActiveTab("doctors")}
           className={`px-6 py-2 ${
             activeTab === "doctors"
-              ? "border-b-[1px] border-b-blue-600 text-black"
+              ? "bg-gray-200 p-10 rounded-xl text-black"
               : "text-gray-500"
           }`}
           style={{ fontSize: Clamp(1, 1.5) }}
@@ -61,7 +61,7 @@ const Specialist = () => {
           onClick={() => setActiveTab("pharmacists")}
           className={`px-6 py-2 ${
             activeTab === "pharmacists"
-              ? "border-b-[1px] border-b-blue-600 text-black"
+              ? "bg-gray-200 p-10 rounded-xl text-black"
               : "text-gray-500"
           }`}
           style={{ fontSize: Clamp(1, 1.5) }}
@@ -70,7 +70,7 @@ const Specialist = () => {
         </button>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-5 w-full xl:w-[70%]">
+      <div className="flex flex-wrap gap-5 w-full">
         {activeTab === "doctors"
           ? renderData("doctors")
           : renderData("pharmacists")}

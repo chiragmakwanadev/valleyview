@@ -21,6 +21,10 @@ export const plugins = [
         "padding-left": Clamp(1, 15),
         "padding-right": Clamp(1, 15),
       },
+      ".margin-x": {
+        "margin-left": Clamp(1, 15),
+        "margin-right": Clamp(1, 15),
+      },
     });
   },
 ];

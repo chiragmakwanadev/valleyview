@@ -6,17 +6,14 @@ import Clamp from "@/components/Clamp";
 
 const Footer = () => {
   return (
-    <div className="text-blue-600 flex flex-col">
+    <div className="text-white flex flex-col bg-gray-800">
       <div
-        className="border-t-[4px] border-blue-600 flex flex-col md:flex-row items-start gap-3 justify-around py-[50px] 
-      mt-[80px] mx-[15px] sm:mx-[60px] md:mx-[120px] xl:mx-[200px] 2xl:mx-[250px]"
+        className="flex flex-col md:flex-row items-start gap-3 justify-around
+      mt-[50px] margin-x pb-[20px] border-b-[2px] border-gray-500"
         style={{ marginLeft: Clamp(1, 15), marginRight: Clamp(1, 15) }}
       >
-        <img src="/images/logo.png" alt="" style={{ width: Clamp(10, 18) }} />
-        <div className="flex gap-2 flex-col pl-0 xl:pl-[50px]">
-          <h1 className="font-semibold" style={{ fontSize: Clamp(1.5, 2.5) }}>
-            Location
-          </h1>
+        <div className="flex flex-col gap-10">
+          <img src="/images/logo-nobg.png" alt="" className="w-[250px]" />
           <h1
             className="text-[20px] font-semibold"
             style={{ fontSize: Clamp(0.75, 1.25) }}
@@ -28,6 +25,31 @@ const Footer = () => {
               Whitby, ON L1N 2L6
             </span>
           </h1>
+        </div>
+        <div className="flex gap-7 flex-col pl-0 xl:pl-[50px]">
+          <h1 className="font-medium" style={{ fontSize: Clamp(1.5, 2.5) }}>
+            Contact Us
+          </h1>
+          <ul
+            className="gap-4 hidden xl:flex"
+            style={{ fontSize: Clamp(0.75, 1.5) }}
+          >
+            <li>
+              <Link href="https://x.com/vmcwhitby">
+                <FaXTwitter />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.facebook.com/profile.php?id=100094622814558">
+                <FaFacebookF />
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.instagram.com/valleyviewmedical/">
+                <FaInstagram />
+              </Link>
+            </li>
+          </ul>
           <ul style={{ fontSize: Clamp(0.75, 1.25) }}>
             <li>
               <span className=" font-semibold">CALL US:</span>
@@ -85,7 +107,8 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="bg-blue-600 text-white text-center px-[15px] sm:px-[60px] md:px-[120px] xl:px-[200px] 2xl:px-[250px] py-[40px] flex flex-col items-center gap-4"
+        className="bg-gray-800 text-white text-center px-[15px] sm:px-[60px] md:px-[120px] 
+        xl:px-[200px] 2xl:px-[250px] py-[40px] flex flex-col items-center gap-4 "
         style={{ fontSize: Clamp(0.75, 1.25) }}
       >
         <p>
@@ -97,23 +120,6 @@ const Footer = () => {
             Tallships Media
           </Link>
         </p>
-        <ul className="flex gap-4">
-          <li>
-            <Link href="https://x.com/vmcwhitby">
-              <FaXTwitter />
-            </Link>
-          </li>
-          <li>
-            <Link href="https://www.facebook.com/profile.php?id=100094622814558">
-              <FaFacebookF />
-            </Link>
-          </li>
-          <li>
-            <Link href="https://www.instagram.com/valleyviewmedical/">
-              <FaInstagram />
-            </Link>
-          </li>
-        </ul>
       </div>
     </div>
   );

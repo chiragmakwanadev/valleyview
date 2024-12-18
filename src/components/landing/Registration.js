@@ -15,69 +15,64 @@ const Dates = [
 
 const Registration = () => {
   return (
-    <>
-      <div className="padding-x py-[50px]">
-        <div className="flex flex-col items-start xl:items-center gap-4 py-[40px]">
-          <h1
-            className="text-[36px] font-bold text-blue-600"
-            style={{ fontSize: Clamp(1.5, 2.25) }}
-          >
-            New Patient Registration
-          </h1>
-          <p
-            className="text-[18px] text-start xl:text-center"
-            style={{ fontSize: Clamp(1, 1.5) }}
-          >
-            Due to high demand, we are temporarily suspending online patient
-            registrations. We are still accepting new patients, please register
-            in-person at the clinic.
-          </p>
-        </div>
-        <div className="flex flex-col xl:flex-row w-full gap-10 bg-blue-100 p-3 md:p-5 xl:p-10 rounded-xl shadow-xl">
+    <div className="bg-[#f2f0f0] pt-[150px]">
+      <div className="bg-white margin-x mb-[50px] p-7 rounded-xl flex flex-col gap-[50px]">
+        <div className="flex flex-row-reverse bg-white rounded-xl gap-[40px]">
           <div className="flex flex-col w-full xl:w-[50%]">
-            <p className="text-[16px] font-thin">
-              Accessible Parking Available
-            </p>
-            <h1
-              className=" font-medium text-blue-600"
-              style={{ fontSize: Clamp(1.5, 2.25) }}
-            >
-              Location
-            </h1>
-            <p
-              className="font-light pb-[30px]"
-              style={{ fontSize: Clamp(1, 1.5) }}
-            >
-              1916 Dundas St E Unit 6, Whitby
-            </p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1347128752056!2d-78.901594!3d43.889603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d525cd06d2595d%3A0x9f6c4a3af69bb80d!2s1916%20Dundas%20St%20E%2C%20Whitby%2C%20ON%20L1N%202L6%2C%20Canada!5e0!3m2!1sen!2sca!4v1699633078210!5m2!1sen!2sca"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-xl w-full h-[450px]"
+              className="rounded-xl"
               style={{ height: Clamp(15, 28) }}
             ></iframe>
           </div>
-          <div className="flex flex-col w-full xl:w-[50%]">
-            <p className="text-[16px] font-thin">Valleyview Medical Centre</p>
-            <h1
-              className=" font-medium text-blue-600"
-              style={{ fontSize: Clamp(1.5, 2.25) }}
-            >
+          <div className="flex flex-col  gap-4 w-[50%] justify-between">
+            <div className="flex flex-col gap-5">
+              <h1 className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
+                New Patient Registration
+              </h1>
+              <p className="text-[18px]">
+                Due to high demand, we are temporarily suspending online patient
+                registrations. We are still accepting new patients, please
+                register in-person at the clinic.
+              </p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <h1 className=" font-medium text-blue-600 text-[24px]">
+                Location
+              </h1>
+              <p className="font-light " style={{ fontSize: Clamp(1, 1.5) }}>
+                1916 Dundas St E Unit 6, Whitby
+              </p>
+              <p className="text-[16px] font-thin">
+                Accessible Parking Available
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row w-full gap-10 pt-[50px]">
+          <img
+            src="/images/landing2.jpg"
+            alt=""
+            className="w-[50%] object-cover rounded-xl"
+          />
+          <div className="flex flex-col gap-2 w-full xl:w-[50%] py-[50px]">
+            <h1 className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
               Visit a Doctor
             </h1>
             <p
-              className=" font-light pb-[30px] text-blue-600"
+              className=" font-normal pt-[30px] text-blue-600"
               style={{ fontSize: Clamp(1, 1.5) }}
             >
               +1 905-434-1662
             </p>
-            <div className="text-[18px]">
+            <div className="text-[16px]">
               {Object.entries(Dates[0]).map(([day, time]) => (
                 <div key={day} className="flex  gap-4 pb-2 items-center">
                   <p className="font-bold">{day}:</p>
-                  <p style={{ fontSize: Clamp(1, 1.25) }}>{time}</p>
+                  <p>{time}</p>
                 </div>
               ))}
             </div>
@@ -85,7 +80,7 @@ const Registration = () => {
               <h1 className="font-bold text-[18px]">NOTE:</h1>
               Times may vary depending on doctor’s availability
             </span>
-            <p className="pt-[30px]" style={{ fontSize: Clamp(1, 1.25) }}>
+            <p className="pt-[30px]" style={{ fontSize: Clamp(0.75, 1) }}>
               As a community-oriented medical clinic in Whitby, we offer a wide
               range of services designed to address all of your health care
               needs. From routine check-ups, scheduled appointments to see your
@@ -102,7 +97,7 @@ const Registration = () => {
           </div>
         </div>
       </div>
-      <div className="bg-blue-600 text-white padding-x py-[80px] flex flex-col xl:flex-row gap-5 items-start xl:items-center">
+      <div className="bg-white text-black padding-x py-[80px] flex flex-col xl:flex-row gap-5 items-start xl:items-center">
         <h1
           className=" text-start xl:text-right font-semibold leading-[40px]"
           style={{ fontSize: Clamp(1.5, 2.25) }}
@@ -118,7 +113,7 @@ const Registration = () => {
           discretion. Thank you for your understanding and cooperation.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
 import { Montserrat, DM_Sans } from "next/font/google";
 import Landing from "@/components/landing/Landing";
-import Whitby from "@/components/landing/Whitby";
 import Registration from "@/components/landing/Registration";
 import Priscription from "@/components/landing/Priscription";
 import News from "@/components/landing/News";
@@ -29,7 +28,6 @@ export default function Home() {
       </Head>
       <main className="">
         <Landing />
-        <Whitby />
         <Registration />
         <Priscription />
         <News />

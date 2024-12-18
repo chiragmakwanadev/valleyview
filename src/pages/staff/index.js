@@ -13,7 +13,7 @@ const Index = () => {
       <Link
         key={index}
         href={`/staff/${item.slug}`}
-        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] "
+        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] rounded-xl shadow-md"
       >
         <img
           src={item.image || "/default-image.jpg"} // use a default image if no image is provided
@@ -40,28 +40,14 @@ const Index = () => {
           Whitby Doctors at Valleyview Medical | Vallewview Medical Centre
         </title>
       </Head>
-      <div
-        className="padding-x py-[50px] flex flex-col items-center"
-        style={{ paddingTop: Clamp(6, 10) }}
-      >
-        <div className="text-center mb-8">
-          <p style={{ fontSize: Clamp(1, 1.5) }}>
-            Your health connected with care!
-          </p>
-          <h1
-            className="font-bold text-blue-600"
-            style={{ fontSize: Clamp(1.5, 2.5) }}
-          >
-            Our Health Care Specialists
-          </h1>
-        </div>
-
-        <div className="flex justify-center mb-8">
+      <Banner subtitle={"Our Health Care Specialists"} buttonText="Email Us" />
+      <div className="padding-x py-[50px] flex flex-col bg-[#f2f0f0]">
+        <div className="flex mb-8">
           <button
             onClick={() => setActiveTab("doctors")}
             className={`px-6 py-2 ${
               activeTab === "doctors"
-                ? "border-b-[1px] border-b-blue-600 text-black"
+                ? "bg-white p-10 rounded-xl text-black"
                 : "text-gray-500"
             }`}
             style={{ fontSize: Clamp(1, 1.5) }}
@@ -72,7 +58,7 @@ const Index = () => {
             onClick={() => setActiveTab("pharmacists")}
             className={`px-6 py-2 ${
               activeTab === "pharmacists"
-                ? "border-b-[1px] border-b-blue-600 text-black"
+                ? "bg-white p-10 rounded-xl text-black"
                 : "text-gray-500"
             }`}
             style={{ fontSize: Clamp(1, 1.5) }}
@@ -81,7 +67,7 @@ const Index = () => {
           </button>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-5 w-full xl:w-[70%]">
+        <div className="flex flex-wrap items-center gap-5 w-full">
           {activeTab === "doctors"
             ? renderData("doctors")
             : renderData("pharmacists")}

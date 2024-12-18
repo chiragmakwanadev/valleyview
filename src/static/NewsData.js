@@ -4,6 +4,7 @@ export const Newsdata = [
     date: "June 22, 2024",
     tag: "Staffing News",
     title: "Dr. Aloysius’ Departure",
+    slug: "Dr-Aloysius-Departure",
     description: `Valleyview Medical Centre is sad to announce that Dr. Aloysius will be leaving the clinic on August 31st.
 
     After several years of seeing patients in Whitby, Dr. Aloysius has decided to move to another city and will be closing her on-site practice to enable her to spend more time with her family and travel.
@@ -17,6 +18,7 @@ export const Newsdata = [
     date: "March 4, 2024",
     tag: "Staffing News",
     title: "Welcome Dr. Abdullah Khan",
+    slug: "Welcome-Dr-Abdullah-Khan",
     description: `Valleyview Medical Centre is proud to introduce Dr. Abdullah Khan, an esteemed medical professional with over 12 years of experience since his graduation.
 
     Dr. Khan’s journey in the field of medicine has taken him across borders, as he has practiced in both England and Scotland, honing his skills and gaining invaluable experience.

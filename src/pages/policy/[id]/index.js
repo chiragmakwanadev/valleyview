@@ -43,7 +43,7 @@ const PolicySlugPage = ({ policyTopic }) => {
       <Head>
         <title>{policyTopic.topic} | Vallewview Medical Centre</title>
       </Head>
-      <div className="policy-page" style={{ paddingTop: Clamp(3.7, 7.5) }}>
+      <div className="policy-page">
         <Banner subtitle={policyTopic.topic} buttonText="Have a question?" />
         <div className="policy-content padding-x flex flex-col items-center py-[100px]">
           {policyTopic.item.map((policy, index) => (

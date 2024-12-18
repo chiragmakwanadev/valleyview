@@ -11,15 +11,17 @@ const hours = {
 
 const Prescription = () => {
   return (
-    <div className="padding-x py-[80px] pt-[150px] flex flex-col xl:flex-row-reverse gap-10">
+    <div className="padding-x py-[80px] pt-[150px] flex flex-col xl:flex-row-reverse gap-10 bg-[#f2f0f0]">
       <div className="flex flex-col gap-4 w-full xl:w-[40%] rounded-xl">
         <img
           src="/images/ida.png"
           alt=""
           className="w-[120px] h-[40px] object-cover"
         />
-        <div>
-          <p className="text-[18px] font-extralight">EAST WHITBY IDA</p>
+        <div className="flex flex-col gap-2">
+          <p className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
+            EAST WHITBY IDA
+          </p>
           <h1
             className="font-bold text-red-600"
             style={{ fontSize: Clamp(1.5, 2.25) }}
@@ -44,8 +46,8 @@ const Prescription = () => {
 
         <Link href="https://www.bookmyshot.com/9054351100">
           <button
-            className="bg-red-600 px-[20px] py-[8px] mt-[20px] md:mt-[40px] text-white
-           hover:text-red-600 border-[1px] border-transparent hover:border-red-600 hover:bg-white duration-500"
+            className="bg-blue-600 px-[20px] py-[8px] w-full md:w-[250px] mt-[20px] text-white
+            hover:text-blue-600 border-[1px] border-transparent hover:border-blue-600 hover:bg-white duration-500 rounded-xl"
           >
             FILL A PRISCRIPTION
           </button>

@@ -45,9 +45,9 @@ const Index = () => {
                 key={news.id}
                 className="bg-white p-8 shadow-lg rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[32%] h-auto md:h-[400px] flex flex-col justify-between"
               >
-                <div>
-                  <p className="text-gray-500 text-sm">{news.date}</p>
-                  <span className="text-blue-600 text-sm font-normal">
+                <div className="">
+                  <p className="text-gray-500 text-sm pb-2">{news.date}</p>
+                  <span className="text-[12px] text-blue-600 bg-blue-200 w-[250px] px-5 py-2 text-center rounded-3xl">
                     {news.tag}
                   </span>
                   <h2

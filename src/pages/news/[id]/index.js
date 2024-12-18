@@ -57,10 +57,7 @@ const NewsDetail = ({ newsItem }) => {
           >
             {newsItem.date}
           </p>
-          <span
-            className="text-blue-600  font-normal"
-            style={{ fontSize: Clamp(0.75, 1.15) }}
-          >
+          <span className="text-[12px] text-blue-600 bg-blue-200 w-[250px] px-5 py-2 text-center rounded-3xl">
             {newsItem.tag}
           </span>
           <p

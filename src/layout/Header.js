@@ -54,13 +54,13 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-[#0f68df] text-white flex items-center px-[15px] md:px-[20px] xl:px-[40px] 
-      py-[12px] xl:py-[20px] justify-between fixed w-full z-50  ${montserrat.className}`}
+      className={`backdrop-blur-md bg-black/30 text-white flex items-center px-[15px] md:px-[20px] xl:px-[40px] 
+    py-[12px] xl:py-[20px] fixed justify-between w-full z-50 ${montserrat.className}`}
     >
       <div className="flex gap-3 items-center">
         <Link href="/">
           <img
-            src="/images/logo2.jpg"
+            src="/images/logo-nobg.png"
             alt="logo"
             className="w-[250px]"
             style={{ width: Clamp(8, 15) }}
