@@ -28,8 +28,7 @@ const Specialist = () => {
               {item.name}
             </h1>
           </div>
-          <p>
-            {" "}
+          <div>
             {item.description
               .split(/\n\s*\n/) // Splits paragraphs by double line breaks with optional spaces/tabs
               .slice(0, 1) // First two paragraphs
@@ -38,7 +37,7 @@ const Specialist = () => {
                   {paragraph.trim()} {/* Removes extra spaces */}
                 </p>
               ))}
-          </p>
+          </div>
         </div>
       </Link>
     ));

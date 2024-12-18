@@ -51,13 +51,7 @@ const Header = () => {
 
   return (
     <div
-      className={`bg-white text-black flex items-center justify-between px-5 py-2 w-auto z-50 rounded-2xl shadow-xl`}
-      style={{
-        position: "fixed",
-        left: "20px",
-        top: "20px",
-        right: "20px !important",
-      }}
+      className={`bg-white text-black flex items-center justify-between px-5 py-2 w-auto z-50 rounded-2xl shadow-xl fixed left-[20px] right-[20px] top-[20px]`}
     >
       <div className="flex gap-3 items-center w-[22%]">
         <Link href="/">
