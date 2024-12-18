@@ -1,9 +1,10 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Clamp from "../Clamp";
 import { DiCssdeck } from "react-icons/di";
 import { GoDotFill } from "react-icons/go";
 import { LiaDotCircleSolid } from "react-icons/lia";
+import { IoIosArrowUp } from "react-icons/io";
 
 const linkData = [
   {
@@ -33,6 +34,32 @@ const linkData = [
 ];
 
 const Landing = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const HandleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClose = (e) => {
+    if (isOpen && !e.target.closest(".modal-box")) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClose);
+
+    if (isOpen) {
+      document.body.style.backgroundColor = "white";
+    } else {
+      document.body.style.backgroundColor = "";
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClose);
+    };
+  }, [isOpen]);
+
   return (
     <div className="w-full relative">
       <img
@@ -41,10 +68,44 @@ const Landing = () => {
         className="w-full object-cover h-[50vh] xl:h-[92vh]"
       />
       <div className="absolute bottom-[18%] left-[50px] flex flex-col justify-center text-white gap-5">
-        <p className="flex items-center text-[20px] gap-3">
-          <DiCssdeck size={30} />
-          Consult top doctors anytime, from any location.
-        </p>
+        <div className="flex items-center gap-4">
+          <p className="flex items-center text-[20px] gap-3">
+            <DiCssdeck size={30} />
+            Consult top doctors anytime, from any location.
+          </p>
+          <div className="relative">
+            <div
+              className="flex items-center gap-2 border-white border-[1px] px-3 py-1 rounded-full cursor-pointer modal-box"
+              style={{
+                backgroundColor: isOpen ? "white" : "transparent",
+                color: isOpen ? "black" : "white",
+                transition: "0.2s ease-in-out",
+              }}
+              onClick={HandleOpen}
+            >
+              <h1>Select City</h1>
+              <IoIosArrowUp
+                className={`${isOpen ? "rotate-90" : "rotate-0"} duration-500`}
+              />
+            </div>
+            {isOpen && (
+              <ul className="absolute bottom-[50px] bg-white text-black w-[200px] rounded-xl overflow-hidden shadow-lg modal-box">
+                <li className="border-b-[1px] border-black hover:bg-black hover:text-white cursor-pointer text-center">
+                  Toronto
+                </li>
+                <li className="border-b-[1px] border-black hover:bg-black hover:text-white cursor-pointer text-center">
+                  Vancouver
+                </li>
+                <li className="border-b-[1px] border-black hover:bg-black hover:text-white cursor-pointer text-center">
+                  Montreal
+                </li>
+                <li className="hover:bg-black hover:text-white cursor-pointer text-center">
+                  Calgary
+                </li>
+              </ul>
+            )}
+          </div>
+        </div>
         <h1
           className={`font-medium`}
           style={{ fontSize: Clamp(2, 4.6), lineHeight: Clamp(2, 4.6) }}

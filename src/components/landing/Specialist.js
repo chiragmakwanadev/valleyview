@@ -7,7 +7,6 @@ const Specialist = () => {
   const [activeTab, setActiveTab] = useState("doctors");
 
   const renderData = (category) => {
-    console.log("first", Data);
     return Data[0][category].map((item, index) => (
       <Link
         key={index}
