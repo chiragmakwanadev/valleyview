@@ -61,7 +61,7 @@ const Header = () => {
       <div className="flex xl:hidden">
         <HamburgerMenu />
       </div>
-      <ul className="hidden xl:flex gap-1 2xl:gap-7 font-medium text-[12px] 2xl:text-[16px]">
+      <ul className="hidden xl:flex gap-3 2xl:gap-7 font-medium text-[14px] 2xl:text-[16px]">
         <li
           className="group relative py-[5px] cursor-pointer duration-300"
           onMouseEnter={handleStaffMouseEnter}
@@ -135,7 +135,7 @@ const Header = () => {
           <span className="absolute bottom-[5px] left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
       </ul>
-      <ul className="flex items-center gap-3">
+      <ul className="hidden xl:flex items-center gap-3">
         <li
           className="group relative px-[20px] py-[5px] bg-transparent border-black border-[1px] hover:bg-black
          hover:text-white cursor-pointer duration-300 rounded-full"

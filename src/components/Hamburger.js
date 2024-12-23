@@ -45,12 +45,12 @@ const HamburgerMenu = () => {
 
   return (
     <div>
-      <button className="xl:hidden text-white" onClick={toggleMenu}>
+      <button className=" xl:hidden text-black" onClick={toggleMenu}>
         <RxHamburgerMenu size={24} />
       </button>
 
       <div
-        className={`fixed top-0 right-0 w-full bg-[#0f68df] text-white h-full z-50 transform ${
+        className={`fixed top-0 right-0 w-full bg-white text-black h-full z-50 transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300`}
       >
@@ -62,7 +62,7 @@ const HamburgerMenu = () => {
 
         <ul className="flex flex-col space-y-4 p-5">
           <li
-            className="flex justify-between items-center px-5 py-3 border-b-[1px] border-white"
+            className="flex justify-between items-center px-5 py-3 border-b-[1px] border-black"
             onClick={toggleStaffDropdown}
           >
             <Link href="/staff">OUR STAFF</Link>
@@ -86,7 +86,7 @@ const HamburgerMenu = () => {
           )}
 
           <li
-            className="flex justify-between items-center px-5 py-3 border-b-[1px] border-white"
+            className="flex justify-between items-center px-5 py-3 border-b-[1px] border-black"
             onClick={togglePolicyDropdown}
           >
             <Link href="/policy/clinic-policies">CLINIC POLICIES</Link>
@@ -104,10 +104,10 @@ const HamburgerMenu = () => {
             </ul>
           )}
 
-          <li className="px-5 py-3 border-b-[1px] border-white">
+          <li className="px-5 py-3 border-b-[1px] border-black">
             <Link href="/news">NEWS</Link>
           </li>
-          <li className="px-5 py-3 border-b-[1px] border-white">
+          <li className="px-5 py-3 border-b-[1px] border-black">
             <Link href="/contact">CONTACT US</Link>
           </li>
           <li className="px-5 py-2 w-[250px] bg-blue-400 rounded-md mt-5">

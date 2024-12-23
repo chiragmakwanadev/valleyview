@@ -15,9 +15,9 @@ const Dates = [
 
 const Registration = () => {
   return (
-    <div className="bg-[#f2f0f0] pt-[150px]">
-      <div className="bg-white margin-x mb-[50px] p-7 rounded-xl flex flex-col gap-1 shadow-xl">
-        <div className="flex flex-row-reverse bg-white rounded-xl gap-[40px]">
+    <div className="bg-[#f2f0f0] pt-[50px] md:pt-[100px] xl:pt-[150px]">
+      <div className="bg-white margin-x mb-[50px] p-4 xl:p-7 rounded-xl flex flex-col gap-1 shadow-xl">
+        <div className="flex flex-col xl:flex-row-reverse bg-white rounded-xl gap-[40px]">
           <div className="flex flex-col w-full xl:w-[50%]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1347128752056!2d-78.901594!3d43.889603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d525cd06d2595d%3A0x9f6c4a3af69bb80d!2s1916%20Dundas%20St%20E%2C%20Whitby%2C%20ON%20L1N%202L6%2C%20Canada!5e0!3m2!1sen!2sca!4v1699633078210!5m2!1sen!2sca"
@@ -28,12 +28,12 @@ const Registration = () => {
               style={{ height: Clamp(15, 28) }}
             ></iframe>
           </div>
-          <div className="flex flex-col  gap-4 w-[50%] justify-between">
+          <div className="flex flex-col  gap-4 w-full xl:w-[50%] justify-between">
             <div className="flex flex-col gap-5">
-              <h1 className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
+              <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-200 w-auto xl:w-[250px] p-[5px] text-center rounded-3xl">
                 New Patient Registration
               </h1>
-              <p className="text-[18px]">
+              <p style={{ fontSize: Clamp(1, 1.25) }}>
                 Due to high demand, we are temporarily suspending online patient
                 registrations. We are still accepting new patients, please
                 register in-person at the clinic.
@@ -56,10 +56,11 @@ const Registration = () => {
           <img
             src="/images/landing2.jpg"
             alt=""
-            className="w-[50%] object-cover rounded-xl"
+            className="w-full xl:w-[50%] object-cover rounded-xl"
+            style={{ height: Clamp(15, 35) }}
           />
           <div className="flex flex-col gap-2 w-full xl:w-[50%]">
-            <h1 className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
+            <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-200 w-auto xl:w-[250px] p-[5px] text-center rounded-3xl">
               Visit a Doctor
             </h1>
             <p
@@ -80,7 +81,7 @@ const Registration = () => {
               <h1 className="font-bold text-[18px]">NOTE:</h1>
               Times may vary depending on doctor’s availability
             </span>
-            <p style={{ fontSize: Clamp(0.75, 1) }}>
+            <p style={{ fontSize: Clamp(1, 1.25) }}>
               As a community-oriented medical clinic in Whitby, we offer a wide
               range of services designed to address all of your health care
               needs. From routine check-ups, scheduled appointments to see your
@@ -97,9 +98,9 @@ const Registration = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white text-black padding-x py-[80px] flex flex-col xl:flex-row gap-5 items-start xl:items-center">
+      <div className="bg-white text-black padding-x py-[80px] flex flex-col xl:flex-row gap-5 items-center xl:items-center">
         <h1
-          className=" text-start xl:text-right font-semibold leading-[40px]"
+          className=" text-center xl:text-right font-semibold leading-[40px]"
           style={{ fontSize: Clamp(1.5, 2.25) }}
         >
           Appointment <br /> Cancellation <br /> Policy

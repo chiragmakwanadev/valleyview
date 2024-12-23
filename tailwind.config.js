@@ -18,12 +18,12 @@ export const plugins = [
   function ({ addUtilities }) {
     addUtilities({
       ".padding-x": {
-        "padding-left": Clamp(1, 15),
-        "padding-right": Clamp(1, 15),
+        "padding-left": Clamp(0.5, 15),
+        "padding-right": Clamp(0.5, 15),
       },
       ".margin-x": {
-        "margin-left": Clamp(1, 15),
-        "margin-right": Clamp(1, 15),
+        "margin-left": Clamp(0.5, 15),
+        "margin-right": Clamp(0.5, 15),
       },
     });
   },

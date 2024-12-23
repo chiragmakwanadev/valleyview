@@ -4,7 +4,7 @@ import Clamp from "../Clamp";
 const Why = () => {
   return (
     <div className="padding-x py-[100px] bg-[#f2f0f0]">
-      <div className="bg-white text-black flex flex-col xl:flex-row gap-10 p-10 rounded-xl">
+      <div className="bg-white text-black flex flex-col xl:flex-row gap-10 p-5 xl:p-10 rounded-xl">
         <img
           src="/images/why.jpg"
           alt=""
@@ -16,7 +16,7 @@ const Why = () => {
           className="w-full xl:w-[50%] object-cover h-[300px] xl:h-auto rounded-2xl xl:rounded-none block xl:hidden"
         />
         <div className="w-full xl:w-[50%] flex flex-col gap-5">
-          <p className="text-[18px] text-blue-600 bg-blue-100 w-[350px] p-[5px] text-center rounded-3xl">
+          <p className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-100 w-full xl:w-[350px] p-[5px] text-center rounded-3xl">
             Your health connected with care!
           </p>
           <h1 className="font-normal" style={{ fontSize: Clamp(1.5, 2.5) }}>

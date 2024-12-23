@@ -11,7 +11,7 @@ const Specialist = () => {
       <Link
         key={index}
         href={`/staff/${item.slug}`}
-        className="min-w-[300px] w-full sm:w-[31%] p-6 bg-[#f2f0f0] rounded-xl flex flex-col shadow-xl "
+        className="min-w-[250px] md:min-w-[300px] w-full sm:w-[31%] p-6 bg-[#f2f0f0] rounded-xl flex flex-col shadow-xl "
       >
         <img
           src={item.image || "/default-image.jpg"} // use a default image if no image is provided
@@ -45,7 +45,7 @@ const Specialist = () => {
   return (
     <div className="padding-x py-[50px] flex flex-col">
       <div className="text-center mb-8 flex flex-col items-center">
-        <p className="text-[18px] text-blue-600 bg-blue-100 px-5 py-2 text-center rounded-3xl">
+        <p className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-100 px-5 py-2 text-center rounded-3xl">
           Your health connected with care!
         </p>
         <h1

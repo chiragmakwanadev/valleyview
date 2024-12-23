@@ -65,45 +65,52 @@ const Landing = () => {
       <img
         src="/images/landing3.jpg"
         alt=""
-        className="w-full object-cover h-[50vh] xl:h-[92vh]"
+        className="w-full object-cover h-[92vh]"
       />
-      <div className="absolute bottom-[18%] left-[50px] flex flex-col justify-center text-white gap-5">
-        <div className="flex items-center gap-4">
-          <p className="flex items-center text-[20px] gap-3">
+      <div className="absolute bottom-[45%] md:bottom-[30%] xl:bottom-[18%] left-[20px] xl:left-[50px] flex flex-col justify-center text-white gap-5">
+        <div className="flex flex-col gap-6 xl:gap-4">
+          <p className="flex items-center  text-[16px] xl:text-[20px] gap-3">
             <DiCssdeck size={30} />
-            Consult top doctors anytime, from any location.
+            Consult top doctors anytime, from any location in Canada.
           </p>
-          <div className="relative">
-            <div
-              className="flex items-center gap-2 border-white border-[1px] px-3 py-1 rounded-full cursor-pointer modal-box"
-              style={{
-                backgroundColor: isOpen ? "white" : "transparent",
-                color: isOpen ? "black" : "white",
-                transition: "0.2s ease-in-out",
-              }}
-              onClick={HandleOpen}
-            >
-              <h1>Select City</h1>
-              <IoIosArrowUp
-                className={`${isOpen ? "rotate-90" : "rotate-0"} duration-500`}
-              />
-            </div>
-            {isOpen && (
-              <ul className="absolute bottom-[50px] bg-white text-black w-[200px] rounded-xl overflow-hidden shadow-lg modal-box">
-                <li className="border-b-[1px] border-black hover:bg-black hover:text-white cursor-pointer text-center">
+          <div className="flex flex-col md:flex-row items-start xl:items-center text-white gap-2 xl:gap-4">
+            <p className="text-[14px] md:text-[16px] xl:text-[18px] font-medium">
+              Select Your location:
+            </p>
+            <div className="flex gap-2 flex-wrap">
+              <Link href="/clinic/Toronto">
+                <div
+                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                >
                   Toronto
-                </li>
-                <li className="border-b-[1px] border-black hover:bg-black hover:text-white cursor-pointer text-center">
+                </div>
+              </Link>
+              <Link href="/clinic/Vancouver">
+                <div
+                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                >
                   Vancouver
-                </li>
-                <li className="border-b-[1px] border-black hover:bg-black hover:text-white cursor-pointer text-center">
+                </div>
+              </Link>
+              <Link href="/clinic/Montreal">
+                <div
+                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                >
                   Montreal
-                </li>
-                <li className="hover:bg-black hover:text-white cursor-pointer text-center">
+                </div>
+              </Link>
+              <Link href="/clinic/Calgary">
+                <div
+                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                >
                   Calgary
-                </li>
-              </ul>
-            )}
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
         <h1
@@ -121,7 +128,7 @@ const Landing = () => {
         >
           <button
             className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[5px] xl:py-[8px] text-white hover:text-black  rounded-full
-            border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full"
+            border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-[150px]"
             style={{ fontSize: Clamp(0.75, 1) }}
           >
             <LiaDotCircleSolid size={20} />
@@ -129,7 +136,7 @@ const Landing = () => {
           </button>
         </Link>
       </div>
-      <div className="absolute bottom-[-70px] right-[12.5%] left-[12.5%] bg-white p-[30px] rounded-[10px] shadow-xl">
+      <div className="xl:absolute bottom-[-120px] xl:bottom-[-70px] right-0 xl:right-[12.5%] left-0 xl:left-[12.5%] bg-white p-[30px] rounded-none xl:rounded-[10px] shadow-xl">
         <div className="flex flex-col">
           <h1
             className="font-medium text-black text-center"

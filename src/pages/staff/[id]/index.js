@@ -13,8 +13,8 @@ const StaffDetail = ({ staffMember }) => {
       </Head>
       <div className="flex flex-col w-full items-center">
         <Banner subtitle={staffMember.name} buttonText="Email Us" />
-        <div className="padding-x py-[50px] flex flex-col gap-5 w-full xl:w-[80%]">
-          <div className="flex flex-row gap-5">
+        <div className="padding-x py-[50px] flex flex-col gap-0 md:gap-5 w-full xl:w-[80%]">
+          <div className="flex flex-col md:flex-row gap-5">
             <div className="w-full md:w-[30%] flex flex-col gap-3">
               <img
                 src={staffMember.image || "/default-image.jpg"}
@@ -23,7 +23,7 @@ const StaffDetail = ({ staffMember }) => {
               />
             </div>
 
-            <div className="text-[18px] w-[70%] flex flex-col gap-3">
+            <div className="text-[18px] w-full md:w-[70%] flex flex-col gap-3">
               <h1
                 className="font-bold text-blue-600"
                 style={{ fontSize: Clamp(1, 1.5) }}

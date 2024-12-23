@@ -28,7 +28,7 @@ const Banner = ({
       </div> */}
 
       <div className="absolute top-[20%] inset-0 flex flex-col items-center justify-center text-center text-black px-4 border-none">
-        <h1 className="text-[18px] font-normal mb-2 bg-white px-5 py-2 rounded-full">
+        <h1 className="text-[16px] xl:text-[18px] font-normal mb-2 bg-white px-5 py-2 rounded-full">
           Your health connected with care!
         </h1>
         <p className="font-bold mb-2" style={{ fontSize: Clamp(1.4, 3) }}>

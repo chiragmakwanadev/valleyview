@@ -51,14 +51,14 @@ const PolicySlugPage = ({ policyTopic }) => {
               {policy.title && (
                 <h2
                   className="font-semibold text-blue-600 pb-3"
-                  style={{ fontSize: Clamp(1, 1.5) }}
+                  style={{ fontSize: Clamp(1.25, 1.75) }}
                 >
                   {policy.title}
                 </h2>
               )}
               <p
                 className="text-[18px]"
-                style={{ whiteSpace: "pre-line", fontSize: Clamp(0.75, 1) }}
+                style={{ whiteSpace: "pre-line", fontSize: Clamp(1, 1.5) }}
               >
                 {policy.description}
               </p>
