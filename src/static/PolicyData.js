@@ -264,7 +264,7 @@ export const PolicyData = {
   "Test Results Notification": [
     {
       topic: "Test Results Notification",
-      slug: "test-results-notification",
+      slug: "test-results-notificationn",
       item: [
         {
           description: `In order to manage the high volume of test results received at Valleyview Medical Centre on a daily basis, we would like to inform you of our notification process.

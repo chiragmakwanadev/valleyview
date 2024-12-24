@@ -80,7 +80,7 @@ const Landing = () => {
             <div className="flex gap-2 flex-wrap">
               <Link href="/clinic/Toronto">
                 <div
-                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+                  className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
       border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
                 >
                   Toronto
@@ -88,7 +88,7 @@ const Landing = () => {
               </Link>
               <Link href="/clinic/Vancouver">
                 <div
-                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+                  className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
       border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
                 >
                   Vancouver
@@ -96,7 +96,7 @@ const Landing = () => {
               </Link>
               <Link href="/clinic/Montreal">
                 <div
-                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+                  className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
       border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
                 >
                   Montreal
@@ -104,7 +104,7 @@ const Landing = () => {
               </Link>
               <Link href="/clinic/Calgary">
                 <div
-                  className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-white hover:text-black rounded-full
+                  className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
       border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
                 >
                   Calgary

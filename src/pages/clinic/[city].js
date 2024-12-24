@@ -71,7 +71,17 @@ const ClinicDetail = () => {
     },
   ];
 
-  const clinic = clinicData[city];
+  const clinic = city ? clinicData[city] : null;
+
+  if (!clinic) {
+    return (
+      <div>
+        <p>
+          Clinic data is not available. Please select a valid clinic location.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -79,39 +89,59 @@ const ClinicDetail = () => {
         <img
           src="/images/landing3.jpg"
           alt=""
-          className="w-full object-cover h-[50vh] xl:h-[92vh]"
+          className="w-full object-cover h-[92vh]"
         />
-        <div className="absolute bottom-[18%] left-[50px] flex flex-col justify-center text-white gap-5">
-          <div className="flex flex-col gap-4">
-            <p className="flex items-center text-[20px] gap-3">
+        <div className="absolute bottom-[45%] md:bottom-[30%] xl:bottom-[18%] left-[20px] xl:left-[50px] flex flex-col justify-center text-white gap-5">
+          <div className="flex flex-col gap-6 xl:gap-4">
+            <p className="flex items-center  text-[16px] xl:text-[20px] gap-3">
               <DiCssdeck size={30} />
               Consult top doctors anytime, from any location in Canada.
             </p>
-            <div className="flex flex-row items-center text-white gap-4">
-              <p className="text-[18px] font-medium">Select Your location:</p>
-              <div className="flex gap-2">
-                {Object.keys(clinicData).map((clinicCity) => (
-                  <Link key={clinicCity} href={`/clinic/${clinicCity}`}>
-                    <div
-                      className={`px-[20px] py-[5px] rounded-full border-[1px] text-center w-full cursor-pointer duration-200 flex items-center gap-2 justify-center ${
-                        city === clinicCity
-                          ? "bg-white text-black border-white"
-                          : "bg-transparent text-white hover:bg-white hover:text-black border-white"
-                      }`}
-                    >
-                      {clinicCity}
-                    </div>
-                  </Link>
-                ))}
+            <div className="flex flex-col md:flex-row items-start xl:items-center text-white gap-2 xl:gap-4">
+              <p className="text-[14px] md:text-[16px] xl:text-[18px] font-medium">
+                Select Your location:
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <Link href="/clinic/Toronto">
+                  <div
+                    className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                  >
+                    Toronto
+                  </div>
+                </Link>
+                <Link href="/clinic/Vancouver">
+                  <div
+                    className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                  >
+                    Vancouver
+                  </div>
+                </Link>
+                <Link href="/clinic/Montreal">
+                  <div
+                    className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                  >
+                    Montreal
+                  </div>
+                </Link>
+                <Link href="/clinic/Calgary">
+                  <div
+                    className="bg-white px-[10px] xl:px-[20px] py-[3px] xl:py-[5px] text-black rounded-full
+      border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full cursor-pointer"
+                  >
+                    Calgary
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
           <h1
-            className="font-medium"
+            className={`font-medium`}
             style={{ fontSize: Clamp(2, 4.6), lineHeight: Clamp(2, 4.6) }}
           >
-            WELCOME TO VALLEYVIEW <br /> MEDICAL CENTRE (
-            {clinic?.name || "City"})
+            WELCOME TO VALLEYVIEW <br /> MEDICAL CENTRE ({clinic.name})
           </h1>
           <p className="text-[24px]" style={{ fontSize: Clamp(1, 1.5) }}>
             Your health connected with care!
@@ -122,7 +152,7 @@ const ClinicDetail = () => {
           >
             <button
               className="bg-transparent hover:bg-white px-[10px] xl:px-[20px] py-[5px] xl:py-[8px] text-white hover:text-black  rounded-full
-          border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-full"
+            border-[1px] border-white duration-200 flex items-center gap-2 text-center justify-center w-[150px]"
               style={{ fontSize: Clamp(0.75, 1) }}
             >
               <LiaDotCircleSolid size={20} />
@@ -130,7 +160,7 @@ const ClinicDetail = () => {
             </button>
           </Link>
         </div>
-        <div className="absolute bottom-[-70px] right-[12.5%] left-[12.5%] bg-white p-[30px] rounded-[10px] shadow-xl">
+        <div className="xl:absolute bottom-[-120px] xl:bottom-[-70px] right-0 xl:right-[12.5%] left-0 xl:left-[12.5%] bg-white p-[30px] rounded-none xl:rounded-[10px] shadow-xl">
           <div className="flex flex-col">
             <h1
               className="font-medium text-black text-center"
@@ -148,7 +178,7 @@ const ClinicDetail = () => {
                 <Link key={index} href={href}>
                   <h1
                     className="bg-transparent border-black hover:bg-black px-[22px] py-[8px] text-black hover:text-white w-full text-center rounded-full
-          border-[1px] duration-200 flex items-center gap-2"
+            border-[1px] duration-200 flex items-center gap-2"
                   >
                     <GoDotFill />
                     {text}

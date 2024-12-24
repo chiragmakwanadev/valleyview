@@ -3,18 +3,16 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import { PolicyData } from "@/static/PolicyData";
-import { Data as StaffData } from "@/static/StaffData";
+// import { Data as StaffData } from "@/static/StaffData";
 import { useRouter } from "next/router";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ data }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPolicyOpen, setIsPolicyOpen] = useState(false);
   const [isStaffOpen, setIsStaffOpen] = useState(false);
 
   const policyTopics = Object.keys(PolicyData);
-  const doctors = StaffData[0].doctors;
-  const pharmacists = StaffData[0].pharmacists;
 
   const router = useRouter();
 
@@ -70,15 +68,15 @@ const HamburgerMenu = () => {
           </li>
           {isStaffOpen && (
             <ul className="pl-5 space-y-2">
-              {doctors.map((doctor) => (
-                <li key={doctor.slug}>
-                  <Link href={`/staff/${doctor.slug}`}>{doctor.name}</Link>
-                </li>
-              ))}
-              {pharmacists.map((pharmacist) => (
-                <li key={pharmacist.slug}>
-                  <Link href={`/staff/${pharmacist.slug}`}>
-                    Pharmacist {pharmacist.name}
+              {data.map((items, index) => (
+                <li key={index}>
+                  <Link href={`/staff/${items.slug.current}`}>
+                    {items.categories &&
+                    items.categories.some((category) =>
+                      category.toLowerCase().includes("pharmacist")
+                    )
+                      ? `Pharmacist ${items.name}`
+                      : items.name}
                   </Link>
                 </li>
               ))}
