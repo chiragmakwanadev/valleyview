@@ -75,7 +75,7 @@ const Landing = () => {
           </p>
           <div className="flex flex-col md:flex-row items-start xl:items-center text-white gap-2 xl:gap-4">
             <p className="text-[14px] md:text-[16px] xl:text-[18px] font-medium">
-              Select Your location:
+              Select Your location :
             </p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/clinic/Toronto">
