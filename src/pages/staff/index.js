@@ -52,8 +52,6 @@ const Index = () => {
   const renderData = (category) => {
     const staffList = staffData[category];
 
-    console.log("checking", staffList);
-
     return staffList?.map((item, index) => (
       <Link
         key={index}

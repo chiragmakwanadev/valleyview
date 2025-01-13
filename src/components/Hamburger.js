@@ -80,6 +80,9 @@ const HamburgerMenu = ({ data }) => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/assistant">Staff Assistant</Link>
+              </li>
             </ul>
           )}
 

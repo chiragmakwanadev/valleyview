@@ -27,13 +27,15 @@ export const poppins = Poppins({
 });
 
 export default function Home() {
+  const location = localStorage.getItem("location");
+
   return (
     <div className={` ${poppins.variable}`}>
       <Head>
-        <title>Vallewview Medical Centre</title>
+        <title>Vallewview Medical Centre {location}</title>
       </Head>
-      <main className="">
-        <Landing />
+      <main>
+        <Landing location={location} />
         <Registration />
         <Priscription />
         <News />

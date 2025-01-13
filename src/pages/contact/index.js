@@ -2,7 +2,7 @@ import Banner from "@/components/Banner";
 import Clamp from "@/components/Clamp";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Dates = [
   {
@@ -17,14 +17,40 @@ const Dates = [
 ];
 
 const Index = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    city: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const mailto = `mailto:info@valleyviewmedical.ca?subject=New Inquiry from ${formData.firstName} ${formData.lastName}&body=${encodeURIComponent(
+      `Name: ${formData.firstName} ${formData.lastName}
+Phone: ${formData.phone}
+Email: ${formData.email}
+City: ${formData.city}
+Message: ${formData.message}`
+    )}`;
+    window.location.href = mailto;
+  };
+
   return (
     <>
       <Head>
         <title>Contact Us | Vallewview Medical Centre</title>
       </Head>
-      <div style={{ paddingTop: Clamp(3.7, 7.5) }}>
+      <div>
         <Banner subtitle="Contact Us" buttonText="Email Us" />
-        <div className="flex flex-col xl:flex-row w-full gap-10 padding-x">
+        <div className="flex flex-col xl:flex-row w-full gap-10 padding-x py-[50px]">
           <div className="flex flex-col w-full xl:w-[50%]">
             <p className="text-[16px] font-thin">
               Accessible Parking Available
@@ -50,7 +76,77 @@ const Index = () => {
               style={{ height: Clamp(15, 28) }}
             ></iframe>
           </div>
-          <div className="flex flex-col w-full xl:w-[50%]">
+          <div className="w-full xl:w-[50%]">
+            <h1 className="text-[24px] font-semibold py-5 text-blue-600">
+              New Patient Registration Form
+            </h1>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+                className="border px-4 py-2 rounded-md"
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+                className="border px-4 py-2 rounded-md"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="border px-4 py-2 rounded-md"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="border px-4 py-2 rounded-md"
+              />
+              <select
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                required
+                className="border px-4 py-2 rounded-md"
+              >
+                <option value="">Select City</option>
+                <option value="Whitby">Whitby</option>
+                <option value="Oshawa">Oshawa</option>
+              </select>
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="border px-4 py-2 rounded-md h-32"
+              ></textarea>
+              <button
+                type="submit"
+                className="bg-blue-600 px-4 py-2 text-white rounded-md hover:bg-blue-700"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+        <div className="flex flex-row-reverse gap-4 w-full  padding-x pb-[50px]">
+          <div className="w-[50%]">
             <p className="text-[16px] font-thin">Valleyview Medical Centre</p>
             <h1
               className=" font-medium text-blue-600"
@@ -76,6 +172,8 @@ const Index = () => {
               <h1 className="font-bold text-[18px]">NOTE:</h1>
               Times may vary depending on doctor’s availability
             </span>
+          </div>
+          <div className="w-[50%]">
             <p className="pt-[30px]" style={{ fontSize: Clamp(1, 1.25) }}>
               As a community-oriented medical clinic in Whitby, we offer a wide
               range of services designed to address all of your health care

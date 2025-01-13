@@ -56,7 +56,7 @@ const Index = () => {
       <Link
         key={index}
         href={`/staff/${item.slug.current}`}
-        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] rounded-xl shadow-md"
+        className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] rounded-xl shadow-xl"
       >
         <img
           src={urlFor(item.image.asset).url()}
@@ -85,14 +85,13 @@ const Index = () => {
           Whitby Doctors at Valleyview Medical | Valleyview Medical Centre
         </title>
       </Head>
-      <Banner subtitle={"Our Health Care Specialists"} buttonText="Email Us" />
-      <div className="padding-x py-[50px] flex flex-col bg-[#f2f0f0]">
+      <div className="padding-x py-[50px] flex flex-col bg-white">
         <div className="flex mb-8">
           <button
             onClick={() => setActiveTab("doctors")}
             className={`px-6 py-2 ${
               activeTab === "doctors"
-                ? "bg-white p-10 rounded-xl text-black"
+                ? "bg-[#f2f0f0] p-10 rounded-xl text-black"
                 : "text-gray-500"
             }`}
             style={{ fontSize: Clamp(1, 1.5) }}
@@ -103,7 +102,7 @@ const Index = () => {
             onClick={() => setActiveTab("pharmacists")}
             className={`px-6 py-2 ${
               activeTab === "pharmacists"
-                ? "bg-white p-10 rounded-xl text-black"
+                ? "bg-[#f2f0f0] p-10 rounded-xl text-black"
                 : "text-gray-500"
             }`}
             style={{ fontSize: Clamp(1, 1.5) }}

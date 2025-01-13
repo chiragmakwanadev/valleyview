@@ -34,9 +34,9 @@ const Registration = () => {
                 New Patient Registration
               </h1>
               <p style={{ fontSize: Clamp(1, 1.25) }}>
-                Due to high demand, we are temporarily suspending online patient
-                registrations. We are still accepting new patients, please
-                register in-person at the clinic.
+                You can conveniently register as a new patient using our online
+                platform or visit us in person at the clinic. We're excited to
+                welcome you to Valleyview Medical Centre.
               </p>
             </div>
             <div className="flex flex-col gap-1">
