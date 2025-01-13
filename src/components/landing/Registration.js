@@ -35,8 +35,8 @@ const Registration = () => {
               </h1>
               <p style={{ fontSize: Clamp(1, 1.25) }}>
                 You can conveniently register as a new patient using our online
-                platform or visit us in person at the clinic. We're excited to
-                welcome you to Valleyview Medical Centre.
+                platform or visit us in person at the clinic. We&apos;re excited
+                to welcome you to Valleyview Medical Centre.
               </p>
             </div>
             <div className="flex flex-col gap-1">
