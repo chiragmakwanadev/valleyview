@@ -9,33 +9,37 @@ import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   const [location, setLocation] = useState(null);
+  const [hasReloaded, setHasReloaded] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    const storedLocation = localStorage.getItem("location");
-    if (storedLocation) {
-      setLocation(storedLocation);
-    } else if (!router.query.location) {
-      setLocation(null);
-    }
+    const handleReload = () => {
+      setHasReloaded(true);
+    };
+
+    window.addEventListener("beforeunload", handleReload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleReload);
+    };
   }, []);
 
   useEffect(() => {
-    if (router.query.location) {
-      setLocation(router.query.location);
-      localStorage.setItem("location", router.query.location);
-    } else {
+    if (hasReloaded) {
       localStorage.removeItem("location");
-      router.replace({ pathname: "/" });
+      setLocation(null);
+    } else {
+      const storedLocation = localStorage.getItem("location");
+      if (storedLocation) {
+        setLocation(storedLocation);
+      }
     }
-  }, [router.query.location, location]);
+  }, [hasReloaded]);
 
   const handleSelectLocation = (selectedLocation) => {
     setLocation(selectedLocation);
-    router.push({
-      pathname: "/",
-      query: { location: selectedLocation },
-    });
+    localStorage.setItem("location", selectedLocation);
+    router.push("/", undefined, { shallow: true });
   };
 
   if (!location) {
@@ -53,7 +57,7 @@ function MyApp({ Component, pageProps }) {
         <FaWhatsapp />
       </Link>
       <Header />
-      <Component {...pageProps} />
+      <Component {...pageProps} location={location} />
       <Footer />
     </div>
   );
