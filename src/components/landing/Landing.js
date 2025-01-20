@@ -42,10 +42,14 @@ const Landing = ({ location }) => {
   const handleCityChange = (city) => {
     localStorage.setItem("location", city);
     setActiveCity(city);
+    router.push({
+      pathname: router.pathname,
+      query: { location: city },
+    });
   };
 
   useEffect(() => {
-    const savedCity = localStorage.getItem("location") || "Whitby";
+    const savedCity = localStorage.getItem("location");
     setActiveCity(savedCity);
   }, []);
 
@@ -132,8 +136,8 @@ const Landing = ({ location }) => {
             {linkData.map(({ href, text }, index) => (
               <Link key={index} href={href}>
                 <h1
-                  className="bg-red-700 border-transparent hover:bg-red-600 px-[27px] py-[12px] text-white hover:text-white w-full text-center rounded-full
-            border-[1px] duration-200 flex items-center gap-2 text-[18px]"
+                  className="bg-red-700 border-transparent hover:bg-red-600 px-[20px] py-[10px] text-white hover:text-white w-full text-center rounded-full
+            border-[1px] duration-200 flex items-center gap-2 text-[16px]"
                 >
                   {text}
                 </h1>

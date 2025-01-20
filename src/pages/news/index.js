@@ -1,48 +1,24 @@
 import Banner from "@/components/Banner";
 import Clamp from "@/components/Clamp";
+import { Newsdata } from "@/static/NewsData";
 import Head from "next/head";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { PortableText, createClient } from "next-sanity";
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: "production",
-  useCdn: true,
-  apiVersion: "2024-12-23",
-});
+import React, { useState } from "react";
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
-  const [posts, setPosts] = useState([]);
-  const totalPages = Math.ceil(posts.length / itemsPerPage);
+  const totalPages = Math.ceil(Newsdata.length / itemsPerPage);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const data = await client.fetch(`
-        *[_type == "post"]{
-          title,
-          slug,
-          "categories": categories[]->title, 
-          publishedAt,
-          body
-        }
-      `);
-        setPosts(data);
-      } catch (error) {
-        console.error("Error fetching posts: ", error);
-      }
-    };
-
-    fetchPosts();
-  }, []);
-
-  const currentItems = posts.slice(
+  const currentItems = Newsdata.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+
+  const truncateText = (text) => {
+    const words = text.split(" ");
+    return words.length > 25 ? `${words.slice(0, 25).join(" ")}...` : text;
+  };
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
@@ -50,39 +26,6 @@ const Index = () => {
 
   const handlePreviousPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
-  };
-
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.toLocaleString("default", { month: "long" });
-    const year = date.getFullYear();
-
-    const daySuffix = (day) => {
-      if (day > 3 && day < 21) return "th"; // Covers 4th-20th
-      switch (day % 10) {
-        case 1:
-          return "st";
-        case 2:
-          return "nd";
-        case 3:
-          return "rd";
-        default:
-          return "th";
-      }
-    };
-
-    return `${day}${daySuffix(day)} ${month} ${year}`;
-  };
-
-  const getFirstParagraph = (content) => {
-    const firstParagraph = content.find((block) => block._type === "block");
-
-    if (firstParagraph) {
-      return [firstParagraph];
-    }
-
-    return [];
   };
 
   return (
@@ -93,21 +36,19 @@ const Index = () => {
           Centre
         </title>
       </Head>
-      <div>
+      <div style={{ paddingTop: Clamp(3.7, 7.5) }}>
         <Banner subtitle="LATEST NEWS AND UPDATES" buttonText="Email Us" />
         <div className="padding-x py-[50px]">
           <div className="flex flex-row flex-wrap justify-center w-full gap-6">
-            {currentItems.map((news, index) => (
+            {currentItems.map((news) => (
               <div
-                key={index}
-                className="bg-white p-8 shadow-lg rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[32%] h-auto md:h-[400px] flex flex-col justify-between"
+                key={news.id}
+                className="bg-white p-8 shadow-lg rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[31%] h-auto md:h-[400px] flex flex-col justify-between"
               >
                 <div className="">
-                  <p className="text-gray-500 text-sm pb-2">
-                    {formatDate(news.publishedAt)}
-                  </p>
+                  <p className="text-gray-500 text-sm pb-2">{news.date}</p>
                   <span className="text-[12px] text-blue-600 bg-blue-200 w-[250px] px-5 py-2 text-center rounded-3xl">
-                    {news.categories}
+                    {news.tag}
                   </span>
                   <h2
                     className="font-bold text-blue-600 my-2"
@@ -116,16 +57,10 @@ const Index = () => {
                     {news.title}
                   </h2>
                 </div>
-                <div className="text-[16px] mb-4">
-                  <PortableText
-                    value={
-                      news.body && news.body.length
-                        ? getFirstParagraph(news.body)
-                        : news.body
-                    }
-                  />
-                </div>
-                <Link href={`/news/${news.slug.current}`} className="w-full">
+                <p className="text-[16px] mb-4">
+                  {truncateText(news.description)}
+                </p>
+                <Link href={`/news/${news.id}`} className="w-full">
                   <button className="bg-blue-600 text-white px-4 py-2 rounded-lg mt-[40px] w-full">
                     Read More
                   </button>

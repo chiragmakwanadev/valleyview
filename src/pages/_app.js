@@ -15,6 +15,8 @@ function MyApp({ Component, pageProps }) {
     const storedLocation = localStorage.getItem("location");
     if (storedLocation) {
       setLocation(storedLocation);
+    } else if (!router.query.location) {
+      setLocation(null);
     }
   }, []);
 
@@ -22,8 +24,11 @@ function MyApp({ Component, pageProps }) {
     if (router.query.location) {
       setLocation(router.query.location);
       localStorage.setItem("location", router.query.location);
+    } else {
+      localStorage.removeItem("location");
+      router.replace({ pathname: "/" });
     }
-  }, [router.query.location]);
+  }, [router.query.location, location]);
 
   const handleSelectLocation = (selectedLocation) => {
     setLocation(selectedLocation);

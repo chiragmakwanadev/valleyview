@@ -1,72 +1,27 @@
 import Banner from "@/components/Banner";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { Data } from "@/static/StaffData";
 import Link from "next/link";
 import Clamp from "@/components/Clamp";
 import Head from "next/head";
-import { PortableText, createClient } from "next-sanity";
-import { urlFor } from "@/sanity/lib/image";
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: "production",
-  useCdn: true,
-  apiVersion: "2024-12-23",
-});
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("doctors");
-  const [staffData, setStaffData] = useState([]);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const data = await client.fetch(`
-          *[_type == "author"]{
-            name,
-            slug,
-            image,
-            "categories": categories[]->title,
-            body
-          }
-        `);
-
-        // Filter out doctors and pharmacists based on categories
-        const doctors = data.filter((item) =>
-          item.categories.includes("Family Physician")
-        );
-        const pharmacists = data.filter(
-          (item) =>
-            item.categories.includes("Pharmacist") ||
-            item.categories.includes("Pharmacist Manager")
-        );
-
-        setStaffData({ doctors, pharmacists });
-      } catch (error) {
-        console.error("Error fetching posts: ", error);
-      }
-    };
-
-    fetchPosts();
-  }, []);
 
   const renderData = (category) => {
-    const staffList = staffData[category];
-
-    return staffList?.map((item, index) => (
+    return Data[0][category].map((item, index) => (
       <Link
         key={index}
-        href={`/staff/${item.slug.current}`}
+        href={`/staff/${item.slug}`}
         className="min-w-[300px] w-full sm:w-[31%] p-4 bg-white text-center flex flex-col h-[500px] rounded-xl shadow-md"
       >
         <img
-          src={urlFor(item.image.asset).url()}
+          src={item.image || "/default-image.jpg"}
           alt={item.name}
           className="w-[100%] h-[370px] object-cover rounded-lg overflow-hidden"
         />
         <div className="flex flex-col gap-2 pt-3">
-          <h3 className="text-[14px] font-normal">
-            {item.categories.join(", ")}
-          </h3>
+          <h3 className="text-[14px] font-normal">{item.title}</h3>
           <p
             className="text-blue-600 font-bold"
             style={{ fontSize: Clamp(1, 1.25) }}
@@ -82,7 +37,7 @@ const Index = () => {
     <>
       <Head>
         <title>
-          Whitby Doctors at Valleyview Medical | Valleyview Medical Centre
+          Whitby Doctors at Valleyview Medical | Vallewview Medical Centre
         </title>
       </Head>
       <Banner subtitle={"Our Health Care Specialists"} buttonText="Email Us" />

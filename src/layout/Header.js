@@ -1,43 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { PolicyData } from "@/static/PolicyData";
-// import { Data as StaffData } from "@/static/StaffData";
+import { Data as StaffData } from "@/static/StaffData";
 import Clamp from "@/components/Clamp";
 import HamburgerMenu from "@/components/Hamburger";
-import { createClient } from "next-sanity";
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: "production",
-  useCdn: true,
-  apiVersion: "2024-12-23", // Ensure you're using the latest version of the Sanity API
-});
 
 const Header = () => {
   const [isPolicyHovering, setIsPolicyHovering] = useState(false);
   const [isStaffHovering, setIsStaffHovering] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
-  const [isStaffData, setIsStaffData] = useState();
   const [isDialogOpen, setIsDialogOpen] = useState(false); // State for dialog box
 
-  useEffect(() => {
-    async function fetchStaffData() {
-      try {
-        const staffData = await client.fetch(`
-          *[_type == "author"]{
-            name,
-            slug,
-            "categories": categories[]->title,
-          }
-        `);
-        setIsStaffData(staffData);
-      } catch (error) {
-        console.error("Error fetching staff data:", error);
-      }
-    }
-
-    fetchStaffData();
-  }, []);
+  const staffData = StaffData[0]; // Assuming StaffData has a similar structure as before
+  const doctors = staffData.doctors;
+  const pharmacists = staffData.pharmacists;
 
   const policyTopics = Object.keys(PolicyData);
 
@@ -94,9 +70,9 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex xl:hidden">
-        <HamburgerMenu data={isStaffData} />
+        <HamburgerMenu data={{ doctors, pharmacists }} />
       </div>
-      <ul className="hidden xl:flex gap-3 2xl:gap-7 font-bold text-[14px] 2xl:text-[18px]">
+      <ul className="hidden xl:flex gap-4 2xl:gap-7 font-bold text-[16px]">
         <li
           className="group relative py-[5px] cursor-pointer duration-300"
           onMouseEnter={handleStaffMouseEnter}
@@ -104,21 +80,24 @@ const Header = () => {
         >
           <Link href="/staff">OUR TEAM</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
-          {isStaffHovering && isStaffData?.length > 0 && (
+          {isStaffHovering && (
             <div className="absolute left-0 top-[100%] backdrop-blur-xl bg-black/70 text-white shadow-lg rounded-md mt-2 w-[200px] z-10 overflow-hidden">
               <ul className="space-y-2">
-                {isStaffData.map((items, index) => (
+                {doctors.map((doctor) => (
                   <li
-                    key={index}
+                    key={doctor.slug}
                     className="hover:text-black hover:bg-white px-4 py-2"
                   >
-                    <Link href={`/staff/${items.slug.current}`}>
-                      {items.categories &&
-                      items.categories.some((category) =>
-                        category.toLowerCase().includes("pharmacist")
-                      )
-                        ? `Pharmacist ${items.name}`
-                        : items.name}
+                    <Link href={`/staff/${doctor.slug}`}>{doctor.name}</Link>
+                  </li>
+                ))}
+                {pharmacists.map((pharmacist) => (
+                  <li
+                    key={pharmacist.slug}
+                    className="hover:text-black hover:bg-white px-4 py-2"
+                  >
+                    <Link href={`/staff/${pharmacist.slug}`}>
+                      Pharmacist {pharmacist.name}
                     </Link>
                   </li>
                 ))}

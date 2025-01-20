@@ -1,5 +1,5 @@
+import { Newsdata } from "@/static/NewsData";
 import { useRouter } from "next/router";
-import { createClient } from "next-sanity";
 import { IoPersonSharp } from "react-icons/io5";
 import { AiFillHome } from "react-icons/ai";
 import { FaPhone, FaLink, FaXTwitter } from "react-icons/fa6";
@@ -8,21 +8,10 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import Clamp from "@/components/Clamp";
 import Head from "next/head";
-import { PortableText } from "next-sanity";
-
-// Initialize Sanity client
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: "production",
-  useCdn: true,
-});
 
 export const getStaticPaths = async () => {
-  const allPosts = await client.fetch(
-    '*[_type == "post"]{ "slug": slug.current }'
-  );
-  const paths = allPosts.map((post) => ({
-    params: { slug: post.slug }, // Use the `slug` as the dynamic route parameter
+  const paths = Newsdata.map((news) => ({
+    params: { id: news.id.toString() },
   }));
 
   return {
@@ -32,60 +21,13 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const newsItem = await client.fetch(
-    `*[_type == "post" && slug.current == $slug][0]{
-      _id,
-      title,
-      slug,
-      "categories": categories[]->title, 
-      publishedAt,
-      body
-    }`,
-    { slug: params.slug }
-  );
+  const newsItem = Newsdata.find((item) => item.id === parseInt(params.id, 10));
+
   return {
     props: {
       newsItem,
     },
   };
-};
-
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  const day = date.getDate();
-  const month = date.toLocaleString("default", { month: "long" });
-  const year = date.getFullYear();
-
-  const daySuffix = (day) => {
-    if (day > 3 && day < 21) return "th"; // Covers 4th-20th
-    switch (day % 10) {
-      case 1:
-        return "st";
-      case 2:
-        return "nd";
-      case 3:
-        return "rd";
-      default:
-        return "th";
-    }
-  };
-
-  return `${day}${daySuffix(day)} ${month} ${year}`;
-};
-
-const renderPortableText = (value) => {
-  return value.map((block, index) => {
-    if (block._type === "block") {
-      return (
-        <p key={index} style={{ marginBottom: "1.5rem", lineHeight: "1.6" }}>
-          {block.children.map((child, idx) => (
-            <span key={idx}>{child.text}</span>
-          ))}
-        </p>
-      );
-    }
-    return null;
-  });
 };
 
 const NewsDetail = ({ newsItem }) => {
@@ -110,22 +52,22 @@ const NewsDetail = ({ newsItem }) => {
             {newsItem.title}
           </h1>
           <p
-            className="text-gray-500 my-2"
+            className="text-gray-500  my-2"
             style={{ fontSize: Clamp(0.75, 1.15) }}
           >
-            {formatDate(newsItem.publishedAt)}
+            {newsItem.date}
           </p>
-          <div className="text-blue-600 bg-blue-200 w-[250px] px-5 py-2 text-center rounded-3xl">
-            {newsItem.categories && newsItem.categories.join(", ")}
-          </div>
-          <div
+          <span className="text-[12px] text-blue-600 bg-blue-200 w-[250px] px-5 py-2 text-center rounded-3xl">
+            {newsItem.tag}
+          </span>
+          <p
             className="text-[16px] mt-4 w-[90%]"
             style={{ whiteSpace: "pre-line" }}
           >
-            {renderPortableText(newsItem.body)}
-          </div>
+            {newsItem.description}
+          </p>
           <button className="bg-blue-600 text-white px-4 py-2 rounded-lg mt-[40px]">
-            <Link href="">CONTACT US</Link>
+            <Link href="/contact">CONTACT US</Link>
           </button>
         </div>
         <div className="w-full xl:w-[35%] ml-0 xl:ml-[20px] px-0 xl:px-[50px] flex flex-col gap-5 sticky top-[180px] h-fit">
