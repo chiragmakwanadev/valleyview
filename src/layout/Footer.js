@@ -113,11 +113,8 @@ const Footer = () => {
       >
         <p>
           © 2024 Valleyview Medical Centre | Powered by{" "}
-          <Link
-            href="https://www.tallshipsmedia.com"
-            className="hover:text-red-600"
-          >
-            Tallships Media
+          <Link href="https://www.Vtechedge.com" className="hover:text-red-600">
+            VTECH Edge
           </Link>
         </p>
       </div>
