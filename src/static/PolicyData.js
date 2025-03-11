@@ -5,51 +5,70 @@ export const PolicyData = {
       slug: "clinic-policies",
       item: [
         {
+          image: "/images/clinic-2.jpg",
           title: "Health Cards",
           description:
             "Please ensure you have your valid health card with you for every visit to Valleyview Medical Center. Our Front Staff will request it during check-in. Failure to present a valid health card may result in being charged at regular OHIP rates before receiving care. Keeping your health card up to date is essential for accessing healthcare and preventing fraud. If your health card is lost, stolen, or damaged, please contact the Ministry of Health and Long Term Care info line at 1-800-664-8998. For address or name changes, visit or contact your local OHIP office.",
         },
         {
+          image: "/images/clinic-3.jpg",
+
           title: "Uninsured Services",
           description:
             "The Ontario Government covers medically necessary services through the Ontario Health Insurance Plan (OHIP). Services not covered by OHIP are considered Uninsured Services. Examples include prescription refills by phone, drivers’ medicals and third-party examinations, missed appointments, work and school-related notes, medical forms for insurance, legal or employment purposes, photocopying, faxing, and transferring medical records.",
         },
         {
+          image: "/images/clinic-4.jpg",
+
           title: "Test Results",
           description:
             "Due to the high volume of test results, we do not report normal results to patients. We will contact patients for abnormal results or tests requiring a follow-up visit. If you wish to discuss test results with your physician, please schedule a follow-up appointment one to two weeks after the tests. Allow at least 48 hours for blood work results and at least 72 hours for x-rays or other investigative test results.",
         },
         {
+          image: "/images/clinic-5.jpg",
+
           title: "Respectful Workplace",
           description:
             "We have a zero-tolerance policy for abuse, including any form of mistreatment, towards staff, patients, physicians, or anyone in our clinic. Incidents of abuse, such as intimidation, condescending language, impatience, refusal to answer questions, giving misleading information, or manipulation, will be recorded and reported. We will take appropriate actions, including potential termination of patient status/employment or involvement of authorities, based on the severity of the incident.",
         },
         {
+          image: "/images/clinic-6.jpg",
+
           title: "Medical Appointments",
           description:
             "When booking your appointment, please inform our staff of the reason for your visit to help us plan and manage our schedule effectively. Appointments are typically 15 minutes long to accommodate all patients. Some complaints may require follow-up appointments, and your doctor will address your main concern while discussing plans for any other medical issues in future visits. Focusing on your main concern helps us manage patient flow and reduce wait times.",
         },
         {
+          image: "/images/clinic-7.jpg",
+
           title: "Patient Check-In Information",
           description:
             "Prior to check-in, especially for the first visit, we provide forms for patients to fill out. These forms collect information such as your name, date of birth, address, contact number, and health card details. The forms are confidential and securely shredded after the visit.",
         },
         {
+          image: "/images/clinic-8.jpg",
+
           title: "Prescription Renewal",
           description:
             "For quality care, medication refills should be addressed during your appointment. Non-emergency refill appointments should be scheduled two weeks in advance of your prescription running out. Valleyview Medical Center has a 'No Phone/Fax Prescription Renewal Policy' and does not refill narcotics/controlled medications. We recommend contacting the providers who initially prescribed them for refills.",
         },
         {
+          image: "/images/clinic-9.jpg",
+
           title: "Cancellation / Late Arrival",
           description:
             "If you need to cancel your appointment, please provide a minimum of 24 hours’ notice so that we can offer the slot to another patient. In case of emergencies or late arrival, please contact us as soon as possible to inform us of your situation.",
         },
         {
+          image: "/images/clinic-10.jpg",
+
           title: "No Show Fee",
           description:
             "To avoid a ‘No Show Fee,’ please give the clinic a minimum of 24 hours’ notice if you cannot attend your appointment. Failure to attend or provide proper notice of cancellation of scheduled appointments will result in a $40 no-show fee. Three or more no-show incidents may result in dismissal at your physician’s discretion.",
         },
         {
+          image: "/images/clinic-11.jpg",
+
           title: "Vacation / Sick Coverage",
           description:
             "If your primary care provider is unavailable due to sickness, vacation, or continuing medical education, you may be seen by another qualified physician within our clinic. Our team maintains a collegial and compassionate approach to ensure your care is in capable hands. Your medical history, both past and current, is accessible through our electronic medical record system, allowing the covering physician to be well-informed about your health concerns and provide continuity of care.",

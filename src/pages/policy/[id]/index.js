@@ -45,25 +45,48 @@ const PolicySlugPage = ({ policyTopic }) => {
       </Head>
       <div className="policy-page">
         <Banner subtitle={policyTopic.topic} buttonText="Have a question?" />
-        <div className="policy-content padding-x flex flex-col items-center py-[100px]">
-          {policyTopic.item.map((policy, index) => (
-            <div key={index} className="policy-item mb-8 w-full xl:w-[50%]">
-              {policy.title && (
-                <h2
-                  className="font-semibold text-blue-600 pb-3"
-                  style={{ fontSize: Clamp(1.25, 1.75) }}
-                >
-                  {policy.title}
-                </h2>
-              )}
-              <p
-                className="text-[18px]"
-                style={{ whiteSpace: "pre-line", fontSize: Clamp(1, 1.5) }}
+        <div className="padding-x flex flex-col items-center py-[100px]">
+          {policyTopic.item.map((policy, index) => {
+            // Alternate images left and right
+            const isEven = index % 2 === 0;
+
+            return (
+              <div
+                key={index}
+                className={`policy-item mb-8 w-full flex items-center ${
+                  isEven ? "flex-row" : "flex-row-reverse"
+                }`}
               >
-                {policy.description}
-              </p>
-            </div>
-          ))}
+                {policy.image && (
+                  <div className="w-[40%]">
+                    <img
+                      src={policy.image}
+                      alt="Policy Image"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                )}
+                <div className="w-[60%] pl-6">
+                  {policy.title && (
+                    <h2
+                      className="font-semibold text-blue-600 pb-3"
+                      style={{ fontSize: Clamp(1.25, 1.75) }}
+                    >
+                      {policy.title}
+                    </h2>
+                  )}
+                  <p
+                    style={{
+                      whiteSpace: "pre-line",
+                      fontSize: Clamp(0.8, 1.1),
+                    }}
+                  >
+                    {policy.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

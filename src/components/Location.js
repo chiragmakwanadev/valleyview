@@ -17,12 +17,12 @@ const LocationBox = ({ onSelectLocation }) => {
   return (
     <div className="relative w-full h-[100vh] bg-[#f2f0f0] flex items-center justify-center">
       <img
-        src="/images/background.jpeg"
+        src="/images/bg-2.jpg"
         alt=""
-        className="absolute object-cover w-full h-[100vh]"
+        className="absolute object-cover w-full h-[100vh] grayscale"
       />
       <div
-        className="bg-white/70 backdrop-blur-md shadow-lg w-[90%] sm:w-[70%] md:w-[50%] h-[300px] flex flex-col items-center 
+        className="bg-white/70 backdrop-blur-sm shadow-lg w-[90%] sm:w-[70%] md:w-[50%] h-[300px] flex flex-col items-center 
       justify-center rounded-lg gap-7 z-[9999] p-[30px]"
       >
         <div className="flex flex-col gap-2 items-center">
@@ -40,13 +40,13 @@ const LocationBox = ({ onSelectLocation }) => {
           <h2>Select Your Location</h2>
           <div className="flex flex-col md:flex-row gap-4 mt-4">
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded"
+              className="text-black px-4 py-2 rounded border-black hover:border-white border-[1px] hover:bg-white duration-200"
               onClick={() => handleLocationSelect("Whitby")}
             >
               Whitby
             </button>
             <button
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="text-black px-4 py-2 rounded border-black hover:border-white border-[1px] hover:bg-white duration-200"
               onClick={() => handleLocationSelect("Oshawa")}
             >
               Oshawa

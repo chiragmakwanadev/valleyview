@@ -30,12 +30,12 @@ const Index = () => {
 
   return (
     <>
-      <div style={{ paddingTop: Clamp(3.7, 7.5) }}>
+      <div style={{ paddingTop: Clamp(3.7, 7.5) }} className="bg-[#c4cad0]">
         <div className="flex flex-col gap-2 items-center">
           <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-100 w-auto xl:w-[350px] p-[5px] text-center rounded-3xl">
-            The Latest News & Updates
+            The Latest Blog & News
           </h1>
-          <p className="text-[16px] font-medium">
+          <p className="text-[16px] font-medium ">
             Updates, policy changes, and other newsworthy items from Valleyview
             Medical Centre
           </p>

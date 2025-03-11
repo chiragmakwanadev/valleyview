@@ -18,7 +18,6 @@ const HamburgerMenu = ({ data }) => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const togglePolicyDropdown = () => setIsPolicyOpen(!isPolicyOpen);
-  const toggleStaffDropdown = () => setIsStaffOpen(!isStaffOpen);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -59,12 +58,8 @@ const HamburgerMenu = ({ data }) => {
         </div>
 
         <ul className="flex flex-col space-y-4 p-5">
-          <li
-            className="flex justify-between items-center px-5 py-3 border-b-[1px] border-black"
-            onClick={toggleStaffDropdown}
-          >
+          <li className="flex justify-between items-center px-5 py-3 border-b-[1px] border-black">
             <Link href="/staff">OUR STAFF</Link>
-            <button>+</button>
           </li>
           {isStaffOpen && (
             <ul className="pl-5 space-y-2">

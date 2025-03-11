@@ -113,25 +113,6 @@ export const Data = [
     ],
     pharmacists: [
       {
-        title: "Pharmacist Manager",
-        name: "Kashif Alavi",
-        image: "/images/kashif.jpg",
-        slug: "kashif-alavi",
-        description: `Kashif Alavi is known for his dedicated patient care and strong interpersonal skills, thriving in fast-paced environments by combining his approachable nature with the ability to foster trust among healthcare colleagues.
-  
-          His communication strategies and prompt feedback yield impactful results, while his commitment to continuous improvement and rapid skill acquisition is evident.
-          
-          Kashif’s expertise in optimizing patient care is showcased through exceptional support for diverse individuals, including seniors and those with unique needs, earning praise for his empathy, efficiency, and punctuality.
-          
-          Proficient in multilingual communication and technology integration, he excels in connecting with clients and is adept at problem-solving. His teamwork and mentoring abilities extend beyond his roles, displaying dedication to team development.
-          
-          With a Master of Science in Pharmacy from St. John’s University, New York, Kashif’s extensive career spans Pharmacist Manager positions and academic roles, reflecting his commitment to healthcare excellence.
-          
-          With over 15 years of experience across diverse regions, including the Durham Region, urban and rural Alberta, and New York, his broad network and local insights position him to drive transformative change in patient care and healthcare collaborations, showcasing him as a valuable asset in the healthcare field.
-          
-          `,
-      },
-      {
         title: "Pharmacist",
         name: "Husban Ahmed",
         image: "/images/husban.jpg",
@@ -166,5 +147,27 @@ export const Data = [
           Hetal’s unyielding commitment to enhancing lives not only speaks to her character but also underscores her pivotal role in advancing health outcomes, making her an invaluable asset in the field of healthcare.`,
       },
     ],
+    manager: [
+      {
+        title: "Pharmacist Manager",
+        name: "Kashif Alavi",
+        image: "/images/kashif.jpg",
+        slug: "kashif-alavi",
+        description: `Kashif Alavi is known for his dedicated patient care and strong interpersonal skills, thriving in fast-paced environments by combining his approachable nature with the ability to foster trust among healthcare colleagues.
+  
+          His communication strategies and prompt feedback yield impactful results, while his commitment to continuous improvement and rapid skill acquisition is evident.
+          
+          Kashif’s expertise in optimizing patient care is showcased through exceptional support for diverse individuals, including seniors and those with unique needs, earning praise for his empathy, efficiency, and punctuality.
+          
+          Proficient in multilingual communication and technology integration, he excels in connecting with clients and is adept at problem-solving. His teamwork and mentoring abilities extend beyond his roles, displaying dedication to team development.
+          
+          With a Master of Science in Pharmacy from St. John’s University, New York, Kashif’s extensive career spans Pharmacist Manager positions and academic roles, reflecting his commitment to healthcare excellence.
+          
+          With over 15 years of experience across diverse regions, including the Durham Region, urban and rural Alberta, and New York, his broad network and local insights position him to drive transformative change in patient care and healthcare collaborations, showcasing him as a valuable asset in the healthcare field.
+          
+          `,
+      },
+    ],
+    staff: [],
   },
 ];

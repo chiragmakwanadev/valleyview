@@ -7,6 +7,7 @@ import Welcome from "@/components/landing/Welcome";
 import Specialist from "@/components/landing/Specialist";
 import Why from "@/components/landing/Why";
 import Head from "next/head";
+import Testimonial from "@/components/landing/Testimonial";
 
 export const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
@@ -37,11 +38,12 @@ export default function Home() {
       <main>
         <Landing location={location} />
         <Registration />
-        <Priscription />
+        {/* <Priscription /> */}
         <News />
         <Welcome />
-        <Specialist />
+        {/* <Specialist /> */}
         <Why />
+        <Testimonial />
       </main>
     </div>
   );

@@ -3,7 +3,7 @@ import Clamp from "../Clamp";
 
 const Why = () => {
   return (
-    <div className="padding-x py-[100px] bg-[#f2f0f0]">
+    <div className="padding-x py-[100px] bg-[#c4cad0]">
       <div className="bg-white text-black flex flex-col xl:flex-row gap-10 p-5 xl:p-10 rounded-xl">
         <img
           src="/images/why.jpg"

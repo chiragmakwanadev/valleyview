@@ -6,51 +6,11 @@ import Clamp from "@/components/Clamp";
 import HamburgerMenu from "@/components/Hamburger";
 
 const Header = () => {
-  const [isPolicyHovering, setIsPolicyHovering] = useState(false);
-  const [isStaffHovering, setIsStaffHovering] = useState(false);
-  const [hoverTimeout, setHoverTimeout] = useState(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false); // State for dialog box
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const staffData = StaffData[0]; // Assuming StaffData has a similar structure as before
+  const staffData = StaffData[0];
   const doctors = staffData.doctors;
   const pharmacists = staffData.pharmacists;
-
-  const policyTopics = Object.keys(PolicyData);
-
-  const handlePolicyMouseEnter = () => {
-    clearHoverTimeout();
-    setIsStaffHovering(false);
-    setIsPolicyHovering(true);
-  };
-
-  const startHoverTimeout = (callback) => {
-    const timeout = setTimeout(callback, 800);
-    setHoverTimeout(timeout);
-  };
-
-  const handlePolicyMouseLeave = () => {
-    startHoverTimeout(() => setIsPolicyHovering(false));
-  };
-
-  const handleStaffMouseEnter = () => {
-    clearHoverTimeout();
-    setIsPolicyHovering(false);
-    setIsStaffHovering(true);
-  };
-
-  const handleStaffMouseLeave = () => {
-    startHoverTimeout(() => setIsStaffHovering(false));
-  };
-
-  const clearHoverTimeout = () => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-    }
-  };
-
-  useEffect(() => {
-    return () => clearHoverTimeout();
-  }, []);
 
   const openDialog = () => setIsDialogOpen(true);
   const closeDialog = () => setIsDialogOpen(false);
@@ -73,65 +33,14 @@ const Header = () => {
         <HamburgerMenu data={{ doctors, pharmacists }} />
       </div>
       <ul className="hidden xl:flex gap-4 2xl:gap-7 font-bold text-[16px]">
-        <li
-          className="group relative py-[5px] cursor-pointer duration-300"
-          onMouseEnter={handleStaffMouseEnter}
-          onMouseLeave={handleStaffMouseLeave}
-        >
+        <li className="group relative py-[5px] cursor-pointer duration-300">
           <Link href="/staff">OUR TEAM</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
-          {isStaffHovering && (
-            <div className="absolute left-0 top-[100%] backdrop-blur-xl bg-black/70 text-white shadow-lg rounded-md mt-2 w-[200px] z-10 overflow-hidden">
-              <ul className="space-y-2">
-                {doctors.map((doctor) => (
-                  <li
-                    key={doctor.slug}
-                    className="hover:text-black hover:bg-white px-4 py-2"
-                  >
-                    <Link href={`/staff/${doctor.slug}`}>{doctor.name}</Link>
-                  </li>
-                ))}
-                {pharmacists.map((pharmacist) => (
-                  <li
-                    key={pharmacist.slug}
-                    className="hover:text-black hover:bg-white px-4 py-2"
-                  >
-                    <Link href={`/staff/${pharmacist.slug}`}>
-                      Pharmacist {pharmacist.name}
-                    </Link>
-                  </li>
-                ))}
-                <li className="hover:text-black hover:bg-white px-4 py-2">
-                  <Link href="/assistant">Staff Assistant</Link>
-                </li>
-              </ul>
-            </div>
-          )}
         </li>
 
-        <li
-          className="group relative py-[5px] cursor-pointer duration-300"
-          onMouseEnter={handlePolicyMouseEnter}
-          onMouseLeave={handlePolicyMouseLeave}
-        >
+        <li className="group relative py-[5px] cursor-pointer duration-300">
           <Link href="/policy/clinic-policies">CLINIC POLICIES</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
-          {isPolicyHovering && (
-            <div className="absolute left-0 top-[100%] backdrop-blur-xl bg-black/70 overflow-hidden text-white shadow-lg rounded-md mt-2 w-[200px] z-10">
-              <ul className="space-y-2">
-                {policyTopics.map((topic) => (
-                  <li
-                    key={topic}
-                    className="hover:text-black hover:bg-white  px-4 py-2"
-                  >
-                    <Link href={`/policy/${PolicyData[topic][0].slug}`}>
-                      {topic}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </li>
 
         <li className="group relative py-[5px] cursor-pointer duration-300">

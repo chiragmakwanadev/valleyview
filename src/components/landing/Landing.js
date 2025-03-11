@@ -88,7 +88,7 @@ const Landing = ({ location }) => {
         <div className="flex flex-col gap-6 xl:gap-4">
           <p className="flex items-center  text-[16px] xl:text-[20px] gap-3">
             <DiCssdeck size={30} />
-            Consult top doctors anytime, from any location in Canada.
+            Consult top doctors in Durham Region.
           </p>
         </div>
         <h1

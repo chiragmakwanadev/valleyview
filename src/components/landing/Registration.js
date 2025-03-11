@@ -15,7 +15,7 @@ const Dates = [
 
 const Registration = () => {
   return (
-    <div className="bg-[#f2f0f0] pt-[50px] md:pt-[100px] xl:pt-[150px]">
+    <div className="bg-[#c4cad0] pt-[50px] md:pt-[100px] xl:pt-[150px]">
       <div className="bg-white margin-x mb-[50px] p-4 xl:p-7 rounded-xl flex flex-col gap-1 shadow-xl">
         <div className="flex flex-col xl:flex-row-reverse bg-white rounded-xl gap-[40px]">
           <div className="flex flex-col w-full xl:w-[50%]">
@@ -30,13 +30,22 @@ const Registration = () => {
           </div>
           <div className="flex flex-col  gap-4 w-full xl:w-[50%] justify-between">
             <div className="flex flex-col gap-5">
-              <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-200 w-auto xl:w-[250px] p-[5px] text-center rounded-3xl">
-                New Patient Registration
+              <h1
+                className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-200 w-auto
+               p-[5px] text-center rounded-3xl"
+              >
+                Accepting New Patients in Durham Region
               </h1>
-              <p style={{ fontSize: Clamp(1, 1.25) }}>
-                You can conveniently register as a new patient using our online
-                platform or visit us in person at the clinic. We&apos;re excited
-                to welcome you to Valleyview Medical Centre.
+              <p style={{ fontSize: Clamp(0.8, 1) }}>
+                You can easily register as a new patient through our convenient
+                online platform, allowing you to complete the process from the
+                comfort of your home. Alternatively, you are welcome to visit us
+                in person at the clinic, where our friendly staff will be happy
+                to assist you with your registration. At Valleyview Medical
+                Centre, we are committed to providing a smooth and hassle-free
+                experience as you begin your healthcare journey with us. We look
+                forward to welcoming you and meeting your medical needs with
+                compassionate, high-quality care.
               </p>
             </div>
             <div className="flex flex-col gap-1">
@@ -54,29 +63,28 @@ const Registration = () => {
         </div>
         <div className="flex flex-col xl:flex-row w-full gap-10 pt-[50px]">
           <img
-            src="/images/landing2.jpg"
+            src="/images/hospital.jpg"
             alt=""
             className="w-full xl:w-[50%] object-cover rounded-xl"
             style={{ height: Clamp(15, 35) }}
           />
           <div className="flex flex-col gap-2 w-full xl:w-[50%]">
             <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-200 w-auto xl:w-[250px] p-[5px] text-center rounded-3xl">
-              Visit a Doctor
+              Clinic Timings
             </h1>
-            <p
-              className=" font-normal pt-[10px] text-blue-600"
-              style={{ fontSize: Clamp(1, 1.5) }}
-            >
-              +1 905-434-1662
-            </p>
+
             <div className="text-[16px]">
               {Object.entries(Dates[0]).map(([day, time]) => (
-                <div key={day} className="flex  gap-4 pb-2 items-center">
-                  <p className="font-bold">{day}:</p>
+                <div
+                  key={day}
+                  className="grid grid-cols-2 gap-x-1 pb-2 items-center justify-start"
+                >
+                  <p className="font-bold whitespace-nowrap">{day}:</p>
                   <p>{time}</p>
                 </div>
               ))}
             </div>
+
             <span className="flex items-start xl:items-end">
               <h1 className="font-bold text-[18px]">NOTE:</h1>
               Times may vary depending on doctor’s availability
