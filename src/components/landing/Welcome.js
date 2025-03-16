@@ -35,7 +35,7 @@ const Welcome = () => {
             <p>
               We believe in empowering you with knowledge, supporting your
               medical decisions, and guiding you toward a healthier life.
-              Whether you're visiting for a routine check-up, specialized
+              Whether you&apos;re visiting for a routine check-up, specialized
               treatment, or urgent care, our experienced doctors and
               compassionate staff are here to assist you every step of the way.
             </p>

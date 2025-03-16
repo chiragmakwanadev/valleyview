@@ -134,16 +134,20 @@ const Landing = ({ location }) => {
             style={{ fontSize: Clamp(0.75, 1) }}
           >
             {linkData.map(({ href, text }, index) => (
-              <h1
-                className="bg-red-700 border-transparent hover:bg-red-600
-              px-[20px] py-[10px] text-white hover:text-white rounded-full
-              border-[1px] duration-200 flex items-center justify-center
-              gap-2 text-[16px] text-center w-full md:w-auto"
+              <Link
+                key={index}
+                href={href}
+                className="flex items-center justify-center text-center w-full md:w-auto"
               >
-                <Link key={index} href={href}>
+                <h1
+                  className="bg-red-700 border-transparent hover:bg-red-600
+              px-[20px] py-[10px] text-white hover:text-white rounded-full
+              border-[1px] duration-200 
+              gap-2 text-[16px] w-full md:w-auto"
+                >
                   {text}
-                </Link>
-              </h1>
+                </h1>
+              </Link>
             ))}
           </div>
         </div>
