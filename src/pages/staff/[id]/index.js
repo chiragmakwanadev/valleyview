@@ -69,9 +69,11 @@ export async function getStaticPaths() {
   const allCategories = ["doctors", "pharmacists", "staff", "manager"];
   const paths = allCategories.flatMap(
     (category) =>
-      Data[0][category]?.map((member) => ({
-        params: { id: member.slug },
-      })) || []
+      Data[0][category]
+        ?.filter((member) => member.slug)
+        .map((member) => ({
+          params: { id: member.slug },
+        })) || []
   );
 
   return { paths, fallback: false };
