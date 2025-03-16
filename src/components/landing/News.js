@@ -32,7 +32,7 @@ const Index = () => {
     <>
       <div style={{ paddingTop: Clamp(3.7, 7.5) }} className="bg-[#c4cad0]">
         <div className="flex flex-col gap-2 items-center">
-          <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-100 w-auto xl:w-[350px] p-[5px] text-center rounded-3xl">
+          <h1 className="text-[16px] xl:text-[18px] text-white bg-black w-auto xl:w-[350px] p-[5px] text-center rounded-3xl">
             The Latest Blog & News
           </h1>
           <p className="text-[16px] font-medium ">
@@ -45,15 +45,15 @@ const Index = () => {
             {currentItems.map((news) => (
               <div
                 key={news.id}
-                className="bg-white p-8 shadow-lg rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[31%] h-auto md:h-[400px] flex flex-col justify-between"
+                className="bg-white backdrop-blur-sm p-8 shadow-lg rounded-lg min-w-[100%] md:min-w-[320px] w-full md:w-[31%] h-auto flex flex-col justify-between hover:transf"
               >
-                <div className="">
+                <div className="flex flex-col gap-3">
                   <p className="text-gray-500 text-sm pb-2">{news.date}</p>
-                  <span className="text-[12px] text-blue-600 bg-blue-200 w-[250px] px-5 py-2 text-center rounded-3xl">
+                  <span className="text-[12px] text-white bg-blue-700 w-[250px] px-5 py-2 text-center rounded-3xl">
                     {news.tag}
                   </span>
                   <h2
-                    className="font-bold text-blue-600 my-2"
+                    className="font-bold text-black my-2"
                     style={{ fontSize: Clamp(1, 1.5) }}
                   >
                     {news.title}
@@ -63,7 +63,10 @@ const Index = () => {
                   {truncateText(news.description)}
                 </p>
                 <Link href={`/news/${news.id}`} className="w-full">
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-lg mt-[40px] w-full">
+                  <button
+                    className="bg-transparent text-black border-black border-[1px]
+                   px-4 py-2 rounded-full mt-[40px] w-full hover:bg-black hover:border-black hover:text-white duration-200"
+                  >
                     Read More
                   </button>
                 </Link>
@@ -78,14 +81,14 @@ const Index = () => {
             <button
               onClick={handlePreviousPage}
               disabled={currentPage === 1}
-              className="px-2 md:px-4 py-1 md:py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+              className="px-2 md:px-4 py-1 md:py-2 bg-white text-black rounded disabled:opacity-50"
             >
               Previous
             </button>
             <button
               onClick={handleNextPage}
               disabled={currentPage === totalPages}
-              className="px-2 md:px-4 py-1 md:py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+              className="px-2 md:px-4 py-1 md:py-2 bg-white text-black rounded disabled:opacity-50"
             >
               Next
             </button>

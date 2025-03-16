@@ -167,7 +167,58 @@ export const Data = [
           
           `,
       },
+      {
+        title: "Business Operations Manager",
+        name: "Musab Waseem",
+        image: "/images/musab.jpg",
+        slug: "musab-waseem-manager",
+        oshawa: "false",
+        description: `As the Business Operations Manager at Valleyview Medical Centre, Musab Waseem plays a crucial role in ensuring the smooth operation of one of the busiest healthcare facilities in the Durham region. With extensive experience in medical administration, clinic management, and IT infrastructure, Musab oversees daily operations, optimizes workflow efficiency, and enhances patient care services. His expertise in electronic medical records (EMR) systems, billing processes, and compliance regulations ensures that both patients and healthcare providers experience seamless, high-quality service. Passionate about innovation in healthcare administration, Musab continuously implements strategies to improve patient access, streamline operations, and enhance the overall healthcare experience.
+        `,
+      },
     ],
-    staff: [],
+    staff: [
+      {
+        title: "Allied Healthcare Professional",
+        name: "Musab Waseem",
+        image: "/images/musab.jpg",
+        slug: "musab-waseem-admin",
+        oshawa: "true",
+        description: `With a background in pharmacy and healthcare administration, Musab Waseem is a dedicated Allied Healthcare Professional committed to patient well-being and operational excellence. Holding certifications in IM injections, vaccine handling, First Aid CPR, and mental health, Musab brings both clinical expertise and administrative efficiency to his role. His prior experience as a pharmacist in India gives him a unique perspective on medication management, patient safety, and healthcare protocols. Working in a dynamic medical setting, he assists in coordinating patient care, supporting clinical procedures, and ensuring smooth communication between healthcare providers and patients. His dedication to quality healthcare services and patient-centered care makes him an integral part of the Valleyview Medical Centre team.
+        `,
+      },
+      {
+        title: "Receptionist",
+        name: "kayla",
+        image: "",
+        slug: "",
+        oshawa: "true",
+        description: ``,
+      },
+      {
+        title: "Clinic Coordinator",
+        name: "Kanwal Aggarwal",
+        image: "",
+        slug: "",
+        oshawa: "true",
+        description: ``,
+      },
+      {
+        title: "Medical Office Administrator (MOA)",
+        name: "Nikita Saxena",
+        image: "",
+        slug: "",
+        oshawa: "true",
+        description: ``,
+      },
+      {
+        title: "Medical Office Administrator (MOA)",
+        name: "Afrika Gayle",
+        image: "",
+        slug: "",
+        oshawa: "true",
+        description: ``,
+      },
+    ],
   },
 ];

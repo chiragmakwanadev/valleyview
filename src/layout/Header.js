@@ -49,14 +49,12 @@ const Header = () => {
         </li>
 
         <li className="group relative py-[5px] cursor-pointer duration-300">
-          <Link href="/contact">CONTACT US</Link>
+          <Link href="/assistant">CONTACT US</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
 
         <li className="group relative py-[5px] cursor-pointer duration-300">
-          <Link href="/news/our-new-registration-process">
-            BECOME A PATIENT
-          </Link>
+          <Link href="/news/4">BECOME A PATIENT</Link>
           <span className="absolute bottom-[5px] left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
       </ul>

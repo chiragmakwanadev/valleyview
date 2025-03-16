@@ -5,6 +5,7 @@ import Head from "next/head";
 
 const StaffDetail = ({ staffMember }) => {
   if (!staffMember) return <p>Staff member not found</p>;
+  console.log("this is staff member data", staffMember);
 
   return (
     <>
@@ -65,18 +66,22 @@ const StaffDetail = ({ staffMember }) => {
 };
 
 export async function getStaticPaths() {
-  const paths = Data[0].doctors.concat(Data[0].pharmacists).map((member) => ({
-    params: { id: member.slug },
-  }));
+  const allCategories = ["doctors", "pharmacists", "staff", "manager"];
+  const paths = allCategories.flatMap(
+    (category) =>
+      Data[0][category]?.map((member) => ({
+        params: { id: member.slug },
+      })) || []
+  );
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const { id } = params;
-  const allStaff = Data[0].doctors.concat(Data[0].pharmacists);
+  const allCategories = ["doctors", "pharmacists", "staff", "manager"];
+  const allStaff = allCategories.flatMap((category) => Data[0][category] || []);
 
-  const staffMember = allStaff.find((member) => member.slug === id);
+  const staffMember = allStaff.find((member) => member.slug === params.id);
 
   return { props: { staffMember: staffMember || null } };
 }

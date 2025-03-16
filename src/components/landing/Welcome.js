@@ -8,7 +8,7 @@ const Welcome = () => {
         className="font-semibold text-black py-4 text-center"
         style={{ fontSize: Clamp(1.5, 2.5) }}
       >
-        Welcome to Valleyview Medical Centre
+        Your Health, Our Priority <br /> – Welcome to Valleyview Medical Centre
       </h1>
       <div className=" text-black flex flex-col xl:flex-row gap-10 bg-white p-5 xl:p-10 rounded-xl shadow-2xl">
         <div className="w-full xl:w-[50%] flex flex-col gap-5">
@@ -22,47 +22,61 @@ const Welcome = () => {
             className="w-full xl:w-[50%] object-cover block xl:hidden h-[300px] md:h-[400px] rounded-2xl"
           />
           <div
-            style={{ fontSize: Clamp(1, 1.25) }}
+            style={{ fontSize: Clamp(0.75, 1) }}
             className="flex flex-col gap-4 text-gray-700"
           >
             <p>
-              Welcome to Valleyview Medical Center, where your health and
-              well-being are our top priorities. As you step into our
-              state-of-the-art facility, you’ll discover a team of dedicated
-              medical professionals who are committed to providing you with
-              exceptional care and personalized attention.
+              At Valleyview Medical Centre, your health and well-being are at
+              the heart of everything we do. As you step into our modern,
+              state-of-the-art facility, you’ll be greeted by a team of
+              dedicated healthcare professionals committed to providing
+              exceptional medical care with a personal touch.
             </p>
             <p>
-              We’re here to empower you with knowledge, support you through your
-              medical decisions, and celebrate your progress toward a healthier
-              life.
+              We believe in empowering you with knowledge, supporting your
+              medical decisions, and guiding you toward a healthier life.
+              Whether you're visiting for a routine check-up, specialized
+              treatment, or urgent care, our experienced doctors and
+              compassionate staff are here to assist you every step of the way.
+            </p>
+            <h2 className="font-bold" style={{ fontSize: Clamp(1, 1.5) }}>
+              Comprehensive & Patient-Focused Care
+            </h2>
+            <p>
+              At Valleyview Medical Centre, we are dedicated to delivering the
+              highest standard of healthcare in a comfortable and welcoming
+              environment. Our clinic is designed with your convenience in mind,
+              offering:
+            </p>
+            <ul className="text-[14px]">
+              <li>
+                ✅ Advanced technology for accurate diagnostics and effective
+                treatment.
+              </li>
+              <li>
+                ✅ Personalized care tailored to your unique health needs.
+              </li>
+              <li>
+                ✅ On-site pharmacy to make it easier for you to access
+                prescriptions.
+              </li>
+              <li>
+                ✅ Modern facilities to ensure a seamless and stress-free
+                experience.
+              </li>
+            </ul>
+            <h2 className="font-bold" style={{ fontSize: Clamp(1, 1.5) }}>
+              A Commitment to Your Well-Being
+            </h2>
+            <p>
+              From our cozy waiting areas to our well-equipped examination
+              rooms, every aspect of our clinic is designed with your comfort
+              and care in mind. We take the time to listen, understand, and
+              provide healthcare solutions that best suit your needs.
             </p>
             <p>
-              At Valleyview Medical Center, we believe that every patient
-              deserves the highest standard of medical treatment. Our advanced
-              technology and modern amenities at our medical clinic in Whitby to
-              support our compassionate approach to healthcare.
-            </p>
-            <p>
-              Whether you’re visiting for routine check-ups, specialized
-              treatments, or seeking answers to your health concerns, our
-              experienced doctors and support staff are here to guide you every
-              step of the way.
-            </p>
-            <p>
-              We take the time to understand your unique needs and tailor our
-              services to ensure you receive the best possible care. From our
-              comfortable waiting areas to our well-equipped examination rooms,
-              we’ve designed our centre with your comfort and convenience in
-              mind.
-            </p>
-            <p>
-              We also have a pharmacy onsite to make it very easy to fill your
-              prescriptions.
-            </p>
-            <p>
-              Thank you for choosing Valleyview Medical Center – where your
-              well-being is our mission and your trust is our privilege.
+              Thank you for choosing Valleyview Medical Centre—where your health
+              is our mission, and your trust is our privilege.
             </p>
           </div>
         </div>

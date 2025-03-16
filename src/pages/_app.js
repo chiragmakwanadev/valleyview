@@ -48,14 +48,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="relative">
-      <Link
+      {/* <Link
         href="https://wa.me/1234567890"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white fixed w-[80px] h-[80px] bottom-[30px] right-[30px] text-[40px] flex items-center justify-center rounded-full z-[9999]"
       >
         <FaWhatsapp />
-      </Link>
+      </Link> */}
       <Header />
       <Component {...pageProps} location={location} />
       <Footer />

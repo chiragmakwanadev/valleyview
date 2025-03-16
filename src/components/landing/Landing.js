@@ -100,7 +100,7 @@ const Landing = ({ location }) => {
         <p className="text-[24px]" style={{ fontSize: Clamp(1, 1.5) }}>
           Your health connected with care!
         </p>
-        <div className="flex items-center gap-4 w-full">
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
           {["Whitby", "Oshawa"].map((city) => (
             <button
               key={city}
@@ -119,7 +119,7 @@ const Landing = ({ location }) => {
           ))}
         </div>
       </div>
-      <div className="xl:absolute bottom-[-120px] xl:bottom-[-70px] right-0 xl:right-[12.5%] left-0 xl:left-[12.5%] bg-white p-[30px] rounded-none xl:rounded-[10px] shadow-xl">
+      <div className="xl:absolute bottom-[-120px] xl:bottom-[-70px] right-0 xl:right-[7%] left-0 xl:left-[7%] bg-white p-[30px] rounded-none xl:rounded-[10px] shadow-xl">
         <div className="flex flex-col">
           <h1
             className="font-medium text-black text-center"
@@ -134,14 +134,16 @@ const Landing = ({ location }) => {
             style={{ fontSize: Clamp(0.75, 1) }}
           >
             {linkData.map(({ href, text }, index) => (
-              <Link key={index} href={href}>
-                <h1
-                  className="bg-red-700 border-transparent hover:bg-red-600 px-[20px] py-[10px] text-white hover:text-white w-full text-center rounded-full
-            border-[1px] duration-200 flex items-center gap-2 text-[16px]"
-                >
+              <h1
+                className="bg-red-700 border-transparent hover:bg-red-600
+              px-[20px] py-[10px] text-white hover:text-white rounded-full
+              border-[1px] duration-200 flex items-center justify-center
+              gap-2 text-[16px] text-center w-full md:w-auto"
+              >
+                <Link key={index} href={href}>
                   {text}
-                </h1>
-              </Link>
+                </Link>
+              </h1>
             ))}
           </div>
         </div>
