@@ -190,7 +190,7 @@ export const Data = [
       {
         title: "Receptionist",
         name: "kayla",
-        image: "",
+        image: "/images/kayla.jpeg",
         slug: "",
         description: ``,
       },

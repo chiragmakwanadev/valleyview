@@ -79,11 +79,19 @@ const Landing = ({ location }) => {
 
   return (
     <div className="w-full relative">
-      <img
-        src="/images/landing3.jpg"
-        alt=""
-        className="w-full object-cover h-[92vh]"
-      />
+      {activeCity === "Whitby" ? (
+        <img
+          src="/images/landing3.jpg"
+          alt=""
+          className="w-full object-cover h-[92vh]"
+        />
+      ) : (
+        <img
+          src="/images/landing.jpeg"
+          alt=""
+          className="w-full object-cover h-[92vh]"
+        />
+      )}
       <div className="absolute bottom-[45%] md:bottom-[30%] xl:bottom-[22%] left-[20px] xl:left-[50px] flex flex-col justify-center text-white gap-5">
         <div className="flex flex-col gap-6 xl:gap-4">
           <p className="flex items-center  text-[16px] xl:text-[20px] gap-3">
