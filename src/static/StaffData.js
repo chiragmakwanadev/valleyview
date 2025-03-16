@@ -192,7 +192,6 @@ export const Data = [
         name: "kayla",
         image: "",
         slug: "",
-        oshawa: "true",
         description: ``,
       },
       {
