@@ -117,22 +117,52 @@ const Landing = ({ location }) => {
             className={`flex flex-row flex-wrap gap-2 font-medium items-center justify-center`}
             style={{ fontSize: Clamp(0.75, 1) }}
           >
-            {linkData.map(({ href, text }, index) => (
-              <Link
-                key={index}
-                href={href}
-                className="flex items-center justify-center text-center w-full md:w-auto"
-              >
-                <h1
-                  className="bg-red-700 border-transparent hover:bg-red-600
+            {activeCity === "Whitby" ? (
+              <>
+                {linkData.map(({ href, text }, index) => (
+                  <Link
+                    key={index}
+                    href={href}
+                    className="flex items-center justify-center text-center w-full md:w-auto"
+                  >
+                    <h1
+                      className="bg-red-700 border-transparent hover:bg-red-600
               px-[20px] py-[10px] text-white hover:text-white rounded-full
               border-[1px] duration-200 
               gap-2 text-[16px] w-full md:w-auto"
-                >
-                  {text}
-                </h1>
-              </Link>
-            ))}
+                    >
+                      {text}
+                    </h1>
+                  </Link>
+                ))}
+              </>
+            ) : (
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <h2 className="text-[16px] text-red-400">Call Us:</h2>
+                  <Link href="tel:+19053678510" className="hover:text-red-600">
+                    +1 905-367-8510
+                  </Link>
+                </div>{" "}
+                |
+                <div className="flex items-center gap-2">
+                  <h2 className="text-[16px] text-red-400">Fax Us:</h2>
+                  <li className="list-none">
+                    FAX US: <span className="font-semibold">289-764-1231</span>
+                  </li>
+                </div>{" "}
+                |
+                <div className="flex items-center gap-2">
+                  <h2 className="text-[16px] text-red-400">Email Us:</h2>
+                  <Link
+                    href="mailto:info@valleyviewmedical.ca"
+                    className="hover:text-red-600"
+                  >
+                    harmonypharmachoice@gmail.com
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -86,7 +86,7 @@ export const Data = [
           `,
       },
       {
-        title: "Family Physician",
+        title: "M.B.Ch.B., MRCGP, FPHC, DUMC, CCFP",
         name: "Dr. Olajide Afolarin",
         image: "",
         slug: "dr-Olajide-Afolarin",
@@ -107,10 +107,10 @@ export const Data = [
           `,
       },
       {
-        title: "Family Physician",
+        title: "MD, MRCGP",
         name: "Dr. Sajjad Ishaque",
         image: "",
-        slug: "dr-Sajjad-Ishaque",
+        slug: "",
         oshawa: "true",
         description: ``,
       },

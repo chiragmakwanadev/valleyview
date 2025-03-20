@@ -16,7 +16,8 @@ const Index = () => {
         selectedLocation === "Oshawa" ? item.oshawa : !item.oshawa
       )
       .map((item, index) => (
-        <div
+        <Link
+          href={`/staff/${item.slug}`}
           key={index}
           className="min-w-[250px] w-full sm:w-[22%] text-center flex flex-col h-[400px] rounded-xl"
         >
@@ -34,7 +35,7 @@ const Index = () => {
               {item.name}
             </p>
           </div>
-        </div>
+        </Link>
       ));
   };
   return (

@@ -18,7 +18,7 @@ const StaffDetail = ({ staffMember }) => {
           <div className="flex flex-col md:flex-row gap-5">
             <div className="w-full md:w-[30%] flex flex-col gap-3">
               <img
-                src={staffMember.image || "/default-image.jpg"}
+                src={staffMember.image || "/images/logo.png"}
                 alt={staffMember.name}
                 className=" object-cover h-auto md:h-[50vh] w-full rounded-xl"
               />
@@ -31,7 +31,7 @@ const StaffDetail = ({ staffMember }) => {
               >
                 {staffMember.name}
               </h1>
-              <p className="text-[18px] text-blue-600 bg-blue-200 w-[250px] p-[5px] text-center rounded-3xl">
+              <p className="text-[18px] text-blue-600 bg-blue-200 w-auto p-[5px] text-center rounded-3xl">
                 {staffMember.title}
               </p>
               <div style={{ whiteSpace: "pre-line", fontSize: Clamp(1, 1.25) }}>
