@@ -34,6 +34,11 @@ const linkData = [
   },
 ];
 
+const cityOptions = [
+  { name: "Whitby", display: "(Dundas)" },
+  { name: "Oshawa", display: "(Harmony)" },
+];
+
 const Landing = ({ location }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCity, setActiveCity] = useState("Whitby");
@@ -108,21 +113,17 @@ const Landing = ({ location }) => {
         <p className="text-[24px]" style={{ fontSize: Clamp(1, 1.5) }}>
           Your health connected with care!
         </p>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 w-full">
-          {["Whitby", "Oshawa"].map((city) => (
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 w-full">
+          {cityOptions.map(({ name, display }) => (
             <button
-              key={city}
-              onClick={() => handleCityChange(city)}
-              className={`px-[10px] xl:px-[25px] py-[5px] xl:py-[12px] rounded-full border-[1px] text-[18px] 
-                ${
-                  activeCity === city
-                    ? "bg-white text-black"
-                    : "bg-transparent text-white hover:bg-white hover:text-black"
-                } 
-                border-white duration-200 flex items-center gap-2 justify-center w-[150px]`}
-              style={{ fontSize: Clamp(0.75, 1) }}
+              key={name}
+              onClick={() => handleCityChange(name)}
+              className={`py-[5px] rounded-full border-[1px] text-[18px] 
+                ${activeCity === name ? "bg-white text-black" : "bg-transparent text-white hover:bg-white hover:text-black"} 
+                border-white duration-200 flex flex-col items-center justify-center w-[200px]`}
             >
-              {city}
+              <h2>{name}</h2>
+              <h6 className="text-[14px]">{display}</h6>
             </button>
           ))}
         </div>
@@ -133,7 +134,7 @@ const Landing = ({ location }) => {
             className="font-medium text-black text-center"
             style={{ fontSize: Clamp(1, 1.5) }}
           >
-            EAST WHITBY IDA PHARMACY
+            EAST <span className="uppercase">{activeCity}</span> IDA PHARMACY
           </h1>
         </div>
         <div className="flex pt-[20px] gap-3 xl:gap-2 w-full justify-center">

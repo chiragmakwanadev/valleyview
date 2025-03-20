@@ -14,19 +14,32 @@ const Dates = [
 ];
 
 const Registration = () => {
+  const locationAccess = localStorage.getItem("location", location);
+
   return (
     <div className="bg-[#c4cad0] pt-[50px] md:pt-[100px] xl:pt-[150px]">
       <div className="bg-white margin-x mb-[50px] p-4 xl:p-7 rounded-xl flex flex-col gap-1 shadow-xl">
         <div className="flex flex-col xl:flex-row-reverse bg-white rounded-xl gap-[40px]">
           <div className="flex flex-col w-full xl:w-[50%]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1347128752056!2d-78.901594!3d43.889603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d525cd06d2595d%3A0x9f6c4a3af69bb80d!2s1916%20Dundas%20St%20E%2C%20Whitby%2C%20ON%20L1N%202L6%2C%20Canada!5e0!3m2!1sen!2sca!4v1699633078210!5m2!1sen!2sca"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-xl"
-              style={{ height: Clamp(15, 28) }}
-            ></iframe>
+            {locationAccess === "Whitby" ? (
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1347128752056!2d-78.901594!3d43.889603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d525cd06d2595d%3A0x9f6c4a3af69bb80d!2s1916%20Dundas%20St%20E%2C%20Whitby%2C%20ON%20L1N%202L6%2C%20Canada!5e0!3m2!1sen!2sca!4v1699633078210!5m2!1sen!2sca"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl"
+                style={{ height: Clamp(15, 28) }}
+              ></iframe>
+            ) : (
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509406!2d144.96305761531715!3d-37.81627977975148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzU4LjYiUyAxNDTCsDU3JzQ2LjgiRQ!5e0!3m2!1sen!2sus!4v1617183837195!5m2!1sen!2sus"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl"
+                style={{ height: Clamp(15, 28) }}
+              ></iframe>
+            )}
           </div>
           <div className="flex flex-col  gap-4 w-full xl:w-[50%] justify-between">
             <div className="flex flex-col gap-5">
@@ -52,9 +65,15 @@ const Registration = () => {
               <h1 className=" font-medium text-blue-600 text-[24px]">
                 Location
               </h1>
-              <p className="font-light " style={{ fontSize: Clamp(1, 1.5) }}>
-                1916 Dundas St E Unit 6, Whitby
-              </p>
+              {locationAccess === "Whitby" ? (
+                <p className="font-light " style={{ fontSize: Clamp(1, 1.5) }}>
+                  1916 Dundas St E Unit 6, Whitby
+                </p>
+              ) : (
+                <p className="font-light " style={{ fontSize: Clamp(1, 1.5) }}>
+                  991 Taunton Rd E B3, Oshawa, ON L1K 0Z7, Canada
+                </p>
+              )}
               <p className="text-[16px] font-thin">
                 Accessible Parking Available
               </p>
@@ -90,19 +109,19 @@ const Registration = () => {
               Times may vary depending on doctor’s availability
             </span>
             <p style={{ fontSize: Clamp(1, 1.25) }}>
-              As a community-oriented medical clinic in Whitby, we offer a wide
-              range of services designed to address all of your health care
-              needs. From routine check-ups, scheduled appointments to see your
-              family doctor, walk-in patient assessments and preventive care, we
-              aim to be your one-stop solution for maintaining and enhancing
-              your well-being.{" "}
+              As a community-oriented medical clinic in {locationAccess}, we
+              offer a wide range of services designed to address all of your
+              health care needs. From routine check-ups, scheduled appointments
+              to see your family doctor, walk-in patient assessments and
+              preventive care, we aim to be your one-stop solution for
+              maintaining and enhancing your well-being.{" "}
             </p>
-            <button
+            {/* <button
               className="bg-blue-600 px-[20px] py-[8px] w-full md:w-[250px] text-white
            hover:text-blue-600 border-[1px] border-transparent hover:border-blue-600 hover:bg-white duration-500 rounded-xl mt-[10px]"
             >
               BOOK APPOINTMENT
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

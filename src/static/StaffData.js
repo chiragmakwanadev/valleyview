@@ -43,31 +43,6 @@ export const Data = [
       },
       {
         title: "Family Physician",
-        name: "Dr. Francis Owoicho",
-        slug: "dr-francis-owoicho",
-        image: "/images/francis.jpg",
-        description: `Dr. Francis Owoicho Aluh is a dedicated multilingual medical practitioner skilled in Emergency Medicine and Primary Care.
-    
-              His exceptional communication abilities and strong rapport with patients and colleagues characterize his approach.
-    
-              With a history of working for prestigious organizations like the NHS, Dr. Francis has a record of managing patient evacuations and spearheading healthcare initiatives.
-    
-              Proficient in domains including child protection and employee training, he adeptly handles tasks while being fluent in English, Igbo, Idoma, and Hausa languages.
-    
-              Dr. Francis’s culturally sensitive approach is underscored by his commitment to gender equality and child rights.
-    
-              His medical expertise spans surgery consultations, triage calls, prescription oversight, and Steroid Joint Injections administration.
-    
-              He evaluates cases comprehensively, screens for disease risks, and contributes to care plans, especially for chronic conditions.
-    
-              His career encompasses Pediatrics, Internal Medicine (Geriatrics), Accident & Emergency, and Obstetrics/Gynecology rotations, reflecting his dedication to medical education and patient care.
-    
-              As Head Stabilization Centre Doctor at Save the Children International, he excelled in case management and team leadership. Dr. Francis’s administrative skills ensured project success and strategic partnerships, showcasing his commitment to healthcare excellence.
-    
-              With an MBBS and a passion for creative thinking and cycling, he takes a holistic approach, aiming to make a meaningful impact in healthcare through his medical expertise, leadership, and dedication.`,
-      },
-      {
-        title: "Family Physician",
         name: "Dr. Rashida Anike Agoro",
         image: "/images/logo.png",
         slug: "dr-rashida-anike-agoro",
@@ -110,6 +85,35 @@ export const Data = [
           
           `,
       },
+      {
+        title: "Family Physician",
+        name: "Dr. Olajide Afolarin",
+        image: "",
+        slug: "dr-Olajide-Afolarin",
+        oshawa: "true",
+        description: `Dr. Olajide Afolarin, M.B.Ch.B., MRCGP, FPHC, DUMC, CCFP Family Physician | Emergency & Urgent Care Specialist.
+  
+          Dr. Olajide Afolarin is a highly experienced family physician with over 12 years of medical practice, specializing in emergency and urgent medical care. With a passion for delivering high-quality healthcare, Dr. Afolarin has worked extensively in both general medicine and emergency care, having held leadership roles in urgent medical setups and treatment centers across various tertiary institutions in the United Kingdom.
+          
+          As an emergency physician, Dr. Afolarin has served as an Associate Specialist and in charge of prominent emergency departments in the UK, gaining invaluable experience in managing complex and urgent medical cases. His clinical expertise spans a variety of specialties, including general surgery, geriatrics, cardiology, and pediatrics, thanks to a comprehensive rotation and training in these fields.
+                    
+          Dr. Afolarin is committed to lifelong learning and professional development. He holds several prestigious qualifications, including the M.B.Ch.B. from OAU Ife, Nigeria, as well as memberships with the Royal College of General Practitioners (MRCGP), Diploma in Urgent Medical Care (DUMC) from Royal College of Surgeons- Edinburgh, the Faculty of Prehospital Care (FPHC), and the College of Family Physicians Canada (CCFP). Additionally, he has earned certifications in Advanced Traumatic Life Support (ATLS), Advanced Pediatric Life Support (APLS), Advanced Life Support (ALS), and European Pediatric Life Support (EPLS).
+
+          Dr. Afolarin is known for his exceptional communication skills, attentiveness to patient concerns, and compassionate care. He consistently prioritizes patient safety and satisfaction, setting a high standard for thorough and effective medical care. His expertise extends to mental health with experience in general psychiatry, and working with patients with special needs, including autism. His fluency in both English and Yoruba allows him to connect with a diverse patient population.
+          
+          Outside of his professional life, Dr. Afolarin remains dedicated to improving patient care and is always striving to stay at the forefront of medical advancements to provide the best outcomes for those he serves.
+          
+          Dr. Afolarin is currently accepting new patients and is available for consultations at Valleyview Medical Centre's Harmony location.          
+          `,
+      },
+      {
+        title: "Family Physician",
+        name: "Dr. Sajjad Ishaque",
+        image: "",
+        slug: "dr-Sajjad-Ishaque",
+        oshawa: "true",
+        description: ``,
+      },
     ],
     pharmacists: [
       {
@@ -117,6 +121,24 @@ export const Data = [
         name: "Husban Ahmed",
         image: "/images/husban.jpg",
         slug: "husban-ahmed",
+        description: `Originally from Brampton, Husban and his family relocated to Whitby in 2014, immersing themselves in the community’s welcoming atmosphere.
+  
+          After completing his studies in Life Sciences at the University of Waterloo, he graduated with Honours from the University of Toronto’s Leslie Dan Faculty of Pharmacy in 2020.
+          
+          While Husban has gained valuable experience in hospital and industry settings, his true passion lies in serving as a community pharmacist. His aim is to enrich the well-being of the patients he cares for and to become an integral part of the healthcare community.
+          
+          Possessing extensive training and practical experience, he demonstrates an exceptional ability to offer timely, accurate, and personalized information and care to his patients.
+          
+          Husban’s commitment to cultivating a comfortable and informed environment has garnered him the trust and admiration of those he assists. His unwavering dedication to promoting wellness through proper medication management and health education underscores his pivotal role in the field.
+          
+          Husban’s contributions as a pharmacist continually uplift the lives of individuals under his care, solidifying his status as an invaluable asset within the healthcare community.`, // Add Husban's description here
+      },
+      {
+        title: "Pharmacist",
+        name: "Husban Ahmed",
+        image: "/images/husban.jpg",
+        slug: "husban-ahmed",
+        oshawa: "true",
         description: `Originally from Brampton, Husban and his family relocated to Whitby in 2014, immersing themselves in the community’s welcoming atmosphere.
   
           After completing his studies in Life Sciences at the University of Waterloo, he graduated with Honours from the University of Toronto’s Leslie Dan Faculty of Pharmacy in 2020.
@@ -146,6 +168,25 @@ export const Data = [
           
           Hetal’s unyielding commitment to enhancing lives not only speaks to her character but also underscores her pivotal role in advancing health outcomes, making her an invaluable asset in the field of healthcare.`,
       },
+      {
+        title: "Pharmacist",
+        name: "Kashif Alavi",
+        image: "/images/kashif.jpg",
+        slug: "kashif-alavi",
+        description: `Kashif Alavi is known for his dedicated patient care and strong interpersonal skills, thriving in fast-paced environments by combining his approachable nature with the ability to foster trust among healthcare colleagues.
+  
+          His communication strategies and prompt feedback yield impactful results, while his commitment to continuous improvement and rapid skill acquisition is evident.
+          
+          Kashif’s expertise in optimizing patient care is showcased through exceptional support for diverse individuals, including seniors and those with unique needs, earning praise for his empathy, efficiency, and punctuality.
+          
+          Proficient in multilingual communication and technology integration, he excels in connecting with clients and is adept at problem-solving. His teamwork and mentoring abilities extend beyond his roles, displaying dedication to team development.
+          
+          With a Master of Science in Pharmacy from St. John’s University, New York, Kashif’s extensive career spans Pharmacist Manager positions and academic roles, reflecting his commitment to healthcare excellence.
+          
+          With over 15 years of experience across diverse regions, including the Durham Region, urban and rural Alberta, and New York, his broad network and local insights position him to drive transformative change in patient care and healthcare collaborations, showcasing him as a valuable asset in the healthcare field.
+          
+          `,
+      },
     ],
     manager: [
       {
@@ -168,13 +209,30 @@ export const Data = [
           `,
       },
       {
-        title: "Business Operations Manager",
+        title: "Manager of Clinical & Business Operations",
         name: "Musab Waseem",
         image: "/images/musab.jpg",
         slug: "musab-waseem-manager",
-        oshawa: "false",
         description: `As the Business Operations Manager at Valleyview Medical Centre, Musab Waseem plays a crucial role in ensuring the smooth operation of one of the busiest healthcare facilities in the Durham region. With extensive experience in medical administration, clinic management, and IT infrastructure, Musab oversees daily operations, optimizes workflow efficiency, and enhances patient care services. His expertise in electronic medical records (EMR) systems, billing processes, and compliance regulations ensures that both patients and healthcare providers experience seamless, high-quality service. Passionate about innovation in healthcare administration, Musab continuously implements strategies to improve patient access, streamline operations, and enhance the overall healthcare experience.
         `,
+      },
+      {
+        title: "Pharmacist Manager",
+        name: "Husban Ahmed",
+        image: "/images/husban.jpg",
+        slug: "husban-ahmed",
+        oshawa: "true",
+        description: `Originally from Brampton, Husban and his family relocated to Whitby in 2014, immersing themselves in the community’s welcoming atmosphere.
+  
+          After completing his studies in Life Sciences at the University of Waterloo, he graduated with Honours from the University of Toronto’s Leslie Dan Faculty of Pharmacy in 2020.
+          
+          While Husban has gained valuable experience in hospital and industry settings, his true passion lies in serving as a community pharmacist. His aim is to enrich the well-being of the patients he cares for and to become an integral part of the healthcare community.
+          
+          Possessing extensive training and practical experience, he demonstrates an exceptional ability to offer timely, accurate, and personalized information and care to his patients.
+          
+          Husban’s commitment to cultivating a comfortable and informed environment has garnered him the trust and admiration of those he assists. His unwavering dedication to promoting wellness through proper medication management and health education underscores his pivotal role in the field.
+          
+          Husban’s contributions as a pharmacist continually uplift the lives of individuals under his care, solidifying his status as an invaluable asset within the healthcare community.`, // Add Husban's description here
       },
     ],
     staff: [
@@ -183,23 +241,22 @@ export const Data = [
         name: "Musab Waseem",
         image: "/images/musab.jpg",
         slug: "musab-waseem-admin",
-        oshawa: "true",
         description: `With a background in pharmacy and healthcare administration, Musab Waseem is a dedicated Allied Healthcare Professional committed to patient well-being and operational excellence. Holding certifications in IM injections, vaccine handling, First Aid CPR, and mental health, Musab brings both clinical expertise and administrative efficiency to his role. His prior experience as a pharmacist in India gives him a unique perspective on medication management, patient safety, and healthcare protocols. Working in a dynamic medical setting, he assists in coordinating patient care, supporting clinical procedures, and ensuring smooth communication between healthcare providers and patients. His dedication to quality healthcare services and patient-centered care makes him an integral part of the Valleyview Medical Centre team.
         `,
       },
       {
-        title: "Receptionist",
-        name: "kayla",
+        title: "Clinic Co-ordinator",
+        name: "Kayla Elizabeth",
         image: "/images/kayla.jpeg",
         slug: "",
         description: ``,
+        oshawa: "true",
       },
       {
         title: "Clinic Coordinator",
-        name: "Kanwal Aggarwal",
+        name: "Kawaldeep Agrawal",
         image: "",
         slug: "",
-        oshawa: "true",
         description: ``,
       },
       {
@@ -207,7 +264,6 @@ export const Data = [
         name: "Nikita Saxena",
         image: "",
         slug: "",
-        oshawa: "true",
         description: ``,
       },
       {
@@ -215,8 +271,15 @@ export const Data = [
         name: "Afrika Gayle",
         image: "",
         slug: "",
-        oshawa: "true",
         description: ``,
+      },
+      {
+        title: "Medical Office Administrator (MOA)",
+        name: "Akshana Uthaya Paskaran",
+        image: "",
+        slug: "",
+        description: ``,
+        oshawa: "true",
       },
     ],
   },

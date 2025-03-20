@@ -9,12 +9,15 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("doctors");
 
   const renderData = (category) => {
-    console.log("this is data", Data);
-    return Data[0][category].map((item, index) =>
-      item.slug ? (
-        <Link
+    const selectedLocation = localStorage.getItem("location") || "Whitby";
+
+    return Data[0][category]
+      .filter((item) =>
+        selectedLocation === "Oshawa" ? item.oshawa : !item.oshawa
+      )
+      .map((item, index) => (
+        <div
           key={index}
-          href={`/staff/${item.slug}`}
           className="min-w-[250px] w-full sm:w-[22%] text-center flex flex-col h-[400px] rounded-xl"
         >
           <img
@@ -31,31 +34,9 @@ const Index = () => {
               {item.name}
             </p>
           </div>
-        </Link>
-      ) : (
-        <div
-          key={index}
-          className="min-w-[250px] w-full sm:w-[22%] text-center flex flex-col h-[400px] rounded-xl cursor-default"
-        >
-          <img
-            src={item.image || "/images/logo.png"}
-            alt={item.name}
-            className="w-[100%] h-[300px] object-cover rounded-lg overflow-hidden"
-          />
-          <div className="flex flex-col gap-2 pt-3">
-            <h3 className="text-[14px] font-normal">{item.title}</h3>
-            <p
-              className="text-blue-600 font-bold"
-              style={{ fontSize: Clamp(1, 1.25) }}
-            >
-              {item.name}
-            </p>
-          </div>
         </div>
-      )
-    );
+      ));
   };
-
   return (
     <>
       <Head>

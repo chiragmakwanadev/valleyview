@@ -2,6 +2,8 @@ import React from "react";
 import Clamp from "../Clamp";
 
 const Why = () => {
+  const locationAccess = localStorage.getItem("location", location);
+
   return (
     <div className="padding-x py-[100px] bg-[#c4cad0]">
       <div className="bg-white text-black flex flex-col gap-10 p-5 xl:p-10 rounded-xl">
@@ -49,20 +51,20 @@ const Why = () => {
             </p>
             <ul className="text-[14px]">
               <li>
-                ✅ Routine Check-ups & Preventive Care – Early detection and
+                ● Routine Check-ups & Preventive Care – Early detection and
                 proactive care for a healthier future.
               </li>
               <li>
-                ✅ Chronic Disease Management – Support for diabetes,
+                ● Chronic Disease Management – Support for diabetes,
                 hypertension, and other long-term conditions.
               </li>
               <li>
-                ✅ Specialist Referrals – Direct access to leading specialists
+                ● Specialist Referrals – Direct access to leading specialists
                 for advanced care.
               </li>
               <li>
-                ✅ Emergency & Walk-In Services – Immediate care when you need
-                it most.
+                ● Emergency & Walk-In Services – Immediate care when you need it
+                most.
               </li>
             </ul>
             <h2 className="font-bold" style={{ fontSize: Clamp(1, 1.5) }}>
@@ -77,15 +79,15 @@ const Why = () => {
             </p>
             <ul className="text-[14px]">
               <li>
-                ✅ State-of-the-art diagnostic equipment for accurate
+                ● State-of-the-art diagnostic equipment for accurate
                 assessments.
               </li>
               <li>
-                ✅ Electronic Medical Records (EMR) for streamlined patient
+                ● Electronic Medical Records (EMR) for streamlined patient
                 history tracking.
               </li>
               <li>
-                ✅ Telemedicine Services for convenient virtual consultations.
+                ● Telemedicine Services for convenient virtual consultations.
               </li>
             </ul>
             <h2 className="font-bold" style={{ fontSize: Clamp(1, 1.5) }}>
@@ -99,13 +101,13 @@ const Why = () => {
               heard, valued, and cared for.
             </p>
             <ul className="text-[14px]">
-              <li>✅ Multilingual team to assist diverse communities.</li>
+              <li>● Multilingual team to assist diverse communities.</li>
               <li>
-                ✅ Friendly & welcoming staff dedicated to making your
-                experience smooth.
+                ● Friendly & welcoming staff dedicated to making your experience
+                smooth.
               </li>
               <li>
-                ✅ Comfortable and modern clinic environment designed with
+                ● Comfortable and modern clinic environment designed with
                 patients in mind.
               </li>
             </ul>
@@ -118,10 +120,10 @@ const Why = () => {
               conveniently without the hassle of making multiple trips.
             </p>
             <ul className="text-[14px]">
-              <li>✅ Immediate access to prescribed medications.</li>
-              <li>✅ Professional guidance from our expert pharmacists.</li>
+              <li>● Immediate access to prescribed medications.</li>
+              <li>● Professional guidance from our expert pharmacists.</li>
               <li>
-                ✅ Quick refills and medication management for chronic
+                ● Quick refills and medication management for chronic
                 conditions.
               </li>
             </ul>
@@ -136,14 +138,13 @@ const Why = () => {
               care for you and your loved ones.
             </p>
             <ul className="text-[14px]">
-              <li>✅ Pediatric care to keep your little ones healthy.</li>
+              <li>● Pediatric care to keep your little ones healthy.</li>
               <li>
-                ✅ Women’s health services, including routine exams and prenatal
+                ● Women’s health services, including routine exams and prenatal
                 care.
               </li>
               <li>
-                ✅ Geriatric care to support aging with dignity and
-                independence.
+                ● Geriatric care to support aging with dignity and independence.
               </li>
             </ul>
             <h2 className="font-bold" style={{ fontSize: Clamp(1, 1.5) }}>
@@ -151,16 +152,14 @@ const Why = () => {
             </h2>
             <p>
               We believe quality healthcare should be accessible to everyone.
-              Our centrally located clinic makes it easy for patients from
-              Whitby and surrounding areas to receive the care they need without
-              long wait times or unnecessary travel.
+              Our centrally located clinic makes it easy for patients from{" "}
+              {locationAccess} and surrounding areas to receive the care they
+              need without long wait times or unnecessary travel.
             </p>
             <ul className="text-[14px]">
-              <li>✅ Ample parking & wheelchair accessibility.</li>
-              <li>
-                ✅ Flexible appointment scheduling & walk-in availability.
-              </li>
-              <li>✅ Easy access by public transport.</li>
+              <li>● Ample parking & wheelchair accessibility.</li>
+              <li>● Flexible appointment scheduling & walk-in availability.</li>
+              <li>● Easy access by public transport.</li>
             </ul>
             <h2 className="font-bold" style={{ fontSize: Clamp(1, 1.5) }}>
               7. A Team That Truly Cares

@@ -5,6 +5,8 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Clamp from "@/components/Clamp";
 
 const Footer = () => {
+  const locationAccess = localStorage.getItem("location", location);
+
   return (
     <div className="text-white flex flex-col bg-gray-800">
       <div
@@ -19,11 +21,19 @@ const Footer = () => {
             style={{ fontSize: Clamp(0.75, 1.25) }}
           >
             ADDRESS <br />
-            <span className="font-normal">
-              1916 Dundas St E Unit 6
-              <br />
-              Whitby, ON L1N 2L6
-            </span>
+            {locationAccess === "Whitby" ? (
+              <span className="font-normal">
+                1916 Dundas St E Unit 6
+                <br />
+                Whitby, ON L1N 2L6
+              </span>
+            ) : (
+              <span className="font-normal">
+                991 Taunton Rd E B3, Oshawa,
+                <br />
+                ON L1K 0Z7, Canada
+              </span>
+            )}
           </h1>
         </div>
         <div className="flex gap-7 flex-col pl-0 xl:pl-[50px]">
@@ -80,13 +90,18 @@ const Footer = () => {
           </h1>
           <ul style={{ fontSize: Clamp(0.75, 1.25) }}>
             <li className="hover:text-red-600">
-              <Link href="/policy/clinic-policies">Clinic Policies</Link>
+              <Link href="/service-fee">Uninsured Service Fee</Link>
             </li>
             <li className="hover:text-red-600">
-              <Link href="/policy/prescription-renewal-policy">
-                Prescription Renewals
-              </Link>
+              <Link href="/policy/clinic-policies">Clinic Policies</Link>
             </li>
+            {locationAccess === "Whitby" && (
+              <li className="hover:text-red-600">
+                <Link href="/policy/prescription-renewal-policy">
+                  Prescription Renewals
+                </Link>
+              </li>
+            )}
             <li className="hover:text-red-600">
               <Link href="/policy/patient-responsibility">
                 Patient Responsibilites

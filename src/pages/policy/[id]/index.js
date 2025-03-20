@@ -38,16 +38,41 @@ export async function getStaticProps({ params }) {
 }
 
 const PolicySlugPage = ({ policyTopic }) => {
+  const showImages = ["clinic-policies", "health-card-policy"].includes(
+    policyTopic.slug
+  );
+
   return (
     <>
       <Head>
-        <title>{policyTopic.topic} | Vallewview Medical Centre</title>
+        <title>{policyTopic.topic} | Valleyview Medical Centre</title>
       </Head>
       <div className="policy-page">
         <Banner subtitle={policyTopic.topic} buttonText="Have a question?" />
         <div className="padding-x flex flex-col items-center py-[100px]">
           {policyTopic.item.map((policy, index) => {
-            // Alternate images left and right
+            if (!showImages) {
+              return (
+                <div className="policy-item mb-8 w-full flex flex-col items-start">
+                  <h2
+                    className="font-semibold text-blue-600 pb-3"
+                    style={{ fontSize: Clamp(1.25, 1.75) }}
+                  >
+                    {policy.title}
+                  </h2>
+                  <p
+                    key={index}
+                    style={{
+                      whiteSpace: "pre-line",
+                      fontSize: Clamp(0.8, 1.1),
+                    }}
+                  >
+                    {policy.description}
+                  </p>
+                </div>
+              );
+            }
+
             const isEven = index % 2 === 0;
 
             return (

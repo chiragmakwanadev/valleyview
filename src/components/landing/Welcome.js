@@ -50,18 +50,16 @@ const Welcome = () => {
             </p>
             <ul className="text-[14px]">
               <li>
-                ✅ Advanced technology for accurate diagnostics and effective
+                ● Advanced technology for accurate diagnostics and effective
                 treatment.
               </li>
+              <li>● Personalized care tailored to your unique health needs.</li>
               <li>
-                ✅ Personalized care tailored to your unique health needs.
-              </li>
-              <li>
-                ✅ On-site pharmacy to make it easier for you to access
+                ● On-site pharmacy to make it easier for you to access
                 prescriptions.
               </li>
               <li>
-                ✅ Modern facilities to ensure a seamless and stress-free
+                ● Modern facilities to ensure a seamless and stress-free
                 experience.
               </li>
             </ul>

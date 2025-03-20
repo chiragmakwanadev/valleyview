@@ -224,6 +224,7 @@ export const PolicyData = {
       slug: "health-card-policy",
       item: [
         {
+          image: "/images/health-1.jpg",
           title: "Required for Every Visit to Valleyview Medical Centre",
           description: `We kindly request that you bring your health card to each appointment.
       
@@ -236,6 +237,7 @@ export const PolicyData = {
             If you are able to present a valid health card within 30 days of your visit, any amount you have paid will be reimbursed, excluding our administrative fee.`,
         },
         {
+          image: "/images/health-2.jpg",
           title: "Reminder",
           description: `Keeping your health card up to date is crucial to ensure uninterrupted access to healthcare services and to prevent any potential fraud.
       
@@ -283,7 +285,7 @@ export const PolicyData = {
   "Test Results Notification": [
     {
       topic: "Test Results Notification",
-      slug: "test-results-notificationn",
+      slug: "test-results-notification",
       item: [
         {
           description: `In order to manage the high volume of test results received at Valleyview Medical Centre on a daily basis, we would like to inform you of our notification process.

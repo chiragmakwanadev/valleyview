@@ -49,7 +49,7 @@ const Header = () => {
         </li>
 
         <li className="group relative py-[5px] cursor-pointer duration-300">
-          <Link href="/assistant">CONTACT US</Link>
+          <Link href="/contact">CONTACT US</Link>
           <span className="absolute bottom-0 left-0 h-[2px] bg-black w-0 group-hover:w-full transition-all duration-300"></span>
         </li>
 
@@ -62,7 +62,11 @@ const Header = () => {
         <li
           className="group relative px-[23px] py-[8px] bg-red-700 border-transparent border-[1px] hover:bg-red-500
          text-white hover:text-white cursor-pointer duration-300 rounded-full"
-          onClick={openDialog}
+          onClick={() =>
+            handleLocationClick(
+              "https://ocean.cognisantmd.com/intake/patients.html?linkRef=04f9eeaf-8434-4153-aa26-2d0c910f4020#/online-booking"
+            )
+          }
         >
           BOOK APPOINTMENT
         </li>
@@ -74,39 +78,6 @@ const Header = () => {
           <Link href="https://www.bookmyshot.com/9054351100">PHARMACY</Link>
         </li>
       </ul>
-      {isDialogOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
-          onClick={closeDialog}
-        >
-          <div
-            className="bg-white rounded-lg px-6 py-4 w-[300px] text-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2 className="text-lg font-bold mb-4">Choose a Location</h2>
-            <button
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-3xl mb-2 hover:bg-blue-600"
-              onClick={() =>
-                handleLocationClick(
-                  "https://ocean.cognisantmd.com/intake/patients.html?linkRef=oshawa-link"
-                )
-              }
-            >
-              Oshawa
-            </button>
-            <button
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded-3xl hover:bg-blue-600"
-              onClick={() =>
-                handleLocationClick(
-                  "https://ocean.cognisantmd.com/intake/patients.html?linkRef=04f9eeaf-8434-4153-aa26-2d0c910f4020#/online-booking"
-                )
-              }
-            >
-              Whitby
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
