@@ -53,7 +53,10 @@ const PolicySlugPage = ({ policyTopic }) => {
           {policyTopic.item.map((policy, index) => {
             if (!showImages) {
               return (
-                <div className="policy-item mb-8 w-full flex flex-col items-start">
+                <div
+                  className="policy-item mb-8 w-full flex flex-col items-start"
+                  key={index}
+                >
                   <h2
                     className="font-semibold text-blue-600 pb-3"
                     style={{ fontSize: Clamp(1.25, 1.75) }}
@@ -61,7 +64,6 @@ const PolicySlugPage = ({ policyTopic }) => {
                     {policy.title}
                   </h2>
                   <p
-                    key={index}
                     style={{
                       whiteSpace: "pre-line",
                       fontSize: Clamp(0.8, 1.1),

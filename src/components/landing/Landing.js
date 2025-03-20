@@ -40,7 +40,6 @@ const cityOptions = [
 ];
 
 const Landing = ({ location }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeCity, setActiveCity] = useState("Whitby");
   const router = useRouter();
 
@@ -57,30 +56,6 @@ const Landing = ({ location }) => {
     const savedCity = localStorage.getItem("location");
     setActiveCity(savedCity);
   }, []);
-
-  const HandleOpen = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleClose = (e) => {
-    if (isOpen && !e.target.closest(".modal-box")) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClose);
-
-    if (isOpen) {
-      document.body.style.backgroundColor = "white";
-    } else {
-      document.body.style.backgroundColor = "";
-    }
-
-    return () => {
-      document.removeEventListener("click", handleClose);
-    };
-  }, [isOpen]);
 
   return (
     <div className="w-full relative">
