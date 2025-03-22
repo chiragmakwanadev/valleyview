@@ -12,6 +12,17 @@ const Dates = [
     "Sunday/Stat Holidays": "Closed",
   },
 ];
+const oshawaDates = [
+  {
+    Monday: "9am to 7pm",
+    Tuesday: "9am to 7pm",
+    Wednesday: "9am to 7pm",
+    Thursday: "9am to 7pm",
+    Friday: "9am to 7pm",
+    "Sat/Sun": "10am to 3pm",
+    "Stat Holidays": "Closed",
+  },
+];
 
 const Registration = () => {
   const locationAccess = localStorage.getItem("location", location);
@@ -81,27 +92,52 @@ const Registration = () => {
           </div>
         </div>
         <div className="flex flex-col xl:flex-row w-full gap-10 pt-[50px]">
-          <img
-            src="/images/hospital.jpg"
-            alt=""
-            className="w-full xl:w-[50%] object-cover rounded-xl"
-            style={{ height: Clamp(15, 35) }}
-          />
+          {locationAccess === "Whitby" ? (
+            <img
+              src="/images/hospital.jpg"
+              alt=""
+              className="w-full xl:w-[50%] object-cover rounded-xl"
+              style={{ height: Clamp(15, 35) }}
+            />
+          ) : (
+            <img
+              src="/images/oshawa-hos.jpeg"
+              alt=""
+              className="w-full xl:w-[50%] object-cover rounded-xl"
+              style={{ height: Clamp(15, 35) }}
+            />
+          )}
           <div className="flex flex-col gap-2 w-full xl:w-[50%]">
             <h1 className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-200 w-auto xl:w-[250px] p-[5px] text-center rounded-3xl">
               Clinic Timings
             </h1>
 
             <div className="text-[16px]">
-              {Object.entries(Dates[0]).map(([day, time]) => (
-                <div
-                  key={day}
-                  className="grid grid-cols-2 gap-x-1 pb-2 items-center justify-start"
-                >
-                  <p className="font-bold whitespace-nowrap">{day}:</p>
-                  <p>{time}</p>
-                </div>
-              ))}
+              {locationAccess === "Whitby" ? (
+                <>
+                  {Object.entries(Dates[0]).map(([day, time]) => (
+                    <div
+                      key={day}
+                      className="grid grid-cols-2 gap-x-1 pb-2 items-center justify-start"
+                    >
+                      <p className="font-bold whitespace-nowrap">{day}:</p>
+                      <p>{time}</p>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {Object.entries(oshawaDates[0]).map(([day, time]) => (
+                    <div
+                      key={day}
+                      className="grid grid-cols-2 gap-x-1 pb-2 items-center justify-start"
+                    >
+                      <p className="font-bold whitespace-nowrap">{day}:</p>
+                      <p>{time}</p>
+                    </div>
+                  ))}
+                </>
+              )}
             </div>
 
             <span className="flex items-start xl:items-end">

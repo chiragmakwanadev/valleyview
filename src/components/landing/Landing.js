@@ -137,7 +137,7 @@ const Landing = ({ location }) => {
                 ))}
               </>
             ) : (
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 flex-wrap justify-center">
                 <div className="flex items-center gap-2">
                   <h2 className="text-[16px] text-red-400">Call Us:</h2>
                   <Link href="tel:+19053678510" className="hover:text-red-600">

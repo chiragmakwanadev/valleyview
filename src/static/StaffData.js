@@ -213,7 +213,16 @@ export const Data = [
         name: "Musab Waseem",
         image: "/images/musab.jpg",
         slug: "musab-waseem-manager",
-        description: `As the Business Operations Manager at Valleyview Medical Centre, Musab Waseem plays a crucial role in ensuring the smooth operation of one of the busiest healthcare facilities in the Durham region. With extensive experience in medical administration, clinic management, and IT infrastructure, Musab oversees daily operations, optimizes workflow efficiency, and enhances patient care services. His expertise in electronic medical records (EMR) systems, billing processes, and compliance regulations ensures that both patients and healthcare providers experience seamless, high-quality service. Passionate about innovation in healthcare administration, Musab continuously implements strategies to improve patient access, streamline operations, and enhance the overall healthcare experience.
+        description: `As the Manager of Clinical and Business Operations at Valleyview Medical Centre, Musab Waseem ensures the smooth and efficient functioning of both patient care services and business operations. With over 14 months of experience in healthcare administration, he plays a pivotal role in managing daily clinic workflows, optimizing operational strategies, and implementing advanced healthcare technologies. His expertise in EMR systems, medical billing, and regulatory compliance contributes to a well-structured and patient-focused environment. Musab’s leadership and problem-solving skills allow him to coordinate seamlessly with physicians, staff, and patients, ensuring that the clinic delivers exceptional care while maintaining the highest standards of efficiency and professionalism.
+        `,
+      },
+      {
+        title: "Manager of Clinical & Business Operations",
+        name: "Musab Waseem",
+        image: "/images/musab.jpg",
+        oshawa: "true",
+        slug: "musab-waseem-manager",
+        description: `As the Manager of Clinical and Business Operations at Valleyview Medical Centre, Musab Waseem ensures the smooth and efficient functioning of both patient care services and business operations. With over 14 months of experience in healthcare administration, he plays a pivotal role in managing daily clinic workflows, optimizing operational strategies, and implementing advanced healthcare technologies. His expertise in EMR systems, medical billing, and regulatory compliance contributes to a well-structured and patient-focused environment. Musab’s leadership and problem-solving skills allow him to coordinate seamlessly with physicians, staff, and patients, ensuring that the clinic delivers exceptional care while maintaining the highest standards of efficiency and professionalism.
         `,
       },
       {
@@ -241,7 +250,16 @@ export const Data = [
         name: "Musab Waseem",
         image: "/images/musab.jpg",
         slug: "musab-waseem-admin",
-        description: `With a background in pharmacy and healthcare administration, Musab Waseem is a dedicated Allied Healthcare Professional committed to patient well-being and operational excellence. Holding certifications in IM injections, vaccine handling, First Aid CPR, and mental health, Musab brings both clinical expertise and administrative efficiency to his role. His prior experience as a pharmacist in India gives him a unique perspective on medication management, patient safety, and healthcare protocols. Working in a dynamic medical setting, he assists in coordinating patient care, supporting clinical procedures, and ensuring smooth communication between healthcare providers and patients. His dedication to quality healthcare services and patient-centered care makes him an integral part of the Valleyview Medical Centre team.
+        description: `Musab Waseem is a highly skilled allied healthcare professional with a strong background in pharmacy and clinical support. Having previously worked as a pharmacist in India, he brings extensive knowledge of medications, patient counseling, and healthcare procedures. His expertise extends to immunization, as he holds certifications in IM injection and vaccine handling, ensuring safe and effective administration of vaccines. With a keen eye for precision and a commitment to patient care, Musab plays a crucial role in supporting both clinical and administrative functions at Valleyview Medical Centre. His diverse skill set and dedication make him an integral part of the healthcare team.
+        `,
+      },
+      {
+        title: "Allied Healthcare Professional",
+        oshawa: "true",
+        name: "Musab Waseem",
+        image: "/images/musab.jpg",
+        slug: "musab-waseem-admin",
+        description: `Musab Waseem is a highly skilled allied healthcare professional with a strong background in pharmacy and clinical support. Having previously worked as a pharmacist in India, he brings extensive knowledge of medications, patient counseling, and healthcare procedures. His expertise extends to immunization, as he holds certifications in IM injection and vaccine handling, ensuring safe and effective administration of vaccines. With a keen eye for precision and a commitment to patient care, Musab plays a crucial role in supporting both clinical and administrative functions at Valleyview Medical Centre. His diverse skill set and dedication make him an integral part of the healthcare team.
         `,
       },
       {

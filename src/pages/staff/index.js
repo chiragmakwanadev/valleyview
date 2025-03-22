@@ -47,10 +47,10 @@ const Index = () => {
       </Head>
       <Banner subtitle={"Our Health Care Specialists"} buttonText="Email Us" />
       <div className="padding-x py-[50px] flex flex-col bg-[#f2f0f0]">
-        <div className="flex mb-8">
+        <div className="flex flex-wrap mb-8 bg-gray-200 rounded-xl p-2">
           <button
             onClick={() => setActiveTab("doctors")}
-            className={`px-6 py-2 ${
+            className={`px-6 py-2 w-full md:w-auto ${
               activeTab === "doctors"
                 ? "bg-white p-10 rounded-xl text-black"
                 : "text-gray-500"
@@ -61,7 +61,7 @@ const Index = () => {
           </button>
           <button
             onClick={() => setActiveTab("staff")}
-            className={`px-6 py-2 ${
+            className={`px-6 py-2 w-full md:w-auto ${
               activeTab === "staff"
                 ? "bg-white p-10 rounded-xl text-black"
                 : "text-gray-500"
@@ -72,7 +72,7 @@ const Index = () => {
           </button>
           <button
             onClick={() => setActiveTab("pharmacists")}
-            className={`px-6 py-2 ${
+            className={`px-6 py-2 w-full md:w-auto ${
               activeTab === "pharmacists"
                 ? "bg-white p-10 rounded-xl text-black"
                 : "text-gray-500"
@@ -83,7 +83,7 @@ const Index = () => {
           </button>
           <button
             onClick={() => setActiveTab("manager")}
-            className={`px-6 py-2 ${
+            className={`px-6 py-2 w-full md:w-auto ${
               activeTab === "manager"
                 ? "bg-white p-10 rounded-xl text-black"
                 : "text-gray-500"

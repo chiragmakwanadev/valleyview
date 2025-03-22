@@ -4,39 +4,39 @@ import { Rating } from "@mui/material";
 
 const Data = [
   {
-    reviewer: "John Doe",
-    rating: 5,
-    date: "2 months ago",
-    review:
-      "We are incredibly fortunate to have Dr. Smith as our family doctor. His expertise, professionalism, and genuine care for his patients make him stand out in the medical field. He listens attentively, diagnoses accurately, and provides clear, effective treatment plans. Dr. Smith takes the time to explain medical issues thoroughly and ensures that you are comfortable with every step of your care. The front desk staff at this clinic are professional and friendly too. Highly recommend!",
-  },
-  {
-    reviewer: "Emily Carter",
-    rating: 5,
-    date: "a week ago",
-    review:
-      "I highly recommend Dr. Johnson at Harmony Medical Centre. She is the BEST doctor I've ever had. Dr. Johnson takes the time to truly listen to my concerns and is incredibly knowledgeable about women's health and other medical issues. She's also friendly, approachable, and thorough. For the first time in years, I felt heard and understood, not rushed or dismissed. The entire team and pharmacy staff here are also super helpful and kind. I am so happy and grateful I have found Dr. Johnson and this clinic.",
-  },
-  {
-    reviewer: "Mark Williams",
+    reviewer: "Vic Tyrer",
     rating: 5,
     date: "3 months ago",
     review:
-      "I just found a hidden treasure. Dr. Brown is everything I have been hoping to find in a family doctor. I came in as a walk-in since my previous doctor retired. I had been sick for a month! Dr. Brown was friendly and compassionate—she addressed my concerns right away. Lisa and Jake at the front desk were so welcoming and kind. This office is a hidden gem. I am transferring my care to Dr. Brown because she is kind and patient… everything you want in a family doctor.",
+      "If you are looking for a doctor we highly recommend Valleyview Medical Centre. My wife and I registered in person and we're assigned a doctor immediately. We met with Dr. Francis Aluh. He is amazing. He took his time with us, has excellent communication skills, and is very easy to speak with. The Clinic reception staff are well organized, pleasant and efficient in calling patient to see their doctor.",
   },
   {
-    reviewer: "Sophia Lee",
-    rating: 4,
-    date: "1 month ago",
+    reviewer: "Saad Faize",
+    rating: 5,
+    date: "2 months ago",
     review:
-      "Dr. Davis is a great doctor who truly cares about his patients. He always takes the time to answer questions and explain everything in detail. The only reason I am giving 4 stars instead of 5 is that the waiting time can be long. Other than that, I highly recommend Dr. Davis and his team. The staff is friendly and professional, and the clinic is well-organized.",
+      "Exceptional care at Valleyview Medical Centre! Dr. Emmanuel Erdogan is incredibly supportive, going above and beyond for patient well-being. The help desk and pharmacy staff are professional, efficient, and caring. The quality of care far exceeded my expectations. Highly recommend this clinic and its services!",
   },
   {
-    reviewer: "Alex Martinez",
+    reviewer: "telugammayi Dhanasree",
     rating: 5,
     date: "3 weeks ago",
     review:
-      "I have never felt more comfortable at a doctor's office. Dr. Miller is an absolute professional who listens carefully and provides the best medical care. The staff is friendly, the clinic is clean, and I never feel rushed during my visits. If you're looking for a compassionate and knowledgeable doctor, Dr. Miller is the one to see. Thank you for the great care!",
+      "Valley View hospital exceeded our expectations! Dr. Emmanuel Adeogun provided thorough care during my pregnancy, closely monitoring my health and ensuring the best outcomes. The staff is kind, patient, and accommodating despite the hospital being busy. We’re beyond grateful for their support!",
+  },
+  {
+    reviewer: "Bhakti Patel",
+    rating: 5,
+    date: "5 months ago",
+    review:
+      "I visited as a walk-in and met Dr. Francis, who is an amazing doctor. The administrator was incredibly helpful and made the whole process smooth and easy for me. I didn’t have to wait long, which was a big plus. Overall, a great experience, and I would definitely go there again! If you need any help, Musab is your guy—his expertise in IT and admin tasks really stands out.",
+  },
+  {
+    reviewer: "areebah iq8",
+    rating: 5,
+    date: "a month ago",
+    review:
+      "Been going here ever since I was 6 and the current staff and environment are the best yet. Reception has improved, pharmacy is great (still have the same pharmacist since my first time there) and doctors are on top of it. The best part though is that any concerns you have regarding staff, appointments, rescheduling etc. are all taken seriously and changes are made. Good work Valleyview!",
   },
 ];
 

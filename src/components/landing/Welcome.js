@@ -2,6 +2,10 @@ import React from "react";
 import Clamp from "../Clamp";
 
 const Welcome = () => {
+  const locationAccess = localStorage.getItem("location", location);
+
+  console.log("this is location", locationAccess);
+
   return (
     <div className="bg-white padding-x py-[100px]">
       <h1
@@ -15,12 +19,19 @@ const Welcome = () => {
           <p className="text-[16px] xl:text-[18px] text-blue-600 bg-blue-100 w-auto xl:w-[350px] p-[5px] text-center rounded-3xl">
             Your health connected with care!
           </p>
-
-          <img
-            src="/images/reception.jpg"
-            alt=""
-            className="w-full xl:w-[50%] object-cover block xl:hidden h-[300px] md:h-[400px] rounded-2xl"
-          />
+          {locationAccess === "Whitby" ? (
+            <img
+              src="/images/reception.jpg"
+              alt=""
+              className="w-full xl:w-[50%] object-cover block xl:hidden h-[300px] md:h-[400px] rounded-2xl"
+            />
+          ) : (
+            <img
+              src="/images/oshawa-rec.jpeg"
+              alt=""
+              className="w-full xl:w-[50%] object-cover block xl:hidden h-[300px] md:h-[400px] rounded-2xl"
+            />
+          )}
           <div
             style={{ fontSize: Clamp(0.75, 1) }}
             className="flex flex-col gap-4 text-gray-700"
@@ -78,11 +89,19 @@ const Welcome = () => {
             </p>
           </div>
         </div>
-        <img
-          src="/images/reception.jpg"
-          alt=""
-          className="w-full xl:w-[50%] object-cover hidden xl:block rounded-xl"
-        />
+        {locationAccess === "Whitby" ? (
+          <img
+            src="/images/reception.jpg"
+            alt=""
+            className="w-full xl:w-[50%] object-cover hidden xl:block rounded-xl"
+          />
+        ) : (
+          <img
+            src="/images/oshawa-rec.jpeg"
+            alt=""
+            className="w-full xl:w-[50%] object-cover hidden xl:block rounded-xl"
+          />
+        )}
       </div>
     </div>
   );

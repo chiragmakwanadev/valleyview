@@ -35,6 +35,8 @@ const NewsDetail = ({ newsItem }) => {
 
   if (router.isFallback) return <p>Loading...</p>;
 
+  const locationAccess = localStorage.getItem("location", location);
+
   return (
     <>
       <Head>
@@ -79,32 +81,61 @@ const NewsDetail = ({ newsItem }) => {
             >
               Contact Us
             </h1>
-            <ul className="flex flex-col gap-5 pt-4 text-gray-600">
-              <li className="flex gap-5 items-center">
-                <IoPersonSharp />
-                <p>Valleyview Medical Centre</p>
-              </li>
-              <li className="flex gap-5 items-center">
-                <AiFillHome />
-                <p>1916 Dundas St E Unit 6, Whitby</p>
-              </li>
-              <li className="flex gap-5 items-center">
-                <FaPhone />
-                <p>+1 905-434-1662</p>
-              </li>
-              <li className="flex gap-5 items-center">
-                <BiSolidMessage />
-                <Link href="" className="hover:text-red-600">
-                  info@valleyviewmedical.ca
-                </Link>
-              </li>
-              <li className="flex gap-5 items-center">
-                <FaLink />
-                <Link href="" className="hover:text-red-600">
-                  www.valleyviewmedical.ca
-                </Link>
-              </li>
-            </ul>
+            {locationAccess === "Whitby" ? (
+              <ul className="flex flex-col gap-5 pt-4 text-gray-600">
+                <li className="flex gap-5 items-center">
+                  <IoPersonSharp />
+                  <p>Valleyview Medical Centre</p>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <AiFillHome />
+                  <p>1916 Dundas St E Unit 6, Whitby</p>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <FaPhone />
+                  <p>+1 905-434-1662</p>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <BiSolidMessage />
+                  <Link href="" className="hover:text-red-600">
+                    info@valleyviewmedical.ca
+                  </Link>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <FaLink />
+                  <Link href="" className="hover:text-red-600">
+                    www.valleyviewmedical.ca
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              <ul className="flex flex-col gap-5 pt-4 text-gray-600">
+                <li className="flex gap-5 items-center">
+                  <IoPersonSharp />
+                  <p>Valleyview Medical Centre</p>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <AiFillHome />
+                  <p> 991 Taunton Rd E B3, Oshawa</p>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <FaPhone />
+                  <p>+1 905-367-8510</p>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <BiSolidMessage />
+                  <Link href="" className="hover:text-red-600">
+                    harmonypharmachoice@gmail.com
+                  </Link>
+                </li>
+                <li className="flex gap-5 items-center">
+                  <FaLink />
+                  <Link href="" className="hover:text-red-600">
+                    www.valleyviewmedical.ca
+                  </Link>
+                </li>
+              </ul>
+            )}
           </div>
           <div>
             <h1
