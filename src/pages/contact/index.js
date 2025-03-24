@@ -90,11 +90,11 @@ Message: ${formData.message}`
               ></iframe>
             ) : (
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509406!2d144.96305761531715!3d-37.81627977975148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzU4LjYiUyAxNDTCsDU3JzQ2LjgiRQ!5e0!3m2!1sen!2sus!4v1617183837195!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.078275663616!2d-78.84900402362726!3d43.94217347107847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d52d5f4c97b78f%3A0xc09f357d032f78e!2s991%20Taunton%20Rd%20E%20B3%2C%20Oshawa%2C%20ON%20L1K%200Z7%2C%20Canada!5e0!3m2!1sen!2sca!4v1710968456285!5m2!1sen!2sca"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-xl w-full h-[450px]"
+                className="rounded-xl"
                 style={{ height: Clamp(15, 28) }}
               ></iframe>
             )}

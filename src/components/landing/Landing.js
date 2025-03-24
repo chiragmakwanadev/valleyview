@@ -158,7 +158,7 @@ const Landing = ({ location }) => {
                     href="mailto:info@valleyviewmedical.ca"
                     className="hover:text-red-600"
                   >
-                    harmonypharmachoice@gmail.com
+                    valleyviewharmony@gmail.com
                   </Link>
                 </div>
               </div>

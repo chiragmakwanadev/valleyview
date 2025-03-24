@@ -125,7 +125,7 @@ const NewsDetail = ({ newsItem }) => {
                 <li className="flex gap-5 items-center">
                   <BiSolidMessage />
                   <Link href="" className="hover:text-red-600">
-                    harmonypharmachoice@gmail.com
+                    valleyviewharmony@gmail.com
                   </Link>
                 </li>
                 <li className="flex gap-5 items-center">
